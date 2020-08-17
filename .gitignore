@@ -3,7 +3,6 @@
 ################################
 # directories
 build/
-.vscode/
 html/
 latex/
 
@@ -77,13 +76,9 @@ latex/
 ################################
 ########### VS CODE ############
 ################################
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 *.code-workspace
 .history/
+*.zip
 
 ################################
 ######## VISUAL STUDIO #########

@@ -1,0 +1,57 @@
+{ 
+    "version": "2.0.0", 
+    "tasks": [
+        // Build Tasks
+        {
+            "label": "C: Debug",
+            "type": "shell",
+            "command": "${config:compilerC}",
+            "args": ["${file}", "-g3", "-o", "${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C: Release",
+            "type": "shell",
+            "command": "${config:compilerC}",
+            "args": ["${file}", "-O3", "-o", "${fileDirname}/${fileBasenameNoExtension}Release"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        // Execution Tasks
+        {
+            "label": "Execute: Debug Program",
+            "type": "shell",
+            "command": ["${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Execute: Release Program",
+            "type": "shell",
+            "command": ["${fileDirname}/${fileBasenameNoExtension}Release"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
