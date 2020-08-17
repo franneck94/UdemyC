@@ -1,12 +1,20 @@
 { 
     "version": "2.0.0", 
     "tasks": [
-        // Build Tasks
+        // Single Build Tasks
         {
-            "label": "C: Debug",
+            "label": "C: Debug (Single File)",
             "type": "shell",
-            "command": "${config:compilerC}",
-            "args": ["${file}", "-g3", "-o", "${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "command": ["${config:make}"],
+            "args": [
+                "build_single",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "FILE_NAME=${file}",
+                "COMPILATION_MODE=Debug", 
+                "C_COMPILER=${config:compilerC}",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -16,10 +24,18 @@
             ]
         },
         {
-            "label": "C: Release",
+            "label": "C: Release (Single File)",
             "type": "shell",
-            "command": "${config:compilerC}",
-            "args": ["${file}", "-O3", "-o", "${fileDirname}/${fileBasenameNoExtension}Release"],
+            "command": ["${config:make}"],
+            "args": [
+                "build_single",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "FILE_NAME=${file}",
+                "COMPILATION_MODE=Release", 
+                "C_COMPILER=${config:compilerC}",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Release"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -32,7 +48,13 @@
         {
             "label": "Execute: Debug Program",
             "type": "shell",
-            "command": ["${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "command": ["${config:make}"],
+            "args": [
+                "execute",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -44,7 +66,13 @@
         {
             "label": "Execute: Release Program",
             "type": "shell",
-            "command": ["${fileDirname}/${fileBasenameNoExtension}Release"],
+            "command": ["${config:make}"],
+            "args": [
+                "execute",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true

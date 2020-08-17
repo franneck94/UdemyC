@@ -117,7 +117,14 @@
         {
             "label": "Execute: Debug Program",
             "type": "shell",
-            "command": ["${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "command": ["${config:make}"],
+            "args": [
+                "execute",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "--quiet",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -129,7 +136,14 @@
         {
             "label": "Execute: Release Program",
             "type": "shell",
-            "command": ["${fileDirname}/${fileBasenameNoExtension}Release"],
+            "command": ["${config:make}"],
+            "args": [
+                "execute",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "--quiet",
+                "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -146,7 +160,8 @@
             "args": [
                 "clean",
                 "--file=${workspaceFolder}/.vscode/Makefile",
-                "--directory=${fileDirname}/"
+                "--directory=${fileDirname}/",
+                "--quiet"
             ],
             "group": {
                 "kind": "build",
