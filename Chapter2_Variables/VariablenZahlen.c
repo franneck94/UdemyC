@@ -19,8 +19,5 @@ int main()
     double number6 = 1.25;
     double number7 = -1.25;
 
-    number6 = 2.5;
-    number6 = 5.0;
-
     return 0;
 }

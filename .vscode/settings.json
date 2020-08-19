@@ -8,5 +8,5 @@
     // "compilerCpp": "clang++",
     // "debuggerCpp": "lldb",
     // For all OS
-    "make": "make"
+    "make": "make",
 }

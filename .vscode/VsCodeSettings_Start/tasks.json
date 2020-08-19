@@ -53,6 +53,7 @@
                 "execute",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
+                "--quiet",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
             ],
             "group": {
@@ -71,6 +72,7 @@
                 "execute",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
+                "--quiet",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
             ],
             "group": {
