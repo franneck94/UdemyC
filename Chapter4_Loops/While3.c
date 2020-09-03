@@ -15,26 +15,26 @@ int main()
         printf("Pls enter a integer number in [1, 20]\n");
         scanf("%d", &selection);
 
-        if((selection > 20) || (selection < 1))
+        if ((selection > 20) || (selection < 1))
         {
-            printf("You did not enter a valid number!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i+1));
+            printf("You did not enter a valid number!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
             i++;
             continue;
         }
 
-        if(selection == goal)
+        if (selection == goal)
         {
             printf("Correct!\n");
             break;
         }
         else
         {
-            printf("Not correct!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i+1));
+            printf("Not correct!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
         }
 
         i++;
 
-    } while(i < n_rounds);
+    } while (i < n_rounds);
 
     return 0;
 }

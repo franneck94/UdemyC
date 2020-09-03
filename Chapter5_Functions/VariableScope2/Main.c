@@ -5,7 +5,7 @@ void func(int a_func)
 {
     printf("%d\n", a_func);
 }
- 
+
 int main()
 {
     int i = 0; // line 11 - 20

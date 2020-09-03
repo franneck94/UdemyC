@@ -2,7 +2,7 @@
 #include <math.h>
 
 #include "FunctionsBib.h"
- 
+
 #define LENGTH 10
 
 int main()

@@ -4,4 +4,3 @@
 #include <string.h>
 
 #include "DynamicArray.h"
-

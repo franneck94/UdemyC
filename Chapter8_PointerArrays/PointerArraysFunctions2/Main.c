@@ -6,7 +6,7 @@
 
 #define NUM_ELEMENTS 3u
 
-void init_time_array(float* p_array, unsigned int length)
+void init_time_array(float *p_array, unsigned int length)
 {
     for (int i = 0; i < length; ++i)
     {
@@ -14,7 +14,7 @@ void init_time_array(float* p_array, unsigned int length)
     }
 }
 
-void compute_time_array(float* p_array, unsigned int length)
+void compute_time_array(float *p_array, unsigned int length)
 {
     for (int i = 0; i < length; ++i)
     {
@@ -29,14 +29,13 @@ void compute_time_array(float* p_array, unsigned int length)
     }
 }
 
-void print_time_array(float* p_array, unsigned int length)
+void print_time_array(float *p_array, unsigned int length)
 {
     for (int i = 0; i < length; ++i)
     {
         printf("array[%d] = %f\n", i, p_array[i]);
     }
 }
-
 
 int main()
 {

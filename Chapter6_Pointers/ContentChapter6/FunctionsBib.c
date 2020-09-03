@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "FunctionsBib.h"
-  
+
 // Definition
 void printEvenOrOdd(int number)
 {
@@ -18,7 +18,7 @@ void printEvenOrOdd(int number)
 int getNumberFromUser()
 {
     int number_from_user; //0x00: 12
-    
+
     printf("Pls enter a interger number!\n");
     scanf("%d", &number_from_user);
 
@@ -33,7 +33,7 @@ unsigned int factorial(unsigned int i)
         return 1;
     }
 
-    return i * factorial(i-1);
+    return i * factorial(i - 1);
 }
 
 // Definition
@@ -72,7 +72,7 @@ float mean(int number_a, int number_b)
 }
 
 // Definition
-int binom(int* a, int* b)
+int binom(int *a, int *b)
 {
     return (*a) * (*a) + 2 * (*a) * (*b) + (*b) * (*b);
 }

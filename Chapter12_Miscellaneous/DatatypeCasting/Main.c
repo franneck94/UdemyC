@@ -20,7 +20,7 @@ int main()
     printf("%d\n", e);
     printf("%d\n", f);
 
-    float var_a = (int) 3.5f;
+    float var_a = (int)3.5f;
     printf("%f\n", var_a);
 
     return 0;

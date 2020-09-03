@@ -10,7 +10,7 @@ int main()
 {
     function();
 
-    FILE* fp = fopen("C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 12 - Weiteres/IncludeGuards/InputData.txt", "r");
+    FILE *fp = fopen("C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 12 - Weiteres/IncludeGuards/InputData.txt", "r");
 
     if (fp == NULL)
     {
@@ -30,7 +30,6 @@ int main()
     {
         v1.data[i] *= 2;
     }
-
 
     fp = fopen("C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 12 - Weiteres/IncludeGuards/OutputData.txt", "w");
 

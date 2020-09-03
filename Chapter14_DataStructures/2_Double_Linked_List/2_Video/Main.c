@@ -8,17 +8,17 @@
 
 int main()
 {
-    double_list_t* list = list_new();
+    double_list_t *list = list_new();
 
-    double_node_t* a = node_new("a");
-    double_node_t* b = node_new("b");
-    double_node_t* c = node_new("c");
+    double_node_t *a = node_new("a");
+    double_node_t *b = node_new("b");
+    double_node_t *c = node_new("c");
 
     // a b c
     list_rpush(list, a);
     list_rpush(list, b);
     list_rpush(list, c);
-    
+
     // Assertions
     assert(a == list->head);
     assert(b == list->head->next);

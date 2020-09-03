@@ -2,7 +2,7 @@
 #include <math.h>
 
 //#include "FunctionsBib.h"
- 
+
 int main()
 {
     float a = 0.0f;
@@ -13,14 +13,14 @@ int main()
     printf("Cosinus(a) = %.04f\n", cosinus_a);
 
     float b = 2.33456f;
-    float c = ceil(b); // Ceil = Aufrunden
+    float c = ceil(b);  // Ceil = Aufrunden
     float d = floor(b); // Floor = Abrunden
 
     printf("Ceil(b) = %.04f\n", c);
     printf("Floor(b) = %.04f\n", d);
 
     float e = 4.0f;
-    float f = sqrt(e); // square-root
+    float f = sqrt(e);      // square-root
     float g = pow(e, 3.0f); // x^y
 
     printf("Sqrt(%f) = %f\n", e, f);

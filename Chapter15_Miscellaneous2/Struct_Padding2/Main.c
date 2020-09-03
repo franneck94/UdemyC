@@ -5,9 +5,9 @@
 // Padding byte: 3
 typedef struct
 {
-    int a; // 0-3
+    int a;   // 0-3
     float c; // 4-7
-    char b; // 8
+    char b;  // 8
 } s_data2;
 
 // Size in byte: 16
@@ -15,10 +15,10 @@ typedef struct
 // Padding byte: 1
 typedef struct
 {
-    double c; // 0 -7
+    double c;       // 0 -7
     unsigned int d; // 8 - 11
-    short b; // 12 - 13
-    char a; // 14
+    short b;        // 12 - 13
+    char a;         // 14
 } s_data3;
 
 // Size in byte: 24
@@ -27,10 +27,9 @@ typedef struct
 typedef struct
 {
     double c; // 0 - 7
-    float a; // 8 - 11
-    float b; // 12 - 15
+    float a;  // 8 - 11
+    float b;  // 12 - 15
 } s_data4;
-
 
 int main()
 {

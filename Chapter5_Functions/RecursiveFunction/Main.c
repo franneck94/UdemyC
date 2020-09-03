@@ -2,7 +2,7 @@
 #include <math.h>
 
 #include "FunctionsBib.h"
- 
+
 int main()
 {
     // 1! = 1

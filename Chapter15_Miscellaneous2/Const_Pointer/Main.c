@@ -15,7 +15,7 @@ void function2(const int val)
 }
 
 // Pointer, variable value, variable adress
-void function3(int * val)
+void function3(int *val)
 {
     // (*val)++; // OKAY
     printf("function3: %d\n", *val);
@@ -23,7 +23,7 @@ void function3(int * val)
 
 // Pointer, const value, variable adress
 // const DataType * VariableName
-void function4(const int * val)
+void function4(const int *val)
 {
     // (*val)++; // FORBIDDEN
     int b = -2;
@@ -34,7 +34,7 @@ void function4(const int * val)
 
 // Pointer, variable value, const adress
 // DataType * const VariableName
-void function5(int * const val)
+void function5(int *const val)
 {
     (*val)++; // OKAY
     // int b = -2; // FORBIDDEN
@@ -47,7 +47,7 @@ void function5(int * const val)
 // combination of function andf function5
 // const DataType * const VariableName
 // ReadOnly
-void function6(const int * const val)
+void function6(const int *const val)
 {
     // (*val)++; // FORBIDDEN
     // int b = -2; // FORBIDDEN

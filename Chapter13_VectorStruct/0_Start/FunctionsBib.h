@@ -6,7 +6,7 @@
 // Parameters: int number
 // Declaration
 void printEvenOrOdd(int number);
-  
+
 // Return Type: int
 // Name: getNumberFromUser
 // Parameters: None

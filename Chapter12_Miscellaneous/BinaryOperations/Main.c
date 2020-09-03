@@ -38,15 +38,15 @@ int main()
     //   11110001 = 1 + 16 + 32+ 64+ 128
     printf("%d\n", a_complement);
 
-    uint8_t a_right_shift = a>>1;
+    uint8_t a_right_shift = a >> 1;
     // 0b00001110;
     // 0b00000111 = 7
-    printf("%d\n", a_right_shift );
+    printf("%d\n", a_right_shift);
 
-    uint8_t a_left_shift = a<<1;
+    uint8_t a_left_shift = a << 1;
     // 0b00001110;
     // 0b00011100 = 28
-    printf("%d\n", a_left_shift );
+    printf("%d\n", a_left_shift);
 
     return 0;
 }

@@ -2,17 +2,20 @@
 #include <time.h>
 #include <stdlib.h>
 
-int comp(const void* elem1, const void* elem2)
+int comp(const void *elem1, const void *elem2)
 {
-    int l = *((int*) elem1);
-    int r = *((int*) elem2);
+    int l = *((int *)elem1);
+    int r = *((int *)elem2);
 
-    if (l < r) return 1;
-    if (r < l) return -1;
-    else return 0;
+    if (l < r)
+        return 1;
+    if (r < l)
+        return -1;
+    else
+        return 0;
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     if (argc == 1)
     {
@@ -20,7 +23,7 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    FILE* fp = fopen(argv[1], "r");
+    FILE *fp = fopen(argv[1], "r");
     if (fp == NULL)
     {
         printf("File %s does not exist!\n", argv[1]);
@@ -28,7 +31,7 @@ int main(int argc, char* argv[])
     }
 
     int length = atoi(argv[2]);
-    int* data = (int*) malloc(length * sizeof(int));
+    int *data = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {

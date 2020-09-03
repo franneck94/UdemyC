@@ -2,7 +2,7 @@
 #include <math.h>
 
 #include "FunctionsBib.h"
- 
+
 int main()
 {
     int a = 2;

@@ -5,12 +5,11 @@
 
 #include "FunctionsBib.h"
 #include "Vector.h"
- 
+
 int main()
 {
-    Vector* v1 = createVector(3, 1.0);
+    Vector *v1 = createVector(3, 1.0);
     printVector(v1);
-
 
     deleteVector(v1);
 

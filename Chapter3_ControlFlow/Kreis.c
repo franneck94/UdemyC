@@ -26,6 +26,6 @@ int main()
 
         printf("The perimeter is %f and the area is %f", perimeter, area);
     }
-    
+
     return 0;
 }

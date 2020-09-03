@@ -12,11 +12,11 @@ void func()
     printf("(FUNC) a = %d\n", a);
     printf("(FUNC) b = %d\n", b);
 }
- 
+
 int main()
 {
     int c = 1;
-    
+
     printf("(MAIN) a = %d\n", a);
     printf("(FUNC) c = %d\n", c);
     func();

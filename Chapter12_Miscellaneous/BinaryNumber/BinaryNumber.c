@@ -1,5 +1,5 @@
 #include <stdio.h>
- 
+
 int main()
 {
     int first_leading_one_found = 0;
@@ -36,21 +36,20 @@ int main()
         int mask = (1 << i);
         int result = decimal_number & mask;
 
-        if(result != 0)
+        if (result != 0)
         {
-            if(first_leading_one_found == 0)
+            if (first_leading_one_found == 0)
             {
                 first_leading_one_found = 1;
             }
 
             printf("1");
         }
-        else if(first_leading_one_found == 1)
+        else if (first_leading_one_found == 1)
         {
             printf("0");
         }
-        
     }
- 
+
     return 0;
 }

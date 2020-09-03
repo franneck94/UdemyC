@@ -2,7 +2,7 @@
 #include <math.h>
 
 #include "FunctionsBib.h"
- 
+
 int main()
 {
     int numbers[5];
@@ -12,7 +12,6 @@ int main()
     {
         numbers[i] = 1337;
     }
-
 
     for (int i = 0; i < 5; i++)
     {

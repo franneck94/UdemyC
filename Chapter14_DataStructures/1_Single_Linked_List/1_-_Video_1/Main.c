@@ -7,11 +7,11 @@
 
 int main()
 {
-    single_list_t* list = list_new();
+    single_list_t *list = list_new();
 
-    single_node_t* a = node_new("a");
-    single_node_t* b = node_new("b");
-    single_node_t* c = node_new("c");
+    single_node_t *a = node_new("a");
+    single_node_t *b = node_new("b");
+    single_node_t *c = node_new("c");
 
     return 0;
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "FunctionsBib.h"
-  
+
 // Definition
 void printEvenOrOdd(int number)
 {
@@ -20,7 +20,7 @@ void printEvenOrOdd(int number)
 int getNumberFromUser()
 {
     int number_from_user; //0x00: 12
-    
+
     printf("Pls enter a interger number!\n");
     scanf("%d", &number_from_user);
 
@@ -35,7 +35,7 @@ unsigned int factorial(unsigned int i)
         return 1;
     }
 
-    return i * factorial(i-1);
+    return i * factorial(i - 1);
 }
 
 // Definition
@@ -48,7 +48,7 @@ float mean(int number_a, int number_b)
 }
 
 // Definition
-void binom(int* a, int* b, int* c)
+void binom(int *a, int *b, int *c)
 {
     // a^2 + ab + b^2
     *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);
@@ -75,7 +75,7 @@ int minArray(int array[], unsigned int length)
 
     for (int i = 0; i < length; i++)
     {
-        if(i == 0)
+        if (i == 0)
         {
             min = array[i];
         }
@@ -96,7 +96,7 @@ int maxArray(int array[], unsigned int length)
 
     for (int i = 0; i < length; i++)
     {
-        if(i == 0)
+        if (i == 0)
         {
             max = array[i];
         }
@@ -111,10 +111,10 @@ int maxArray(int array[], unsigned int length)
 }
 
 // Definiton
-int* createVector(unsigned int length, int value)
+int *createVector(unsigned int length, int value)
 {
-    int* vector;
-    vector = (int*) malloc(length * sizeof(int));
+    int *vector;
+    vector = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
@@ -125,15 +125,15 @@ int* createVector(unsigned int length, int value)
 }
 
 // Definiton
-int** createMatrix(unsigned int rows, unsigned int cols, int value)
+int **createMatrix(unsigned int rows, unsigned int cols, int value)
 {
-    int** matrix = (int**) malloc(rows * sizeof(int*));
+    int **matrix = (int **)malloc(rows * sizeof(int *));
 
-    for(int i = 0; i < rows; i++)
+    for (int i = 0; i < rows; i++)
     {
-        matrix[i] = (int*) malloc(cols * sizeof(int));
+        matrix[i] = (int *)malloc(cols * sizeof(int));
 
-        for(int j = 0; j < cols; j++)
+        for (int j = 0; j < cols; j++)
         {
             matrix[i][j] = value;
         }

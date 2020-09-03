@@ -11,13 +11,22 @@ int main()
     printf("Pls enter a valid code for any drink!\n");
     scanf("%d", &selection);
 
-    switch(selection)
+    switch (selection)
     {
-        case 0: printf("Cola!\n"); break;
-        case 1: printf("IceTea!\n"); break;
-        case 2: printf("Water!\n"); break;
-        case 3: printf("Coffee!\n"); break;
-        default: printf("You did not enter a valid number!");
+    case 0:
+        printf("Cola!\n");
+        break;
+    case 1:
+        printf("IceTea!\n");
+        break;
+    case 2:
+        printf("Water!\n");
+        break;
+    case 3:
+        printf("Coffee!\n");
+        break;
+    default:
+        printf("You did not enter a valid number!");
     }
 
     return 0;

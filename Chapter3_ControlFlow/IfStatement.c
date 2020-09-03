@@ -15,7 +15,7 @@ int main()
     else if (age_jan > age_marc)
     {
         printf("Jan is older than Marc!");
-    }  
+    }
     else
     {
         printf("Jan and Marc have the same age!");

@@ -1,12 +1,12 @@
 #ifndef FBIB_H
 #define FBIB_H
- 
+
 // Return Type: void
 // Name: printEvenOrOdd
 // Parameters: int number
 // Declaration
 void printEvenOrOdd(int number);
-  
+
 // Return Type: int
 // Name: getNumberFromUser
 // Parameters: None

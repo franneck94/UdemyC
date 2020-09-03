@@ -7,15 +7,15 @@
 
 struct Friend
 {
-    char* name;
-    char* prename;
+    char *name;
+    char *prename;
     unsigned int year;
     unsigned int month;
     unsigned int day;
 };
 
 //          STRUKTUR-NAME       TYPEDEF-NAME
-typedef     struct Friend          FR;
+typedef struct Friend FR;
 typedef float vector_3d[3];
 
 void printFriend(FR f)
@@ -23,7 +23,7 @@ void printFriend(FR f)
     printf("%s, %s's birthday is: %d.%d.%d.\n", f.prename, f.name, f.day, f.month, f.year);
 }
 
-void changeName(FR* f, char* new_name)
+void changeName(FR *f, char *new_name)
 {
     f->name = new_name;
 }

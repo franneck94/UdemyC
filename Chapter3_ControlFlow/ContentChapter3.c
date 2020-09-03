@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int main() 
-{ 
-    unsigned int number; 
-    printf("Please enter a valid unsigned integer!\n"); 
-    scanf("%d", &number); 
+int main()
+{
+    unsigned int number;
+    printf("Please enter a valid unsigned integer!\n");
+    scanf("%d", &number);
     unsigned int number_mod_three = (number % 3);
 
     if (number_mod_three == 0)

@@ -8,7 +8,7 @@
 int main()
 {
     struct Vector v1 = {createVector(10, 1), 3};
-    
+
     for (int i = 0; i < v1.length; i++)
     {
         v1.data[i] = i;

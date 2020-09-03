@@ -24,7 +24,7 @@ int main()
         printf("Sarah is the youngest person!");
     }
     else
-    {  
+    {
         if ((age_jan == age_sarah) && (age_jan == age_marc))
         {
             printf("All of the 3 persons have the same age!");

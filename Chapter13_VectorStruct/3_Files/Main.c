@@ -8,31 +8,31 @@
 
 int main()
 {
-    Vector* v1 = createVector(3, 1.0);
+    Vector *v1 = createVector(3, 1.0);
     printf("v1 = \n");
     printVector(v1);
 
-    Vector* v2 = createVector(3, 2.0);
+    Vector *v2 = createVector(3, 2.0);
     printf("v2 = \n");
     printVector(v2);
 
-    Vector* v3 = addVectors(v1, v2);
+    Vector *v3 = addVectors(v1, v2);
     printf("v3 = \n");
     printVector(v3);
 
-    Vector* v4 = subVectors(v3, v2);
+    Vector *v4 = subVectors(v3, v2);
     printf("v4 = \n");
     printVector(v4);
 
     // = 1 * 2 + 1 * 2 + 1 * 2 = 3 * 2 = 6
-    double vector_dot = dotVectors(v1 ,v2);
+    double vector_dot = dotVectors(v1, v2);
     printf("Dot = %f\n", vector_dot);
 
-    Vector* v5 = multiplyScalarVector(2.0, v1);
+    Vector *v5 = multiplyScalarVector(2.0, v1);
     printf("v5 = \n");
     printVector(v5);
 
-    Vector* v6 = divideScalarVector(2.0, v5);
+    Vector *v6 = divideScalarVector(2.0, v5);
     printf("v6 = \n");
     printVector(v6);
 

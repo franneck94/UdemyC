@@ -7,11 +7,11 @@
 int main()
 {
     unsigned int length = getNumberFromUser();
-    
-    int* array;
+
+    int *array;
 
     // malloc: memory allocation
-    array = (int*) malloc(length * sizeof(int));
+    array = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {

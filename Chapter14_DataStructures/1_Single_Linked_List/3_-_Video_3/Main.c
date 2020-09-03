@@ -8,11 +8,11 @@
 
 int main()
 {
-    single_list_t* list = list_new();
+    single_list_t *list = list_new();
 
-    single_node_t* a = node_new("a");
-    single_node_t* b = node_new("b");
-    single_node_t* c = node_new("c");
+    single_node_t *a = node_new("a");
+    single_node_t *b = node_new("b");
+    single_node_t *c = node_new("c");
 
     // a b c
     list_rpush(list, a);
@@ -33,16 +33,16 @@ int main()
     assert(NULL == list->tail);
     assert(0 == list->len);
 
-    single_node_t* d = node_new("d");
-    single_node_t* e = node_new("e");
-    single_node_t* f = node_new("f");
+    single_node_t *d = node_new("d");
+    single_node_t *e = node_new("e");
+    single_node_t *f = node_new("f");
 
     // d e f
     list_rpush(list, d);
     list_rpush(list, e);
     list_rpush(list, f);
 
-    // d e 
+    // d e
     list_remove(list, f);
 
     // Assertions

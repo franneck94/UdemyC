@@ -3,11 +3,15 @@
 
 #include "FunctionsBib.h"
 
-enum {rows = 2, cols=2};
- 
+enum
+{
+    rows = 2,
+    cols = 2
+};
+
 int main()
 {
-    int M[2][2] = {{1,0}, {0,1}};
+    int M[2][2] = {{1, 0}, {0, 1}};
 
     int rows = 0;
     int cols = 0;

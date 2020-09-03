@@ -10,7 +10,7 @@ int main()
         {
             for (int k = 0; k < 4; k++)
             {
-                printf("%d/%d/%d!\n", i, j , k);
+                printf("%d/%d/%d!\n", i, j, k);
             }
         }
     }

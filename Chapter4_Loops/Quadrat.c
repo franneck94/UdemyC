@@ -13,12 +13,12 @@ int main()
     int is_valid_number = 0;
     float a;
 
-    while(is_valid_number == 0)
+    while (is_valid_number == 0)
     {
         printf("Please enter the value for a: ");
         scanf("%f", &a);
 
-        if(a > 0.0)
+        if (a > 0.0)
         {
             is_valid_number = 1;
         }
@@ -32,6 +32,6 @@ int main()
     float area = a * a;
 
     printf("Permieter %f, area %f", perimeter, area);
-    
+
     return 0;
 }

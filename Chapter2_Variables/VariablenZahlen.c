@@ -3,7 +3,7 @@
 int main()
 {
     // Int = Ganze Zahl
-    int number1; // Deklaration
+    int number1;    // Deklaration
     number1 = 1337; // Initialisierung
 
     int number2 = -1337; // Deklaration + Initialisierung

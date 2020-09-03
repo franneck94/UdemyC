@@ -23,8 +23,8 @@ int main()
     printf("Name: %s %s, Birthday: %2d %2d %4d", prename, lastname, day, month, year);
 
     // Variante 2
-    char* prename2 = (char*)malloc(20 * sizeof(char));
-    char* lastname2 = (char*)malloc(20 * sizeof(char));
+    char *prename2 = (char *)malloc(20 * sizeof(char));
+    char *lastname2 = (char *)malloc(20 * sizeof(char));
     int year2;
     int month2;
     int day2;
