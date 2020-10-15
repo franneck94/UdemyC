@@ -3,10 +3,8 @@
 Dies ist der Code zu meinem Udemy Kurs:
 *C Komplettkurs: Praxisnahe Programmierung für C Einsteiger* von Jan Schaffranek.
 
-Erhalte den Kurs vom 15.10.2020 bis zum 15.11.2020 für nur 14,99€.
+Erhalte den Kurs vom 15.10.2020 bis zum 15.11.2020 für nur 14,99€*.
 Rabatt-Link: [C Kurs im Rabatt](https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_OCT_2020)
-
-## Schritt-für-Schritt Einstieg in das C Programmieren. Erlerne die Sprache anhand zahlreicher Beispiele und Aufgaben
 
 ## Bewertungen von Kursteilnehmern
 
@@ -44,3 +42,6 @@ Alle Sektionen des Kurses sind mit Videos, Quizze und Programmieraufgaben ver
 
 Werde noch heute ein Profi, in der Technologie von Morgen!
 Wir sehen uns im Kurs!
+
+
+\* Alle Angaben ohne Gewähr

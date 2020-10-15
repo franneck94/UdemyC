@@ -1,8 +1,10 @@
+.vscode/VsCodeSettings_Makefile/
+.vscode/VsCodeSettings_Start/
+
 *.pptx
 *.png
 *.txt
 *.csv
-.vscode
 
 ################################
 ########### FOLDERS ############
