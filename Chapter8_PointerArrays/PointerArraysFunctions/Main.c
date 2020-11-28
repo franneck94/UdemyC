@@ -9,7 +9,7 @@ int *createArray(unsigned int length, int value)
     int *arr;
     arr = (int *)malloc(length * sizeof(int));
 
-    printf("Pointer-arr: 0x%x\n", arr);
+    printf("Pointer-arr: 0x%p\n", arr);
 
     for (int i = 0; i < length; i++)
     {
@@ -25,7 +25,7 @@ int main()
 
     int *array = createArray(length, 1);
 
-    printf("Pointer-Array: 0x%x\n", array);
+    printf("Pointer-Array: 0x%p\n", array);
 
     for (int i = 0; i < length; i++)
     {

@@ -1,10 +1,26 @@
-.vscode/VsCodeSettings_Makefile/
-.vscode/VsCodeSettings_Start/
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
 
+lectures/
 *.pptx
 *.png
-*.txt
-*.csv
+*.out
+*.zip
+*.vcxproj
+*.vcxproj.filters
+*.obj
+*.o
+*.exe
+*.out
+*.pro
+*.sln
+*.bmp
+*.ui
+*.stackdump
 
 ################################
 ########### FOLDERS ############

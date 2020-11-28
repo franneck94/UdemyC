@@ -10,7 +10,7 @@ int main()
 
     printf("Die Zahl in Dezimal: %d\n", b_dezimal);
     printf("Die Zahl in Binaer: 0b100111000\n");
-    printf("Die Zahl in Hex: 0x%x\n", b_hex);
+    printf("Die Zahl in Hex: 0x%p\n", b_hex);
 
     return 0;
 }

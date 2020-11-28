@@ -7,7 +7,7 @@
 // Local copy of the input !!!value!!!
 float add(float z_func) // 0x61ff10
 {
-    printf("Add: 0x%x\n", &z_func);
+    printf("Add: 0x%p\n", &z_func);
     z_func += 3.0f;
 
     return z_func;
@@ -17,14 +17,14 @@ float add(float z_func) // 0x61ff10
 // Input is the argument variable
 void sub(float *z_func) // 0x61ff2c
 {
-    printf("Sub: 0x%x\n", z_func);
+    printf("Sub: 0x%p\n", z_func);
     *z_func = *z_func - 3.0f;
 }
 
 int main()
 {
     float z_main = 1.0f; // 0x61ff2c
-    printf("Main Addr.: 0x%x\n", &z_main);
+    printf("Main Addr.: 0x%p\n", &z_main);
 
     // Call by Value
     z_main = add(z_main);

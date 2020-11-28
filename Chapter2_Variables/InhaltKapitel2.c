@@ -11,7 +11,7 @@ int main()
     unsigned int sekunden;
 
     printf("Bitte gebe dein Alter ein!\n");
-    scanf("%d", &alter);
+    scanf("%c", &alter);
 
     tage = alter * 365;
     stunden = tage * 24;

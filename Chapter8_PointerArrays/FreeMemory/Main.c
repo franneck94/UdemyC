@@ -59,7 +59,7 @@ int main()
 
     if (arr != NULL)
     {
-        printf("%x\n", arr);
+        printf("%p\n", arr);
     }
     else
     {

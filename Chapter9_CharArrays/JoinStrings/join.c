@@ -5,7 +5,7 @@
 char *join(char *delimiter, char **list)
 {
     const size_t default_len = 100;
-    char *result = malloc(default_len * sizeof(char));
+    char *result = (char*)malloc(default_len * sizeof(char));
     result[0] = '\0';
 
     int index = 0;

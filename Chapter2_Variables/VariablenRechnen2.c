@@ -10,9 +10,11 @@ int main()
     printf("A: %f", a);
 
     int b = 0;
-
+    printf("%d\n", b);
     b = b + 1;
+    printf("%d\n", b);
     b += 1;
+    printf("%d\n", b);
 
     return 0;
 }
