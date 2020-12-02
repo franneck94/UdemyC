@@ -4,12 +4,11 @@
 
 int main()
 {
-    // Kreis: Radius vom User einlesen
-    // Ueberpruefe dabei, ob der User eine "gueltige" Zahl eingegeben hat
-    // Berechne den Umfang und den Flaecheninhalt des Krieses
-    // Gebe diese Werte dann in der Konsole aus
-    // u = 2 * r * PI
-    // a = r**2 * PI
+    // Circle Example
+    // 1.) Read the values for a, b from the user,
+    //     check if the input is correct (non-negative length)
+    // 2.) Compute the perimeter and area of the circle
+    // 3.) Print the computed values to the console
 
     float radius;
     printf("Please enter the radius: ");
@@ -17,7 +16,7 @@ int main()
 
     if (radius < 0.0)
     {
-        printf("You entered a negative number! Please re-run the program!");
+        printf("You entered a negative number! Please re-start the program!");
     }
     else
     {

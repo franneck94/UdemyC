@@ -4,31 +4,32 @@ int main()
 {
     int a = 22;
     int b = 42;
-    int comp;
+
+    _Bool comparison;
 
     // a greater than b
-    comp = (a > b);
-    printf("Comp: %d\n", comp);
+    comparison = a > b;
+    printf("a > b = %d\n", comparison);
 
     // a less than b
-    comp = (a < b);
-    printf("Comp: %d\n", comp);
+    comparison = a < b;
+    printf("a < b = %d\n", comparison);
 
-    // a equal to b
-    comp = (a == b);
-    printf("Comp: %d\n", comp);
+    // a and b are equal
+    comparison = a == b;
+    printf("a == b = %d\n", comparison);
 
-    // a less or equal than b
-    comp = (a <= b);
-    printf("Comp: %d\n", comp);
+    // a and b are not equal
+    comparison = a != b;
+    printf("a != b = %d\n", comparison);
 
-    // a greater or equal than b
-    comp = (a >= b);
-    printf("Comp: %d\n", comp);
+    // a greater than or equal to b
+    comparison = a >= b;
+    printf("a >= b = %d\n", comparison);
 
-    // a not equal to b
-    comp = (a != b);
-    printf("Comp: %d\n", comp);
+    // a less than or equal to be
+    comparison = a <= b;
+    printf("a <= b = %d\n", comparison);
 
     return 0;
 }

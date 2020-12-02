@@ -2,37 +2,29 @@
 
 int main()
 {
-    int age_jan = 16;
-    int age_marc = 16;
-    int age_sarah = 16;
+    int age_jan = 26;
+    int age_marc = 26;
+    int age_sarah = 30;
 
-    // &&: Conjuction (Konjunktion), logical AND operator
-    // ||: Disjunction (Disjunktion), logical OR operator
-    // !: Negation (Negation), logical NOT operator
+    // &&: Conjunction, logical AND operator
+    // ||: Disjunction, logical OR operator
+    // !: Negation, logical NOT operator
 
-    // Who is the youngest person?
     if ((age_jan < age_marc) && (age_jan < age_sarah))
     {
-        printf("Jan is the youngest person!");
+        printf("Jan is the youngest!");
     }
     else if ((age_marc < age_jan) && (age_marc < age_sarah))
     {
-        printf("Marc is the youngest person!");
+        printf("Marc is the youngest!");
     }
-    else if ((age_sarah < age_jan) && (age_sarah < age_marc))
+    else if ((age_sarah < age_marc) && (age_sarah < age_jan))
     {
-        printf("Sarah is the youngest person!");
+        printf("Sarah is the youngest!");
     }
     else
     {
-        if ((age_jan == age_sarah) && (age_jan == age_marc))
-        {
-            printf("All of the 3 persons have the same age!");
-        }
-        else
-        {
-            printf("There are 2 persons with the same age!");
-        }
+        printf("At least two persons have the same age!");
     }
 
     return 0;

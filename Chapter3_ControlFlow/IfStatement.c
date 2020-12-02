@@ -2,17 +2,14 @@
 
 int main()
 {
-    int age_jan = 24;
-    int age_marc = 42;
-
-    // 1 = true
-    // 0 = false
+    int age_jan = 28;
+    int age_marc = 26;
 
     if (age_jan < age_marc)
     {
         printf("Jan is younger than Marc!");
     }
-    else if (age_jan > age_marc)
+    else if(age_jan > age_marc)
     {
         printf("Jan is older than Marc!");
     }
