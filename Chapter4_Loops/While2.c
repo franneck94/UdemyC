@@ -2,21 +2,20 @@
 
 int main()
 {
-    int n_rounds = 10;
+    int num_iterations = 3;
     int i = 0;
 
-    while (1)
+    while(1)
     {
-        printf("i = %d\n", i);
+        printf("Hello World!\n");
+
         i++;
 
-        if (i >= n_rounds)
+        if(i >= num_iterations)
         {
             break;
         }
     }
-
-    printf("%d", i);
 
     return 0;
 }

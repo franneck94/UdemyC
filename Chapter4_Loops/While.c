@@ -2,16 +2,15 @@
 
 int main()
 {
-    int n_rounds = 10;
-    int i = 1;
+    int num_iterations = 3;
+    int i = 0;
 
-    while (i <= n_rounds)
+    while(i < num_iterations)
     {
-        printf("You are in round %d\n", i);
+        printf("Hello World!\n");
+
         i++;
     }
-
-    printf("%d", i);
 
     return 0;
 }

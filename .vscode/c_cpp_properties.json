@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Linux C",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
@@ -12,7 +12,18 @@
             "intelliSenseMode": "gcc-x64"
         },
         {
-            "name": "Windows",
+            "name": "Linux Cpp",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Windows C",
             "includePath": [
                 "${workspaceFolder}/**"
             ],
@@ -23,6 +34,22 @@
             ],
             "windowsSdkVersion": "10.0.18362.0",
             "compilerPath": "C:\\cygwin64\\bin\\gcc.exe",
+            "cStandard": "c99",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "Windows Cpp",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "C:\\cygwin64\\bin\\g++.exe",
             "cStandard": "c99",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"

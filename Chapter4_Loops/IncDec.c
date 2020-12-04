@@ -4,19 +4,16 @@ int main()
 {
     int a = 1;
 
-    // Increment: i = i + 1     <=> i += 1        <=>    i++
-    // Decrement: i = i - 1     <=>  i -= 1       <=>    i--
+    // Increment: a = a + 1 <=> a += 1 <=> a++
+    // Decrement: a = a - 1 <=> a -= 1 <=> a--
 
-    printf("Starting!\n");
-
-    printf("Finished round %d\n", a);
+    printf("%d\n", a);
     a++;
-
-    printf("Finished round %d\n", a);
-    a++;
-
-    printf("Finished round %d\n", a);
-    a++;
+    // ++a,
+    printf("%d\n", a);
+    a--;
+    // --a;
+    printf("%d\n", a);
 
     return 0;
 }

@@ -2,39 +2,36 @@
 
 int main()
 {
-    int n_rounds = 5;
+    int num_iterations = 5;
     int i = 0;
     int goal = 13;
     int selection;
 
-    printf("This is a nice little game!\n");
-    printf("You have to guess the right number from the interval [1, 20] to win this game!\n");
+    printf("Welcome to our guessing game!");
+    printf("You have to guess the right number from the interval of [1, 20]\n");
 
     do
     {
-        printf("Pls enter a integer number in [1, 20]\n");
+        printf("\nPlease enter a number: ");
         scanf("%d", &selection);
 
-        if ((selection > 20) || (selection < 1))
+        if(selection < 1 || selection > 20)
         {
-            printf("You did not enter a valid number!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
-            i++;
-            continue;
+            printf("You did not enter a valid number!\n");
+            printf("You have %d guesses left!", num_iterations - (i + 1));
         }
-
-        if (selection == goal)
+        else if(selection == goal)
         {
-            printf("Correct!\n");
-            break;
+            printf("You have won the game!\n");
         }
         else
         {
-            printf("Not correct!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
+            printf("Not correct. Please try again!\n");
+            printf("You have %d guesses left!", num_iterations - (i + 1));
         }
 
         i++;
-
-    } while (i < n_rounds);
+    } while(i < num_iterations);
 
     return 0;
 }
