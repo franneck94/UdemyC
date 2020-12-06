@@ -35,5 +35,4 @@ typedef enum
 
 void sort_records(records_t* records, SortingScheme sorting_scheme);
 
-#endif
-//end RECORD_H
+#endif // RECORD_H

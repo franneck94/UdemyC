@@ -16,4 +16,4 @@ int getNumberFromUser();
 // Parameters: unsigned int i
 unsigned int factorial(unsigned int i);
 
-#endif
+#endif // FUNCTIONS_BIB_H

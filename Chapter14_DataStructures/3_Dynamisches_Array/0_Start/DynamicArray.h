@@ -1,4 +1,4 @@
 #ifndef DynamicArray_H
 #define DynamicArray_H
 
-#endif
+#endif // FUNCTIONS_BIB_H

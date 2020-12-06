@@ -10,5 +10,4 @@ ERROR_TYPES read_simple_csv(const char* file_path, records_t* records);
 
 ERROR_TYPES write_simple_csv(const char* file_path, records_t* records);
 
-#endif
-//end CSV_READER_H
+#endif // CSV_READER_H

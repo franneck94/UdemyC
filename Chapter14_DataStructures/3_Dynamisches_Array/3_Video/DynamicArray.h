@@ -22,4 +22,4 @@ void pop_element(dynamic_array_t* array);
 void dynamic_array_empty(dynamic_array_t* array);
 void dynamic_array_print(dynamic_array_t* array);
 
-#endif
+#endif // FUNCTIONS_BIB_H

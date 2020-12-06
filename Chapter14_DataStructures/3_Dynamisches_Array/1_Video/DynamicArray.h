@@ -16,4 +16,4 @@ dynamic_array_t* dynamic_array_new();
 void push_element(dynamic_array_t* array, float val);
 void pop_element(dynamic_array_t* array);
 
-#endif
+#endif // FUNCTIONS_BIB_H

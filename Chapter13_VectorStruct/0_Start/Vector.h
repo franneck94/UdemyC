@@ -29,4 +29,4 @@ int maxVector(Vector* vec);
 // Parameters: unsigned int length, int value
 int* createVector(unsigned int length, int value);
 
-#endif
+#endif // FUNCTIONS_BIB_H

@@ -31,4 +31,4 @@ void list_empty(double_list_t* list);
 void list_remove(double_list_t* list, double_node_t* node);
 void list_print(double_list_t* list);
 
-#endif
+#endif // FUNCTIONS_BIB_H

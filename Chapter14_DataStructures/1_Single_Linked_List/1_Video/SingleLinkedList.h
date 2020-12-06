@@ -25,4 +25,4 @@ typedef struct single_list
 single_list_t* list_new();
 single_node_t* node_new(void* val);
 
-#endif
+#endif // FUNCTIONS_BIB_H

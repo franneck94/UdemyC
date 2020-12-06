@@ -30,4 +30,4 @@ single_node_t* find_prev_node(single_list_t* list, single_node_t* node);
 void list_rpush(single_list_t* list, single_node_t* node);
 void list_rpop(single_list_t* list);
 
-#endif
+#endif // FUNCTIONS_BIB_H

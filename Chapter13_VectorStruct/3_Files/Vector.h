@@ -74,4 +74,4 @@ int readInVectorData(Vector* vec, const char* path);
 // Parameters: Vector* vec, const char* path
 int writeOutVectorData(Vector* vec, const char* path);
 
-#endif
+#endif // FUNCTIONS_BIB_H

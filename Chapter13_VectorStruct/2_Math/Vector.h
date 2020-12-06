@@ -64,4 +64,4 @@ float minVector(Vector* vec);
 // Parameters: Vector* vec
 float maxVector(Vector* vec);
 
-#endif
+#endif // FUNCTIONS_BIB_H

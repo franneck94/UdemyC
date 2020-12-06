@@ -36,4 +36,4 @@ void list_empty(single_list_t* list);
 void list_remove(single_list_t* list, single_node_t* node);
 void list_print(single_list_t* list);
 
-#endif
+#endif // FUNCTIONS_BIB_H

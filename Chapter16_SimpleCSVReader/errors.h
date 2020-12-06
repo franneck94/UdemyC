@@ -7,5 +7,4 @@ typedef enum
     FAILURE = 1,
 } ERROR_TYPES;
 
-#endif
-//end ERRORS_H
+#endif // ERRORS_H
