@@ -5,9 +5,9 @@
 
 #include "CsvReader.h"
 
-ERROR_TYPES line_count(const char *file_path, unsigned int *num_lines)
+ERROR_TYPES line_count(const char* file_path, unsigned int* num_lines)
 {
-    FILE *fp = fopen(file_path, "r");
+    FILE* fp = fopen(file_path, "r");
 
     if (fp == NULL)
     {
@@ -30,9 +30,9 @@ ERROR_TYPES line_count(const char *file_path, unsigned int *num_lines)
     return SUCCESS;
 }
 
-ERROR_TYPES read_simple_csv(const char *file_path, records_t *records)
+ERROR_TYPES read_simple_csv(const char* file_path, records_t* records)
 {
-    FILE *fp = fopen(file_path, "r");
+    FILE* fp = fopen(file_path, "r");
 
     if (fp == NULL)
     {
@@ -46,7 +46,7 @@ ERROR_TYPES read_simple_csv(const char *file_path, records_t *records)
     if (err_line_count == FAILURE)
         return err_line_count;
 
-    entry_t *entries = create_entries(num_lines);
+    entry_t* entries = create_entries(num_lines);
 
     if (entries == NULL)
         return FAILURE;
@@ -70,9 +70,9 @@ ERROR_TYPES read_simple_csv(const char *file_path, records_t *records)
     return SUCCESS;
 }
 
-ERROR_TYPES write_simple_csv(const char *file_path, records_t *records)
+ERROR_TYPES write_simple_csv(const char* file_path, records_t* records)
 {
-    FILE *fp = fopen(file_path, "w");
+    FILE* fp = fopen(file_path, "w");
 
     if (fp == NULL)
     {

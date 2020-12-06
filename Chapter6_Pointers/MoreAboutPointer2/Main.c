@@ -9,9 +9,9 @@ int main()
 
     // p_d points to the memory location of variable a
     // *p_d is the content of the memory location
-    int *p_d = &a;
-    int *p_e = &b;
-    int *p_f = &c;
+    int* p_d = &a;
+    int* p_e = &b;
+    int* p_f = &c;
 
     // p_d = 2 * p_e + 3 * p_f
     // *p_d = 2 * 2 + 3 * 3 = 13

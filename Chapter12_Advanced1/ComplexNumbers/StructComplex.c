@@ -9,7 +9,7 @@ typedef struct
 
 StructComplex addition(StructComplex c1, StructComplex c2)
 {
-    StructComplex result = {.real = 0.0, .imaginary = 0.0};
+    StructComplex result = { .real = 0.0, .imaginary = 0.0 };
 
     result.real = c1.real + c2.real;
     result.imaginary = c1.imaginary + c2.imaginary;
@@ -25,9 +25,9 @@ void print_complex_number(StructComplex c)
 int main()
 {
     // double complex z1 = 1.0 + 3.0 * I;
-    StructComplex c1 = {.real = 1.0, .imaginary = 3.0};
+    StructComplex c1 = { .real = 1.0, .imaginary = 3.0 };
     // double complex z2 = 1.5 + 2.0 * I;
-    StructComplex c2 = {.real = 1.5, .imaginary = 2.0};
+    StructComplex c2 = { .real = 1.5, .imaginary = 2.0 };
 
     StructComplex c3 = addition(c1, c2);
     print_complex_number(c3);

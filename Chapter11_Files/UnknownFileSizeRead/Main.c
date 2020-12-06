@@ -9,7 +9,7 @@ int main()
 {
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/UnknownFileSizeRead/InputData.txt";
     // read=r, write=w
-    FILE *fp = fopen(path, "r");
+    FILE* fp = fopen(path, "r");
 
     if (fp == NULL)
     {
@@ -18,7 +18,7 @@ int main()
 
     // read line by line
     int line_size = 50;
-    char *line = malloc(line_size * sizeof(char));
+    char* line = malloc(line_size * sizeof(char));
 
     while (fgets(line, line_size, fp) != NULL)
     {

@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-char *join(char *delimiter, char **list)
+char* join(char* delimiter, char** list)
 {
     const size_t default_len = 100;
-    char *result = (char*)malloc(default_len * sizeof(char));
+    char* result = (char*)malloc(default_len * sizeof(char));
     result[0] = '\0';
 
     int index = 0;
@@ -34,11 +34,11 @@ char *join(char *delimiter, char **list)
 
 int main()
 {
-    char *list1[] = {NULL};
-    char *list2[] = {"Clara", NULL};
-    char *list3[] = {"Clara", "Florian", NULL};
-    char *list4[] = {"Clara", "Florian", "Jan", NULL};
-    char *s;
+    char* list1[] = { NULL };
+    char* list2[] = { "Clara", NULL };
+    char* list3[] = { "Clara", "Florian", NULL };
+    char* list4[] = { "Clara", "Florian", "Jan", NULL };
+    char* s;
 
     printf("List1: %s\n", s = join(" -> ", list1));
     free(s);

@@ -29,7 +29,7 @@ records_t* create_records()
 
 void fill_records(records_t* records, entry_t* entries, unsigned int length)
 {
-    if(entries == NULL || records == NULL)
+    if (entries == NULL || records == NULL)
         return;
 
     records->entries = entries;
@@ -52,7 +52,7 @@ void print_records(records_t* records)
         return;
 
     printf("Record: \n");
-    for(unsigned int i = 0; i < records->length; ++i)
+    for (unsigned int i = 0; i < records->length; ++i)
     {
         printf("%c, %d\n", records->entries[i].letter, records->entries[i].value);
     }
@@ -71,7 +71,7 @@ void random_fill_records(records_t* records)
     int lower_value = 0;
     int upper_value = 99;
 
-    for(unsigned int i = 0; i < records->length; ++i)
+    for (unsigned int i = 0; i < records->length; ++i)
     {
         char random_letter = (rand() % (upper_letter - lower_letter + 1)) + lower_letter;
         char random_value = (rand() % (upper_value - lower_value + 1)) + lower_value;
@@ -83,27 +83,27 @@ void random_fill_records(records_t* records)
 
 int sort_ascending(const void* elem1, const void* elem2)
 {
-    entry_t* l = ((entry_t*) elem1);
-    entry_t* r = ((entry_t*) elem2);
+    entry_t* l = ((entry_t*)elem1);
+    entry_t* r = ((entry_t*)elem2);
 
-    if (l->value > r->value) 
+    if (l->value > r->value)
         return 1;
-    if (r->value > l->value) 
+    if (r->value > l->value)
         return -1;
-    else 
+    else
         return 0;
 }
 
 int sort_descending(const void* elem1, const void* elem2)
 {
-    entry_t* l = ((entry_t*) elem1);
-    entry_t* r = ((entry_t*) elem2);
+    entry_t* l = ((entry_t*)elem1);
+    entry_t* r = ((entry_t*)elem2);
 
-    if (l->value < r->value) 
+    if (l->value < r->value)
         return 1;
-    if (r->value < l->value) 
+    if (r->value < l->value)
         return -1;
-    else 
+    else
         return 0;
 }
 
@@ -112,9 +112,9 @@ void sort_records(records_t* records, SortingScheme sorting_scheme)
     if (records == NULL)
         return;
 
-    switch(sorting_scheme)
+    switch (sorting_scheme)
     {
-        case SORT_ASCENDING: 
+        case SORT_ASCENDING:
             qsort(records->entries, records->length, sizeof(entry_t), sort_ascending);
             break;
         case SORT_DESCENDING:

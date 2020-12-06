@@ -8,12 +8,12 @@ int main()
 {
     int number_friends = 3;
 
-    char **friends;
-    friends = (char **)malloc(3 * sizeof(char *));
+    char** friends;
+    friends = (char**)malloc(3 * sizeof(char*));
 
     for (int i = 0; i < number_friends; i++)
     {
-        friends[i] = (char *)malloc(20 * sizeof(char));
+        friends[i] = (char*)malloc(20 * sizeof(char));
     }
 
     friends[0] = "Jan Schaffranek";

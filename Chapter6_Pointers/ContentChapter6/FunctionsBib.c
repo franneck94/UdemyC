@@ -72,7 +72,7 @@ float mean(int number_a, int number_b)
 }
 
 // Definition
-int binom(int *a, int *b)
+int binom(int* a, int* b)
 {
     return (*a) * (*a) + 2 * (*a) * (*b) + (*b) * (*b);
 }

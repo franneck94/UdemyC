@@ -5,9 +5,9 @@
 
 #include "SingleLinkedList.h"
 
-single_list_t *list_new()
+single_list_t* list_new()
 {
-    single_list_t *new_list = (single_list_t *)malloc(sizeof(single_list_t));
+    single_list_t* new_list = (single_list_t*)malloc(sizeof(single_list_t));
     if (!new_list)
         return NULL;
 
@@ -18,9 +18,9 @@ single_list_t *list_new()
     return new_list;
 }
 
-single_node_t *node_new(void *val)
+single_node_t* node_new(void* val)
 {
-    single_node_t *new_node = (single_node_t *)malloc(sizeof(single_node_t));
+    single_node_t* new_node = (single_node_t*)malloc(sizeof(single_node_t));
     if (!new_node)
         return NULL;
 
@@ -30,12 +30,12 @@ single_node_t *node_new(void *val)
     return new_node;
 }
 
-single_node_t *find_prev_node(single_list_t *list, single_node_t *node)
+single_node_t* find_prev_node(single_list_t* list, single_node_t* node)
 {
     if (!list || !node)
         return NULL;
 
-    single_node_t *curr = list->head;
+    single_node_t* curr = list->head;
     while (curr->next != node)
     {
         curr = curr->next;
@@ -44,7 +44,7 @@ single_node_t *find_prev_node(single_list_t *list, single_node_t *node)
     return curr;
 }
 
-void list_rpush(single_list_t *list, single_node_t *node)
+void list_rpush(single_list_t* list, single_node_t* node)
 {
     if (!node || !list)
         return;
@@ -65,7 +65,7 @@ void list_rpush(single_list_t *list, single_node_t *node)
     list->len++;
 }
 
-void list_rpop(single_list_t *list)
+void list_rpop(single_list_t* list)
 {
     if (!list || list->len == 0)
         return;
@@ -73,8 +73,8 @@ void list_rpop(single_list_t *list)
     // A -> B (head=a, tail=b, a->next=b, b->next=null)
     // A (head=a, tail=a, a->next=null)
 
-    single_node_t *node = list->tail;
-    single_node_t *prev = find_prev_node(list, node);
+    single_node_t* node = list->tail;
+    single_node_t* prev = find_prev_node(list, node);
 
     if (list->len > 1)
     {
@@ -90,12 +90,12 @@ void list_rpop(single_list_t *list)
     list->len--;
 }
 
-single_node_t *list_find(single_list_t *list, void *val)
+single_node_t* list_find(single_list_t* list, void* val)
 {
     if (!list)
         return NULL;
 
-    single_node_t *node = list->head;
+    single_node_t* node = list->head;
 
     while (node != NULL)
     {
@@ -110,13 +110,13 @@ single_node_t *list_find(single_list_t *list, void *val)
     return NULL;
 }
 
-single_node_t *list_at(single_list_t *list, int index)
+single_node_t* list_at(single_list_t* list, int index)
 {
     if (!list || index < 0 || index >= list->len)
         return NULL;
 
     int current_index = 0;
-    single_node_t *node = list->head;
+    single_node_t* node = list->head;
 
     while (current_index < list->len)
     {
@@ -132,14 +132,14 @@ single_node_t *list_at(single_list_t *list, int index)
     return NULL;
 }
 
-void list_empty(single_list_t *list)
+void list_empty(single_list_t* list)
 {
     if (!list)
         return;
 
     unsigned int len = list->len;
-    single_node_t *next;
-    single_node_t *curr = list->head;
+    single_node_t* next;
+    single_node_t* curr = list->head;
 
     while (len > 0)
     {
@@ -155,12 +155,12 @@ void list_empty(single_list_t *list)
     list->tail = NULL;
 }
 
-void list_remove(single_list_t *list, single_node_t *node)
+void list_remove(single_list_t* list, single_node_t* node)
 {
     if (!list || !node)
         return;
 
-    single_node_t *prev = find_prev_node(list, node);
+    single_node_t* prev = find_prev_node(list, node);
     prev->next = node->next;
 
     if (node == list->tail)
@@ -172,13 +172,13 @@ void list_remove(single_list_t *list, single_node_t *node)
     list->len--;
 }
 
-void list_print(single_list_t *list)
+void list_print(single_list_t* list)
 {
     if (!list)
         return;
 
     int index = 0;
-    single_node_t *node = list->head;
+    single_node_t* node = list->head;
     printf("\nPrinting SingleLinkedList that contains %d elements.\n", list->len);
 
     while (node != NULL)

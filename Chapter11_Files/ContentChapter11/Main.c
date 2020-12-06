@@ -12,13 +12,13 @@ int main()
     /*******************/
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/ContentChapter11/InputData.txt";
     // read=r, write=w
-    FILE *fp = fopen(path, "r");
+    FILE* fp = fopen(path, "r");
     if (fp == NULL)
     {
         return 1;
     }
 
-    Vector v1 = {.data = createVector(8, 1), .length = 8};
+    Vector v1 = { .data = createVector(8, 1), .length = 8 };
 
     for (int i = 0; i < v1.length; i++)
     {
@@ -38,7 +38,7 @@ int main()
 
     char path2[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/ContentChapter11/OutputData.txt";
     // read=r, write=w
-    FILE *fp2 = fopen(path2, "w");
+    FILE* fp2 = fopen(path2, "w");
     if (fp2 == NULL)
     {
         return 1;

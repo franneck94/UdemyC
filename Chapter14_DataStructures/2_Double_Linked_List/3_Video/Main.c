@@ -8,11 +8,11 @@
 
 int main()
 {
-    double_list_t *list = list_new();
+    double_list_t* list = list_new();
 
-    double_node_t *a = node_new("a");
-    double_node_t *b = node_new("b");
-    double_node_t *c = node_new("c");
+    double_node_t* a = node_new("a");
+    double_node_t* b = node_new("b");
+    double_node_t* c = node_new("c");
 
     // a b c
     list_rpush(list, a);
@@ -33,8 +33,8 @@ int main()
     assert(NULL == list->tail);
     assert(0 == list->len);
 
-    double_node_t *d = node_new("d");
-    double_node_t *e = node_new("e");
+    double_node_t* d = node_new("d");
+    double_node_t* e = node_new("e");
 
     list_lpush(list, d);
     list_lpush(list, e);

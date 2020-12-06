@@ -4,7 +4,7 @@
 #include "Vector.h"
 
 // Definiton
-float meanVector(Vector *vec)
+float meanVector(Vector* vec)
 {
     float sum = 0.0f;
 
@@ -18,7 +18,7 @@ float meanVector(Vector *vec)
 }
 
 // Definiton
-int minVector(Vector *vec)
+int minVector(Vector* vec)
 {
     int min;
 
@@ -39,7 +39,7 @@ int minVector(Vector *vec)
 }
 
 // Definiton
-int maxVector(Vector *vec)
+int maxVector(Vector* vec)
 {
     int max;
 
@@ -60,10 +60,10 @@ int maxVector(Vector *vec)
 }
 
 // Definiton
-int *createVector(unsigned int length, int value)
+int* createVector(unsigned int length, int value)
 {
-    int *vector;
-    vector = (int *)malloc(length * sizeof(int));
+    int* vector;
+    vector = (int*)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {

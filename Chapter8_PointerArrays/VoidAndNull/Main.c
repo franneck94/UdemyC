@@ -3,14 +3,14 @@
 
 int main()
 {
-    int *a = (int *)malloc(sizeof(int));
+    int* a = (int*)malloc(sizeof(int));
     // DO SMTH
     free(a);
     a = NULL;
 
     int num = 10;
-    void *p;
+    void* p;
     p = &num;
 
-    printf("%d", *((int *)p));
+    printf("%d", *((int*)p));
 }

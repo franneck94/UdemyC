@@ -14,7 +14,7 @@ int main()
     printf("Please enter a valid drink: ");
     scanf("%d", &selection);
 
-    switch(selection)
+    switch (selection)
     {
         case COLA:
         {

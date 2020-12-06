@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-void add(double *value1, double *value2, double add_value)
+void add(double* value1, double* value2, double add_value)
 {
     *value1 += add_value; // * content (value) of the variable that is pointed to
     *value2 += add_value; // * content (value) of the variable that is pointed to

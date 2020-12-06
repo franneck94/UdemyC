@@ -7,7 +7,7 @@
 int main()
 {
     // Char Array
-    char name[] = {'J', 'a', 'n', '\0'};
+    char name[] = { 'J', 'a', 'n', '\0' };
 
     for (int i = 0; i < 4; i++)
     {
@@ -22,8 +22,8 @@ int main()
         printf("%c\n", name2[i]);
     }
 
-    char *name3;
-    name3 = (char *)malloc(4 * sizeof(char));
+    char* name3;
+    name3 = (char*)malloc(4 * sizeof(char));
 
     name3[0] = 'J';
     name3[1] = 'a';

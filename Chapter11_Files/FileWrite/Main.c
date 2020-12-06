@@ -7,7 +7,7 @@
 
 int main()
 {
-    Vector v1 = {.data = createVector(5, 0), .length = 5};
+    Vector v1 = { .data = createVector(5, 0), .length = 5 };
 
     for (int i = 0; i < v1.length; i++)
     {
@@ -16,7 +16,7 @@ int main()
 
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/FileWrite/OutputData.txt";
     // read=r, write=w
-    FILE *fp = fopen(path, "w");
+    FILE* fp = fopen(path, "w");
 
     if (fp == NULL)
     {

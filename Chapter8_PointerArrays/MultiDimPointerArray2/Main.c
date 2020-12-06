@@ -3,13 +3,13 @@
 #include <stdlib.h>
 
 // Return type: (int*)*
-int **createMatrix(unsigned int rows, unsigned int cols, int value)
+int** createMatrix(unsigned int rows, unsigned int cols, int value)
 {
-    int **matrix = (int **)malloc(rows * sizeof(int *));
+    int** matrix = (int**)malloc(rows * sizeof(int*));
 
     for (int i = 0; i < rows; i++)
     {
-        matrix[i] = (int *)malloc(cols * sizeof(int));
+        matrix[i] = (int*)malloc(cols * sizeof(int));
 
         for (int j = 0; j < cols; j++)
         {
@@ -21,7 +21,7 @@ int **createMatrix(unsigned int rows, unsigned int cols, int value)
 }
 
 // matrix consists of rows and cols
-void fillMatrix(int *matrix[], unsigned int rows, unsigned int cols, int value)
+void fillMatrix(int* matrix[], unsigned int rows, unsigned int cols, int value)
 {
     for (int i = 0; i < rows; i++)
     {
@@ -34,7 +34,7 @@ void fillMatrix(int *matrix[], unsigned int rows, unsigned int cols, int value)
 
 int main()
 {
-    int **matrix = createMatrix(2, 2, 1);
+    int** matrix = createMatrix(2, 2, 1);
 
     for (int i = 0; i < 2; i++)
     {

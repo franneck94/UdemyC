@@ -11,7 +11,7 @@ int main()
 
     printf("\n");
 
-    for (int i = 0; i < num_iterations; i+=2)
+    for (int i = 0; i < num_iterations; i += 2)
     {
         printf("%d\n", i);
     }

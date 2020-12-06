@@ -1,7 +1,7 @@
 #ifndef RECORD_H
 #define RECORD_H
 
-typedef struct 
+typedef struct
 {
     char letter;
     int value;
@@ -11,7 +11,7 @@ entry_t* create_entries(unsigned int num_entries);
 
 void* delete_entries(entry_t* entries);
 
-typedef struct 
+typedef struct
 {
     entry_t* entries;
     unsigned int length;

@@ -1,6 +1,8 @@
+#include "stdio.h"
+
 #include "AnotherBib.h"
 
-void function()
+void dummyFunction()
 {
     Vector v1;
     printf("Called!\n");

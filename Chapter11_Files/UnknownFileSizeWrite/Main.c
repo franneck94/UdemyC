@@ -10,7 +10,7 @@ int main()
     unsigned int length = 10;
     int fill_value = 0;
 
-    Vector v1 = {.data = createVector(length, fill_value), .length = length};
+    Vector v1 = { .data = createVector(length, fill_value), .length = length };
 
     for (int i = 0; i < v1.length; i++)
     {
@@ -19,7 +19,7 @@ int main()
 
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/UnknownFileSizeWrite/OutputData.txt";
     // read=r, write=w
-    FILE *fp = fopen(path, "w");
+    FILE* fp = fopen(path, "w");
 
     if (fp == NULL)
     {

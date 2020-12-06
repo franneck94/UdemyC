@@ -4,10 +4,10 @@
 
 #define matrix(i, j) matrix[i * cols + j]
 
-int *createVector(unsigned int length, int value)
+int* createVector(unsigned int length, int value)
 {
-    int *vector;
-    vector = (int *)malloc(length * sizeof(int));
+    int* vector;
+    vector = (int*)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
@@ -23,7 +23,7 @@ int main()
     unsigned int cols = 3;
     unsigned int n_elements = rows * cols;
 
-    int *matrix = createVector(n_elements, 0);
+    int* matrix = createVector(n_elements, 0);
     matrix[0] = 00;
     matrix[1] = 01;
     matrix[2] = 02;

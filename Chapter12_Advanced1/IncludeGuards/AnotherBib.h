@@ -1,8 +1,8 @@
-#ifndef ABIB_H
-#define ABIB_H
+#ifndef ANOTHER_BIB_H
+#define ANOTHER_BIB_H
 
 #include "FunctionsBib.h"
 
-void function();
+void dummyFunction();
 
-#endif
+#endif // ANOTHER_BIB_H

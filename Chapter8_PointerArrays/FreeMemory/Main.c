@@ -9,8 +9,8 @@ int main()
     unsigned int rows = 2;
     unsigned int cols = 3;
 
-    int **M = createMatrix(rows, cols, 1);
-    int **M_transpose = transposeMatrix(M, rows, cols);
+    int** M = createMatrix(rows, cols, 1);
+    int** M_transpose = transposeMatrix(M, rows, cols);
 
     for (int i = 0; i < rows; i++)
     {
@@ -45,7 +45,7 @@ int main()
     M_transpose = NULL;
 
     int length = 4;
-    int *arr = (int *)calloc(length, length * sizeof(int));
+    int* arr = (int*)calloc(length, length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {

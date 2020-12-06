@@ -9,12 +9,12 @@ int main()
 {
     int number_friends = 3;
 
-    char **friends;
-    friends = (char **)malloc(3 * sizeof(char *));
+    char** friends;
+    friends = (char**)malloc(3 * sizeof(char*));
 
     for (int i = 0; i < number_friends; i++)
     {
-        friends[i] = (char *)malloc(20 * sizeof(char));
+        friends[i] = (char*)malloc(20 * sizeof(char));
     }
 
     friends[0] = "Hans Schaffranek";
@@ -33,8 +33,8 @@ int main()
     printf("same 02: %d\n", same_name_02);
     printf("same 12: %d\n", same_name_12);
 
-    char *name_new;
-    name_new = (char *)malloc(20 * sizeof(char));
+    char* name_new;
+    name_new = (char*)malloc(20 * sizeof(char));
 
     strcpy(name_new, friends[1]);
     printf("Name new: %s", name_new);

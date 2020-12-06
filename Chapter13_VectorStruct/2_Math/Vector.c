@@ -4,10 +4,10 @@
 #include "Vector.h"
 
 // Definiton
-Vector *createVector(unsigned int length, float value)
+Vector* createVector(unsigned int length, float value)
 {
-    Vector *vec = (Vector *)malloc(sizeof(Vector));
-    float *vec_data = (float *)malloc(length * sizeof(float));
+    Vector* vec = (Vector*)malloc(sizeof(Vector));
+    float* vec_data = (float*)malloc(length * sizeof(float));
 
     for (int i = 0; i < length; i++)
     {
@@ -21,16 +21,16 @@ Vector *createVector(unsigned int length, float value)
 }
 
 // Definiton
-void deleteVector(Vector *vec)
+void deleteVector(Vector* vec)
 {
     free(vec->data);
     free(vec);
 }
 
 // Definiton
-Vector *addVectors(Vector *vec1, Vector *vec2)
+Vector* addVectors(Vector* vec1, Vector* vec2)
 {
-    Vector *vec_result = createVector(vec1->length, 0.0);
+    Vector* vec_result = createVector(vec1->length, 0.0);
 
     for (int i = 0; i < vec1->length; i++)
     {
@@ -41,9 +41,9 @@ Vector *addVectors(Vector *vec1, Vector *vec2)
 }
 
 // Definiton
-Vector *subVectors(Vector *vec1, Vector *vec2)
+Vector* subVectors(Vector* vec1, Vector* vec2)
 {
-    Vector *vec_result = createVector(vec1->length, 0.0);
+    Vector* vec_result = createVector(vec1->length, 0.0);
 
     for (int i = 0; i < vec1->length; i++)
     {
@@ -54,7 +54,7 @@ Vector *subVectors(Vector *vec1, Vector *vec2)
 }
 
 // Definiton
-double dotVectors(Vector *vec1, Vector *vec2)
+double dotVectors(Vector* vec1, Vector* vec2)
 {
     double result = 0.0;
 
@@ -67,9 +67,9 @@ double dotVectors(Vector *vec1, Vector *vec2)
 }
 
 // Definiton
-Vector *multiplyScalarVector(double scalar, Vector *vec)
+Vector* multiplyScalarVector(double scalar, Vector* vec)
 {
-    Vector *vec_result = createVector(vec->length, 0.0);
+    Vector* vec_result = createVector(vec->length, 0.0);
 
     for (int i = 0; i < vec->length; i++)
     {
@@ -80,9 +80,9 @@ Vector *multiplyScalarVector(double scalar, Vector *vec)
 }
 
 // Definiton
-Vector *divideScalarVector(double scalar, Vector *vec)
+Vector* divideScalarVector(double scalar, Vector* vec)
 {
-    Vector *vec_result = createVector(vec->length, 0.0);
+    Vector* vec_result = createVector(vec->length, 0.0);
 
     for (int i = 0; i < vec->length; i++)
     {
@@ -93,7 +93,7 @@ Vector *divideScalarVector(double scalar, Vector *vec)
 }
 
 // Definiton
-void printVector(Vector *vec)
+void printVector(Vector* vec)
 {
     for (int i = 0; i < vec->length; i++)
     {
@@ -104,7 +104,7 @@ void printVector(Vector *vec)
 }
 
 // Definiton
-float meanVector(Vector *vec)
+float meanVector(Vector* vec)
 {
     float sum = 0.0f;
 
@@ -118,7 +118,7 @@ float meanVector(Vector *vec)
 }
 
 // Definiton
-float minVector(Vector *vec)
+float minVector(Vector* vec)
 {
     float min;
 
@@ -139,7 +139,7 @@ float minVector(Vector *vec)
 }
 
 // Definiton
-float maxVector(Vector *vec)
+float maxVector(Vector* vec)
 {
     float max;
 

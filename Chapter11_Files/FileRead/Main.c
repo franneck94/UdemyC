@@ -9,14 +9,14 @@ int main()
 {
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/FileRead/InputData.txt";
     // read=r, write=w
-    FILE *fp = fopen(path, "r");
+    FILE* fp = fopen(path, "r");
 
     if (fp == NULL)
     {
         return 1;
     }
 
-    Vector v1 = {.data = createVector(5, 0), .length = 5};
+    Vector v1 = { .data = createVector(5, 0), .length = 5 };
 
     for (int i = 0; i < v1.length; i++)
     {

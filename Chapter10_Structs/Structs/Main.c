@@ -7,8 +7,8 @@
 
 struct Friend
 {
-    char *name;
-    char *prename;
+    char* name;
+    char* prename;
     unsigned int year;
     unsigned int month;
     unsigned int day;
@@ -16,8 +16,8 @@ struct Friend
 
 int main()
 {
-    struct Friend jan = {"Schaffranek", "Jan", 1994, 02, 24};
-    struct Friend lara = {"Hausmann", "Lara", 1992, 12, 12};
+    struct Friend jan = { "Schaffranek", "Jan", 1994, 02, 24 };
+    struct Friend lara = { "Hausmann", "Lara", 1992, 12, 12 };
 
     printf("%d\n", jan.year);
     printf("%d\n", jan.month);

@@ -9,8 +9,8 @@ int main()
     unsigned int rows = 2;
     unsigned int cols = 3;
 
-    int **M = createMatrix(rows, cols, 1);
-    int **M_transpose = transposeMatrix(M, rows, cols);
+    int** M = createMatrix(rows, cols, 1);
+    int** M_transpose = transposeMatrix(M, rows, cols);
 
     for (int i = 0; i < rows; i++)
     {

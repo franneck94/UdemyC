@@ -38,4 +38,4 @@ unsigned int factorial(unsigned int i);
 // Name: binom
 // Parameters: int* a, int* b
 // Declaration
-int binom(int *a, int *b);
+int binom(int* a, int* b);

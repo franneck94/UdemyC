@@ -15,12 +15,12 @@ int main()
         printf("\nPlease enter a number: ");
         scanf("%d", &selection);
 
-        if(selection < 1 || selection > 20)
+        if (selection < 1 || selection > 20)
         {
             printf("You did not enter a valid number!\n");
             printf("You have %d guesses left!", num_iterations - (i + 1));
         }
-        else if(selection == goal)
+        else if (selection == goal)
         {
             printf("You have won the game!\n");
         }
@@ -31,7 +31,7 @@ int main()
         }
 
         i++;
-    } while(i < num_iterations);
+    } while (i < num_iterations);
 
     return 0;
 }

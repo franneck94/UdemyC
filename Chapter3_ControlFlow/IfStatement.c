@@ -9,7 +9,7 @@ int main()
     {
         printf("Jan is younger than Marc!");
     }
-    else if(age_jan > age_marc)
+    else if (age_jan > age_marc)
     {
         printf("Jan is older than Marc!");
     }

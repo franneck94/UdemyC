@@ -1,5 +1,5 @@
-#ifndef FBIB_H
-#define FBIB_H
+#ifndef FUNCTIONS_BIB_H
+#define FUNCTIONS_BIB_H
 
 // Return Type: void
 // Name: printEvenOrOdd
