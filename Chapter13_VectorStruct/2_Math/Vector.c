@@ -3,7 +3,6 @@
 
 #include "Vector.h"
 
-// Definiton
 Vector* createVector(unsigned int length, float value)
 {
     Vector* vec = (Vector*)malloc(sizeof(Vector));
@@ -20,14 +19,12 @@ Vector* createVector(unsigned int length, float value)
     return vec;
 }
 
-// Definiton
 void deleteVector(Vector* vec)
 {
     free(vec->data);
     free(vec);
 }
 
-// Definiton
 Vector* addVectors(Vector* vec1, Vector* vec2)
 {
     Vector* vec_result = createVector(vec1->length, 0.0);
@@ -40,7 +37,6 @@ Vector* addVectors(Vector* vec1, Vector* vec2)
     return vec_result;
 }
 
-// Definiton
 Vector* subVectors(Vector* vec1, Vector* vec2)
 {
     Vector* vec_result = createVector(vec1->length, 0.0);
@@ -53,7 +49,6 @@ Vector* subVectors(Vector* vec1, Vector* vec2)
     return vec_result;
 }
 
-// Definiton
 double dotVectors(Vector* vec1, Vector* vec2)
 {
     double result = 0.0;
@@ -66,7 +61,6 @@ double dotVectors(Vector* vec1, Vector* vec2)
     return result;
 }
 
-// Definiton
 Vector* multiplyScalarVector(double scalar, Vector* vec)
 {
     Vector* vec_result = createVector(vec->length, 0.0);
@@ -79,7 +73,6 @@ Vector* multiplyScalarVector(double scalar, Vector* vec)
     return vec_result;
 }
 
-// Definiton
 Vector* divideScalarVector(double scalar, Vector* vec)
 {
     Vector* vec_result = createVector(vec->length, 0.0);
@@ -92,7 +85,6 @@ Vector* divideScalarVector(double scalar, Vector* vec)
     return vec_result;
 }
 
-// Definiton
 void printVector(Vector* vec)
 {
     for (int i = 0; i < vec->length; i++)
@@ -103,7 +95,6 @@ void printVector(Vector* vec)
     printf("\n");
 }
 
-// Definiton
 float meanVector(Vector* vec)
 {
     float sum = 0.0f;
@@ -117,7 +108,6 @@ float meanVector(Vector* vec)
     return mean;
 }
 
-// Definiton
 float minVector(Vector* vec)
 {
     float min;
@@ -138,7 +128,6 @@ float minVector(Vector* vec)
     return min;
 }
 
-// Definiton
 float maxVector(Vector* vec)
 {
     float max;

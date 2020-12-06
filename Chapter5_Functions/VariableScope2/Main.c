@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 void func(int a_func)
 {

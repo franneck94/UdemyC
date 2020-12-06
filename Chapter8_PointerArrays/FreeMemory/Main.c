@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 
 #include "FunctionsBib.h"
@@ -59,7 +58,7 @@ int main()
 
     if (arr != NULL)
     {
-        printf("%p\n", arr);
+        printf("%x\n", arr);
     }
     else
     {

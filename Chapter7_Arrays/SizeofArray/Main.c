@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <math.h>
-
-#include "FunctionsBib.h"
 
 enum
 {

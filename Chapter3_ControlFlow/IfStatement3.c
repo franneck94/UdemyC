@@ -4,7 +4,6 @@ int main()
 {
     int age_jan = 27;
 
-
     if ((age_jan % 2) == 0)
     {
         printf("Jan's age is even\n");
@@ -13,7 +12,6 @@ int main()
     {
         printf("Jan's age is odd\n");
     }
-
 
     return 0;
 }

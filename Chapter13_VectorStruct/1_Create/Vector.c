@@ -3,7 +3,6 @@
 
 #include "Vector.h"
 
-// Definiton
 Vector* createVector(unsigned int length, float value)
 {
     Vector* vec = (Vector*)malloc(sizeof(Vector));
@@ -20,14 +19,12 @@ Vector* createVector(unsigned int length, float value)
     return vec;
 }
 
-// Definiton
 void deleteVector(Vector* vec)
 {
     free(vec->data);
     free(vec);
 }
 
-// Definiton
 void printVector(Vector* vec)
 {
     for (int i = 0; i < vec->length; i++)
@@ -36,7 +33,6 @@ void printVector(Vector* vec)
     }
 }
 
-// Definiton
 float meanVector(Vector* vec)
 {
     float sum = 0.0f;
@@ -50,7 +46,6 @@ float meanVector(Vector* vec)
     return mean;
 }
 
-// Definiton
 float minVector(Vector* vec)
 {
     float min;
@@ -71,7 +66,6 @@ float minVector(Vector* vec)
     return min;
 }
 
-// Definiton
 float maxVector(Vector* vec)
 {
     float max;

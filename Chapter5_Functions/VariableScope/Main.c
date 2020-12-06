@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <math.h>
-
-//#include "FunctionsBib.h"
 
 int a = 3; // global variable
 

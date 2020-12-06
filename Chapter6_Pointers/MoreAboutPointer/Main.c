@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 void add(double* value1, double* value2, double add_value)
 {

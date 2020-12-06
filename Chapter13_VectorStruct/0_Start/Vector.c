@@ -3,7 +3,6 @@
 
 #include "Vector.h"
 
-// Definiton
 float meanVector(Vector* vec)
 {
     float sum = 0.0f;
@@ -17,7 +16,6 @@ float meanVector(Vector* vec)
     return mean;
 }
 
-// Definiton
 int minVector(Vector* vec)
 {
     int min;
@@ -38,7 +36,6 @@ int minVector(Vector* vec)
     return min;
 }
 
-// Definiton
 int maxVector(Vector* vec)
 {
     int max;
@@ -59,7 +56,6 @@ int maxVector(Vector* vec)
     return max;
 }
 
-// Definiton
 int* createVector(unsigned int length, int value)
 {
     int* vector;

@@ -3,7 +3,6 @@
 
 #include "FunctionsBib.h"
 
-// Definition
 void printEvenOrOdd(int number)
 {
     if ((number % 2) == 0)
@@ -16,7 +15,6 @@ void printEvenOrOdd(int number)
     }
 }
 
-// Definition
 int getNumberFromUser()
 {
     int number_from_user; //0x00: 12
@@ -27,7 +25,6 @@ int getNumberFromUser()
     return number_from_user; // return 12;
 }
 
-// Definition
 unsigned int factorial(unsigned int i)
 {
     if (i <= 1)
@@ -38,7 +35,6 @@ unsigned int factorial(unsigned int i)
     return i * factorial(i - 1);
 }
 
-// Definition
 float mean(int number_a, int number_b)
 {
     float sum = number_a + number_b;
@@ -47,14 +43,12 @@ float mean(int number_a, int number_b)
     return mean;
 }
 
-// Definition
 void binom(int* a, int* b, int* c)
 {
     // a^2 + ab + b^2
     *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);
 }
 
-// Definiton
 float meanArray(int array[], unsigned int length)
 {
     float sum = 0.0f;
@@ -68,7 +62,6 @@ float meanArray(int array[], unsigned int length)
     return mean;
 }
 
-// Definiton
 int minArray(int array[], unsigned int length)
 {
     int min;
@@ -89,7 +82,6 @@ int minArray(int array[], unsigned int length)
     return min;
 }
 
-// Definiton
 int maxArray(int array[], unsigned int length)
 {
     int max;
@@ -110,7 +102,6 @@ int maxArray(int array[], unsigned int length)
     return max;
 }
 
-// Definiton
 int* createVector(unsigned int length, int value)
 {
     int* vector;
@@ -124,7 +115,6 @@ int* createVector(unsigned int length, int value)
     return vector;
 }
 
-// Definiton
 int** createMatrix(unsigned int rows, unsigned int cols, int value)
 {
     int** matrix = (int**)malloc(rows * sizeof(int*));
@@ -142,7 +132,6 @@ int** createMatrix(unsigned int rows, unsigned int cols, int value)
     return matrix;
 }
 
-// Definition
 int** transposeMatrix(int** matrix_input, unsigned int rows, unsigned int cols)
 {
     int** matrix_transpose = createMatrix(cols, rows, 0);

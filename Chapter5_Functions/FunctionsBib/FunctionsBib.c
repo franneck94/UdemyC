@@ -1,7 +1,7 @@
 #include <stdio.h>
+
 #include "FunctionsBib.h"
 
-// Definition
 void printEvenOrOdd(int number)
 {
     if ((number % 2) == 0)
@@ -14,7 +14,6 @@ void printEvenOrOdd(int number)
     }
 }
 
-// Definition
 int getNumberFromUser()
 {
     int number_from_user; //0x00: 12
@@ -25,7 +24,6 @@ int getNumberFromUser()
     return number_from_user; // return 12;
 }
 
-// Definition
 int compareNumbers(int number_a, int number_b)
 {
     if (number_a < number_b)
