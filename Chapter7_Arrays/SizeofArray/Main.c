@@ -1,31 +1,17 @@
 #include <stdio.h>
 
-enum
-{
-    rows = 2,
-    cols = 2
-};
-
 int main()
 {
-    int M[2][2] = { {1, 0}, {0, 1} };
+    int M[2][3] = { {1, 0, 0}, {0, 0, 1} };
 
-    int rows = 0;
-    int cols = 0;
+    int matrix_size = sizeof(M);
+    printf("%u\n", matrix_size);
 
-    cols = sizeof(M[0]) / sizeof(int);
-    rows = sizeof(M) / (cols * sizeof(int));
+    int num_cols = sizeof(M[0]) / sizeof(int);
+    printf("%u\n", num_cols);
 
-    printf("Rows: %d\n", rows);
-    printf("Cols: %d\n", cols);
-
-    // for (int i = 0; i < 2; i++)
-    // {
-    //     for (int j = 0; j < 2; j++)
-    //     {
-    //         printf("Hello!\n");
-    //     }
-    // }
+    int num_rows = matrix_size / (num_cols * sizeof(int));
+    printf("%u\n", num_rows);
 
     return 0;
 }

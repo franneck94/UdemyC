@@ -4,13 +4,15 @@
 int main()
 {
     int *a = (int *)malloc(sizeof(int));
-    // DO SMTH
+    *a = 10; // some computations
+    printf("%d\n", *a);
     free(a);
     a = NULL;
+    // printf("%d\n", *a);
 
     int num = 10;
-    void *p;
-    p = &num;
+    int *p_int = &num;
 
-    printf("%d", *((int *)p));
+    void *p_void = &num;
+    printf("%d\n", *((int *)p_void));
 }
