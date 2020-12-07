@@ -3,10 +3,10 @@
 
 #include "Vector.h"
 
-Vector* createVector(unsigned int length, float value)
+Vector *createVector(unsigned int length, float value)
 {
-    Vector* vec = (Vector*)malloc(sizeof(Vector));
-    float* vec_data = (float*)malloc(length * sizeof(float));
+    Vector *vec = (Vector *)malloc(sizeof(Vector));
+    float *vec_data = (float *)malloc(length * sizeof(float));
 
     for (int i = 0; i < length; i++)
     {
@@ -19,13 +19,13 @@ Vector* createVector(unsigned int length, float value)
     return vec;
 }
 
-void deleteVector(Vector* vec)
+void deleteVector(Vector *vec)
 {
     free(vec->data);
     free(vec);
 }
 
-void printVector(Vector* vec)
+void printVector(Vector *vec)
 {
     for (int i = 0; i < vec->length; i++)
     {
@@ -33,7 +33,7 @@ void printVector(Vector* vec)
     }
 }
 
-float meanVector(Vector* vec)
+float meanVector(Vector *vec)
 {
     float sum = 0.0f;
 
@@ -46,7 +46,7 @@ float meanVector(Vector* vec)
     return mean;
 }
 
-float minVector(Vector* vec)
+float minVector(Vector *vec)
 {
     float min;
 
@@ -66,7 +66,7 @@ float minVector(Vector* vec)
     return min;
 }
 
-float maxVector(Vector* vec)
+float maxVector(Vector *vec)
 {
     float max;
 

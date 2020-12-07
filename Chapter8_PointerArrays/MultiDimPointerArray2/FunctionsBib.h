@@ -31,7 +31,7 @@ unsigned int factorial(unsigned int i);
 // Return Type: int
 // Name: binom
 // Parameters: int a, int b
-void binom(int* a, int* b, int* c);
+void binom(int *a, int *b, int *c);
 
 // Return Type: float
 // Name: meanArray

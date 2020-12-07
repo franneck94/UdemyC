@@ -21,7 +21,7 @@ unsigned int factorial(unsigned int i);
 // Return Type: int
 // Name: binom
 // Parameters: int a, int b
-void binom(int* a, int* b, int* c);
+void binom(int *a, int *b, int *c);
 
 // Return Type: float
 // Name: meanArray
@@ -41,9 +41,9 @@ int maxArray(int array[], unsigned int length);
 // Return Type: int*
 // Name: createVector
 // Parameters: unsigned int length, int value
-int* createVector(unsigned int length, int value);
+int *createVector(unsigned int length, int value);
 
 // Return Type: int**
 // Name: createMatrix
 // Parameters: unsigned int rows, unsigned int cols, int value
-int** createMatrix(unsigned int rows, unsigned int cols, int value);
+int **createMatrix(unsigned int rows, unsigned int cols, int value);

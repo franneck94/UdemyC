@@ -7,8 +7,8 @@
 
 struct Friend
 {
-    char* name;
-    char* prename;
+    char *name;
+    char *prename;
     unsigned int year;
     unsigned int month;
     unsigned int day;

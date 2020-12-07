@@ -4,14 +4,14 @@
 
 #include "Record.h"
 
-entry_t* create_entries(unsigned int num_entries)
+entry_t *create_entries(unsigned int num_entries)
 {
-    entry_t* entries;
-    entries = (entry_t*)malloc(num_entries * sizeof(entry_t));
+    entry_t *entries;
+    entries = (entry_t *)malloc(num_entries * sizeof(entry_t));
     return entries;
 }
 
-void* delete_entries(entry_t* entries)
+void *delete_entries(entry_t *entries)
 {
     if (entries == NULL)
         return NULL;
@@ -20,14 +20,14 @@ void* delete_entries(entry_t* entries)
     return NULL;
 }
 
-records_t* create_records()
+records_t *create_records()
 {
-    records_t* records;
-    records = (records_t*)malloc(sizeof(records_t));
+    records_t *records;
+    records = (records_t *)malloc(sizeof(records_t));
     return records;
 }
 
-void fill_records(records_t* records, entry_t* entries, unsigned int length)
+void fill_records(records_t *records, entry_t *entries, unsigned int length)
 {
     if (entries == NULL || records == NULL)
         return;
@@ -36,7 +36,7 @@ void fill_records(records_t* records, entry_t* entries, unsigned int length)
     records->length = length;
 }
 
-void* delete_records(records_t* records)
+void *delete_records(records_t *records)
 {
     if (records == NULL)
         return NULL;
@@ -46,7 +46,7 @@ void* delete_records(records_t* records)
     return NULL;
 }
 
-void print_records(records_t* records)
+void print_records(records_t *records)
 {
     if (records == NULL)
         return;
@@ -59,7 +59,7 @@ void print_records(records_t* records)
     printf("\n");
 }
 
-void random_fill_records(records_t* records)
+void random_fill_records(records_t *records)
 {
     if (records == NULL)
         return;
@@ -81,10 +81,10 @@ void random_fill_records(records_t* records)
     }
 }
 
-int sort_ascending(const void* elem1, const void* elem2)
+int sort_ascending(const void *elem1, const void *elem2)
 {
-    entry_t* l = ((entry_t*)elem1);
-    entry_t* r = ((entry_t*)elem2);
+    entry_t *l = ((entry_t *)elem1);
+    entry_t *r = ((entry_t *)elem2);
 
     if (l->value > r->value)
         return 1;
@@ -94,10 +94,10 @@ int sort_ascending(const void* elem1, const void* elem2)
         return 0;
 }
 
-int sort_descending(const void* elem1, const void* elem2)
+int sort_descending(const void *elem1, const void *elem2)
 {
-    entry_t* l = ((entry_t*)elem1);
-    entry_t* r = ((entry_t*)elem2);
+    entry_t *l = ((entry_t *)elem1);
+    entry_t *r = ((entry_t *)elem2);
 
     if (l->value < r->value)
         return 1;
@@ -107,7 +107,7 @@ int sort_descending(const void* elem1, const void* elem2)
         return 0;
 }
 
-void sort_records(records_t* records, SortingScheme sorting_scheme)
+void sort_records(records_t *records, SortingScheme sorting_scheme)
 {
     if (records == NULL)
         return;

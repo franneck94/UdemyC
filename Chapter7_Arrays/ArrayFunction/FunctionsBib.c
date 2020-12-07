@@ -66,7 +66,7 @@ float mean(int number_a, int number_b)
     return mean;
 }
 
-void binom(int* a, int* b, int* c)
+void binom(int *a, int *b, int *c)
 {
     // a^2 + ab + b^2
     *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);

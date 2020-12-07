@@ -5,9 +5,9 @@
 
 #include "SingleLinkedList.h"
 
-single_list_t* list_new()
+single_list_t *list_new()
 {
-    single_list_t* new_list = (single_list_t*)malloc(sizeof(single_list_t));
+    single_list_t *new_list = (single_list_t *)malloc(sizeof(single_list_t));
     if (!new_list)
         return NULL;
 
@@ -18,9 +18,9 @@ single_list_t* list_new()
     return new_list;
 }
 
-single_node_t* node_new(void* val)
+single_node_t *node_new(void *val)
 {
-    single_node_t* new_node = (single_node_t*)malloc(sizeof(single_node_t));
+    single_node_t *new_node = (single_node_t *)malloc(sizeof(single_node_t));
     if (!new_node)
         return NULL;
 

@@ -19,7 +19,7 @@ int main()
 
     char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/UnknownFileSizeWrite/OutputData.txt";
     // read=r, write=w
-    FILE* fp = fopen(path, "w");
+    FILE *fp = fopen(path, "w");
 
     if (fp == NULL)
     {

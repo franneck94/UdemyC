@@ -31,4 +31,4 @@ unsigned int factorial(unsigned int i);
 // Return Type: int
 // Name: binom
 // Parameters: int* a, int* b
-int binom(int* a, int* b);
+int binom(int *a, int *b);

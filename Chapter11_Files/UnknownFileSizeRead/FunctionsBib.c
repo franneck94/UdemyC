@@ -35,7 +35,7 @@ unsigned int factorial(unsigned int i)
     return i * factorial(i - 1);
 }
 
-float meanVector(Vector* vec)
+float meanVector(Vector *vec)
 {
     float sum = 0.0f;
 
@@ -48,7 +48,7 @@ float meanVector(Vector* vec)
     return mean;
 }
 
-int minVector(Vector* vec)
+int minVector(Vector *vec)
 {
     int min;
 
@@ -68,7 +68,7 @@ int minVector(Vector* vec)
     return min;
 }
 
-int maxVector(Vector* vec)
+int maxVector(Vector *vec)
 {
     int max;
 
@@ -88,10 +88,10 @@ int maxVector(Vector* vec)
     return max;
 }
 
-int* createVector(unsigned int length, int value)
+int *createVector(unsigned int length, int value)
 {
-    int* vector;
-    vector = (int*)malloc(length * sizeof(int));
+    int *vector;
+    vector = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
@@ -101,13 +101,13 @@ int* createVector(unsigned int length, int value)
     return vector;
 }
 
-int** createMatrix(unsigned int rows, unsigned int cols, int value)
+int **createMatrix(unsigned int rows, unsigned int cols, int value)
 {
-    int** matrix = (int**)malloc(rows * sizeof(int*));
+    int **matrix = (int **)malloc(rows * sizeof(int *));
 
     for (int i = 0; i < rows; i++)
     {
-        matrix[i] = (int*)malloc(cols * sizeof(int));
+        matrix[i] = (int *)malloc(cols * sizeof(int));
 
         for (int j = 0; j < cols; j++)
         {
@@ -118,9 +118,9 @@ int** createMatrix(unsigned int rows, unsigned int cols, int value)
     return matrix;
 }
 
-int** transposeMatrix(int** matrix_input, unsigned int rows, unsigned int cols)
+int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols)
 {
-    int** matrix_transpose = createMatrix(cols, rows, 0);
+    int **matrix_transpose = createMatrix(cols, rows, 0);
 
     for (int i = 0; i < rows; i++)
     {

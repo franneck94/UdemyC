@@ -3,7 +3,7 @@
 
 struct Vector
 {
-    int* data;
+    int *data;
     unsigned int length;
 };
 
@@ -27,31 +27,31 @@ unsigned int factorial(unsigned int i);
 // Return Type: float
 // Name: meanVector
 // Parameters: Vector* vec
-float meanVector(Vector* vec);
+float meanVector(Vector *vec);
 
 // Return Type: int
 // Name: minVector
 // Parameters: Vector* vec
-int minVector(Vector* vec);
+int minVector(Vector *vec);
 
 // Return Type: int
 // Name: maxVector
 // Parameters: Vector* vec
-int maxVector(Vector* vec);
+int maxVector(Vector *vec);
 
 // Return Type: int*
 // Name: createVector
 // Parameters: unsigned int length, int value
-int* createVector(unsigned int length, int value);
+int *createVector(unsigned int length, int value);
 
 // Return Type: int**
 // Name: createMatrix
 // Parameters: unsigned int rows, unsigned int cols, int value
-int** createMatrix(unsigned int rows, unsigned int cols, int value);
+int **createMatrix(unsigned int rows, unsigned int cols, int value);
 
 // Return Type: int**
 // Name: transposeMatrix
 // Parameters: int** matrix_input, unsigned int rows, unsigned int cols
-int** transposeMatrix(int** matrix_input, unsigned int rows, unsigned int cols);
+int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols);
 
 #endif // FUNCTIONS_BIB_H

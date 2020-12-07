@@ -3,7 +3,7 @@
 // 48byte
 typedef struct
 {
-    char* name;
+    char *name;
 } s_user_data;
 
 // s_user_data als stack variable -> lokale Kopie der 48byte
@@ -12,7 +12,7 @@ typedef struct
 typedef struct
 {
     int ID;
-    s_user_data* user_data;
+    s_user_data *user_data;
 } s_account;
 
 int main()

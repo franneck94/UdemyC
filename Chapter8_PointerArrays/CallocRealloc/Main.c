@@ -6,7 +6,7 @@ int main()
     // Malloc: Random/Garbage values
     // Calloc: All Values to 0
     int length = 4;
-    int* arr = (int*)calloc(length, length * sizeof(int));
+    int *arr = (int *)calloc(length, length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
@@ -16,7 +16,7 @@ int main()
 
     // Realloc:
     length = 6;
-    arr = (int*)realloc(arr, length);
+    arr = (int *)realloc(arr, length);
     printf("\n");
 
     for (int i = 0; i < length; i++)

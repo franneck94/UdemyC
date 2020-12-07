@@ -12,7 +12,7 @@ float add(float z_func) // 0x61ff10
 
 // Call by Reference:
 // Input is the argument variable
-void sub(float* z_func) // 0x61ff2c
+void sub(float *z_func) // 0x61ff2c
 {
     printf("Sub: 0x%x\n", z_func);
     *z_func = *z_func - 3.0f;

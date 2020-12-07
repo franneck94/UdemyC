@@ -3,10 +3,10 @@
 
 #include "FunctionsBib.h"
 
-int* createArray(unsigned int length, int value)
+int *createArray(unsigned int length, int value)
 {
-    int* arr;
-    arr = (int*)malloc(length * sizeof(int));
+    int *arr;
+    arr = (int *)malloc(length * sizeof(int));
 
     printf("Pointer-arr: 0x%x\n", arr);
 
@@ -22,7 +22,7 @@ int main()
 {
     unsigned int length = 3;
 
-    int* array = createArray(length, 1);
+    int *array = createArray(length, 1);
 
     printf("Pointer-Array: 0x%x\n", array);
 

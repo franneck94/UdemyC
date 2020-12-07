@@ -14,7 +14,7 @@
                 "COMPILATION_MODE=Debug", 
                 "C_COMPILER=${config:compilerC}",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
-            ],
+            ]
         },
         {
             "label": "Makefile_Release",

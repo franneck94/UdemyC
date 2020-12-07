@@ -5,7 +5,7 @@
 
 int main()
 {
-    records_t* my_records = create_records();
+    records_t *my_records = create_records();
 
     const char input_file_path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 16 - Programmierprojekt2/data_in.csv";
     ERROR_TYPES err_read = read_simple_csv(input_file_path, my_records);

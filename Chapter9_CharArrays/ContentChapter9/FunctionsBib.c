@@ -43,7 +43,7 @@ float mean(int number_a, int number_b)
     return mean;
 }
 
-void binom(int* a, int* b, int* c)
+void binom(int *a, int *b, int *c)
 {
     // a^2 + ab + b^2
     *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);
@@ -102,10 +102,10 @@ int maxArray(int array[], unsigned int length)
     return max;
 }
 
-int* createVector(unsigned int length, int value)
+int *createVector(unsigned int length, int value)
 {
-    int* vector;
-    vector = (int*)malloc(length * sizeof(int));
+    int *vector;
+    vector = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
@@ -115,13 +115,13 @@ int* createVector(unsigned int length, int value)
     return vector;
 }
 
-int** createMatrix(unsigned int rows, unsigned int cols, int value)
+int **createMatrix(unsigned int rows, unsigned int cols, int value)
 {
-    int** matrix = (int**)malloc(rows * sizeof(int*));
+    int **matrix = (int **)malloc(rows * sizeof(int *));
 
     for (int i = 0; i < rows; i++)
     {
-        matrix[i] = (int*)malloc(cols * sizeof(int));
+        matrix[i] = (int *)malloc(cols * sizeof(int));
 
         for (int j = 0; j < cols; j++)
         {
@@ -132,9 +132,9 @@ int** createMatrix(unsigned int rows, unsigned int cols, int value)
     return matrix;
 }
 
-int** transposeMatrix(int** matrix_input, unsigned int rows, unsigned int cols)
+int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols)
 {
-    int** matrix_transpose = createMatrix(cols, rows, 0);
+    int **matrix_transpose = createMatrix(cols, rows, 0);
 
     for (int i = 0; i < rows; i++)
     {
