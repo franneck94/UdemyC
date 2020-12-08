@@ -3,16 +3,18 @@
 
 int main()
 {
-    int *a = (int *)malloc(sizeof(int));
+    int *a = NULL;
+    printf("0x%x\n", a);
+    // ...
+    a = (int *)malloc(sizeof(int));
     *a = 10; // some computations
     printf("%d\n", *a);
+    printf("0x%x\n", a);
     free(a);
     a = NULL;
-    // printf("%d\n", *a);
 
-    int num = 10;
-    int *p_int = &num;
-
-    void *p_void = &num;
-    printf("%d\n", *((int *)p_void));
+    if (a != NULL)
+    {
+        printf("%d\n", *a);
+    }
 }

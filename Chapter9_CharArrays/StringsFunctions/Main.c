@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "FunctionsBib.h"
-
 int main()
 {
     int number_friends = 3;
