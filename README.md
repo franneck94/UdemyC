@@ -3,8 +3,8 @@
 Dies ist der Code zu meinem Udemy Kurs:
 *C Komplettkurs: Praxisnahe Programmierung für C Einsteiger* von Jan Schaffranek.
 
-Erhalte den Kurs vom 7.11.2020 bis zum 7.12.2020 für nur 16,99€*.
-Rabatt-Link: [C Kurs im Rabatt](https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_NOV_2020)
+Erhalte den Kurs vom 01.12.2020 bis zum 31.12.2020 zum aktuellen Bestpreis.
+Rabatt-Link: [C Kurs im Rabatt](https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_DEC_2020)
 
 ## Bewertungen von Kursteilnehmern
 
@@ -33,12 +33,6 @@ Alle Sektionen des Kurses sind mit Videos, Quizze und Programmieraufgaben ver
 - Arrays und Strings
 - Strukturen und Dateien
 - Datenstrukturen
-
-### Warum sollte man die C Programmierung beherrschen?
-
-- C ist eine schnelle und effektive Programmiersprache
-- Bietet die Möglichkeit Low-Level Operationen auszuführen
-- Wird von Firmen, wie Amazon und Google für große Projekte eingesetzt
 
 Werde noch heute ein Profi, in der Technologie von Morgen!
 Wir sehen uns im Kurs!
