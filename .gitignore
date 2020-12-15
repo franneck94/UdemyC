@@ -2,10 +2,12 @@
 *
 # Unignore all with extensions
 !*.*
-*.txt
+!*.txt
+TODO.txt
 # Unignore all dirs
 !*/
 
+.vscode/c_cpp_properties.json
 lectures/
 *.pptx
 *.png
