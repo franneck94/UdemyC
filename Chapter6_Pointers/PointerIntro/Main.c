@@ -2,17 +2,14 @@
 
 int main()
 {
-    int a = 2;
+    int my_value = 1337;
+    printf("Value of my_value: %d\n", my_value);
+    printf("Memory address of my_value: %p\n", &my_value);
 
-    // &: Speicheradresse einer Variable
-    printf("Variable a hat den Wert: %d\n", a);               // 2
-    printf("Variable a hat die Speicheradresse: 0x%x\n", &a); // 0x61ff2c
-
-    int *pointer_b = &a;
-
-    printf("Der Pointer b zeigt auf die Speicheradresse: 0x%x\n", pointer_b); // 0x61ff2c (Referenzierung)
-    printf("Der Pointer b zeigt auf den Wert: %d\n", *pointer_b);             // 2 (Dereferenzierung)
-    printf("Der Pointer b hat die Speicheradresse: 0x%x\n", &pointer_b);      //0x61ff28
+    int *my_pointer = &my_value;
+    printf("Value of my_pointer: %p\n", my_pointer);
+    printf("Value of the reference of my_pointer: %d\n", *my_pointer);
+    printf("Memory address of my_pointer: %p\n", &my_pointer);
 
     return 0;
 }

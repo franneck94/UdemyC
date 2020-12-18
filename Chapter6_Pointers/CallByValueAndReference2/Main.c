@@ -9,11 +9,11 @@ float add(float val_add)
     return val_add;
 }
 
-void sub(float val_sub)
+void sub(float *val_sub)
 {
     printf("Memory address of val_sub: %p\n", &val_sub);
 
-    val_sub = val_sub - 1.0f;
+    *val_sub = *val_sub - 1.0f;
 }
 
 
@@ -25,7 +25,7 @@ int main()
     printf("%f\n", val_main);
     val_main = add(val_main);
     printf("%f\n", val_main);
-    sub(val_main);
+    sub(&val_main);
     printf("%f\n", val_main);
 
     return 0;
