@@ -1,16 +1,15 @@
 #include <stdio.h>
-#include <math.h>
 
 #include "FunctionsBib.h"
 
-#define LENGTH 10
+#define LENGTH 10u
 
 int main()
 {
-    // 55 / 10 = 5,5
     int v[LENGTH] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
     float mean_v = meanArray(v, LENGTH);
-    printf("Mean: %f", mean_v);
+    printf("Mean: %f\n", mean_v);
 
     return 0;
 }
