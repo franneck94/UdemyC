@@ -14,7 +14,7 @@ int main()
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/FileWrite/OutputData.txt";
+    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/FileWrite/OutputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "w");
 

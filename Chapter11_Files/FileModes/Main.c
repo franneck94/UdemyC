@@ -17,7 +17,7 @@ int main()
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/Jan/Dropbox/_Programmieren/UdemyCKurs/Kapitel 11 - Dateien/FileModes/Data.txt";
+    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/FileModes/Data.txt";
 
     // r (read)
     // w (write, creates if not exist)

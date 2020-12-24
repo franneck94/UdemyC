@@ -1,15 +1,12 @@
+###############
+## VARIABLES ##
+###############
 COMPILATION_MODE ?= Debug
 ENABLE_WARNINGS ?= 1
 WARNINGS_AS_ERRORS ?= 0
 C_COMPILER ?= gcc # gcc, clang
 C_STANDARD ?= c99 # c90, c99, c11, c17
 EXECUTABLE_NAME ?= main
-
-ifeq ($(OS), Windows_NT)
-RM = rm -f # RM = del /Q /F # if cygwin is not installed
-else
-RM = rm -f
-endif
 
 ifeq ($(COMPILATION_MODE), Debug)
 C_COMPILER_FLAGS = -g -std=$(C_STANDARD)
@@ -30,19 +27,28 @@ C_COMPILER_CALL = $(C_COMPILER) $(C_COMPILER_FLAGS)
 CPP_SRCS = $(wildcard *.c)
 CPP_OBJECTS = $(filter %.o, $(patsubst %.c,  %.o, $(CPP_SRCS)))
 
+####################
+## PSEUDO TARGETS ##
+####################
 build: $(EXECUTABLE_NAME)
 
-build_single: 
+#############
+## TARGETS ##
+#############
+build_single:
 	$(C_COMPILER_CALL) -o $(EXECUTABLE_NAME) $(FILE_NAME)
 
 $(EXECUTABLE_NAME): $(CPP_OBJECTS)
 	$(C_COMPILER_CALL) $^ -o $@
-
-%.o : %.c
-	$(C_COMPILER_CALL) -c $< -o $@
 
 execute:
 	./$(EXECUTABLE_NAME)
 
 clean:
 	$(RM) *.o
+
+##############
+## PATTERNS ##
+##############
+%.o : %.c
+	$(C_COMPILER_CALL) -c $< -o $@

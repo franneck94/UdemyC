@@ -36,7 +36,7 @@ int main()
     printf("v6 = \n");
     printVector(v6);
 
-    writeOutVectorData(v6, "C:/Users/Jan/Dropbox/_Programmieren/Udemy C Kurs/Kapitel 13 - Projekt/data.txt");
+    writeOutVectorData(v6, "C:/Users/Jan/Dropbox/_Coding/Udemy C Kurs/Kapitel 13 - Projekt/data.txt");
 
     deleteVector(v1);
     deleteVector(v2);
