@@ -3,33 +3,19 @@
 
 #include "FunctionsBib.h"
 
-int *createArray(unsigned int length, int value)
-{
-    int *arr;
-    arr = (int *)malloc(length * sizeof(int));
-
-    printf("Pointer-arr: 0x%x\n", arr);
-
-    for (int i = 0; i < length; i++)
-    {
-        arr[i] = value;
-    }
-
-    return arr;
-}
-
 int main()
 {
-    unsigned int length = 3;
+    unsigned int length = getNumberFromUser();
 
-    int *array = createArray(length, 1);
+    int *array;
 
-    printf("Pointer-Array: 0x%x\n", array);
+    // malloc: memory allocation
+    array = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
-        printf("%d\n", array[i]);
         array[i] = i;
+        printf("Index: %d\n", array[i]);
     }
 
     free(array);
