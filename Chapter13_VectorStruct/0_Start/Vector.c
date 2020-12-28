@@ -61,7 +61,7 @@ int *createVector(unsigned int length, int value)
     int *vector;
     vector = (int *)malloc(length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         vector[i] = value;
     }

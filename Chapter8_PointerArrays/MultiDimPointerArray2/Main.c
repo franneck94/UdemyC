@@ -12,8 +12,11 @@ int main()
     int **matrix = createMatrix(num_rows, num_cols, 1);
     printMatrix(matrix, num_rows, num_cols);
 
-    free(matrix);
-    matrix = NULL;
+    matrix = freeMatrix(matrix, num_rows);
+    if (matrix != NULL)
+    {
+        printMatrix(matrix, num_rows, num_cols);
+    }
 
     return 0;
 }

@@ -8,7 +8,7 @@ int main()
     int *arr = (int *)calloc(length, sizeof(int));
     // int *arr = (int *)malloc(length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         arr[i] = i;
         printf("%d\n", arr[i]);
@@ -19,7 +19,7 @@ int main()
     arr = (int *)realloc(arr, length * sizeof(int));
     printf("\n");
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         arr[i] = i;
         printf("%d\n", arr[i]);

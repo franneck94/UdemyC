@@ -76,7 +76,7 @@ float meanArray(int array[], unsigned int length)
 {
     float sum = 0.0f;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         sum += array[i];
     }
@@ -89,7 +89,7 @@ int minArray(int array[], unsigned int length)
 {
     int min;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -109,7 +109,7 @@ int maxArray(int array[], unsigned int length)
 {
     int max;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -146,6 +146,13 @@ void printArray(int *p_array, unsigned int length)
     }
 }
 
+int* freeArray(int *p_array)
+{
+    free(p_array);
+    p_array = NULL;
+    return p_array;
+}
+
 int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
 {
     int **matrix = (int **)malloc(num_rows * sizeof(int *));
@@ -164,4 +171,16 @@ void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
     {
         printArray(p_matrix[i], num_cols);
     }
+}
+
+int ** freeMatrix(int **p_matrix, unsigned int num_rows)
+{
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        p_matrix[i] = freeArray(p_matrix[i]);
+    }
+
+    free(p_matrix);
+    p_matrix = NULL;
+    return p_matrix;
 }

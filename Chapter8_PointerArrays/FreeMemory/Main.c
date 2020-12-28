@@ -46,7 +46,7 @@ int main()
     int length = 4;
     int *arr = (int *)calloc(length, length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         arr[i] = i;
         printf("%d\n", arr[i]);

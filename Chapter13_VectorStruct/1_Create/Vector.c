@@ -8,7 +8,7 @@ Vector *createVector(unsigned int length, float value)
     Vector *vec = (Vector *)malloc(sizeof(Vector));
     float *vec_data = (float *)malloc(length * sizeof(float));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         vec_data[i] = value;
     }

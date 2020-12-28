@@ -8,6 +8,16 @@ void printEvenOrOdd(int number);
 // Parameters: None
 int getNumberFromUser();
 
+// Return Type: int
+// Name: max
+// Parameters: int number_a, int number_b
+int max(int number_a, int number_b);
+
+// Return Type: int
+// Name: max
+// Parameters: int number_a, int number_b
+int min(int number_a, int number_b);
+
 // Return Type: float
 // Name: mean
 // Parameters: int number_a, int number_b
@@ -38,17 +48,16 @@ int minArray(int array[], unsigned int length);
 // Parameters: int array[], unsigned int length
 int maxArray(int array[], unsigned int length);
 
-// Return Type: int*
-// Name: createVector
-// Parameters: unsigned int length, int value
-int *createVector(unsigned int length, int value);
+int *createArray(unsigned int length, int value);
 
-// Return Type: int**
-// Name: createMatrix
-// Parameters: unsigned int rows, unsigned int cols, int value
-int **createMatrix(unsigned int rows, unsigned int cols, int value);
+void printArray(int *p_array, unsigned int length);
 
-// Return Type: int**
-// Name: transposeMatrix
-// Parameters: int** matrix_input, unsigned int rows, unsigned int cols
-int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols);
+int* freeArray(int *p_array);
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
+
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
+
+int ** freeMatrix(int **p_matrix, unsigned int num_rows);
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);

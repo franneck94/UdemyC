@@ -35,6 +35,30 @@ unsigned int factorial(unsigned int i)
     return i * factorial(i - 1);
 }
 
+int max(int number_a, int number_b)
+{
+    if (number_a < number_b)
+    {
+        return number_b;
+    }
+    else
+    {
+        return number_a;
+    }
+}
+
+int min(int number_a, int number_b)
+{
+    if (number_a > number_b)
+    {
+        return number_b;
+    }
+    else
+    {
+        return number_a;
+    }
+}
+
 float mean(int number_a, int number_b)
 {
     float sum = number_a + number_b;
@@ -53,7 +77,7 @@ float meanArray(int array[], unsigned int length)
 {
     float sum = 0.0f;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         sum += array[i];
     }
@@ -66,7 +90,7 @@ int minArray(int array[], unsigned int length)
 {
     int min;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -86,7 +110,7 @@ int maxArray(int array[], unsigned int length)
 {
     int max;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -102,47 +126,77 @@ int maxArray(int array[], unsigned int length)
     return max;
 }
 
-int *createVector(unsigned int length, int value)
+int *createArray(unsigned int length, int value)
 {
-    int *vector;
-    vector = (int *)malloc(length * sizeof(int));
+    int *array;
+    array = (int *)malloc(length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
-        vector[i] = value;
+        array[i] = value;
     }
 
-    return vector;
+    return array;
 }
 
-int **createMatrix(unsigned int rows, unsigned int cols, int value)
+void printArray(int *p_array, unsigned int length)
 {
-    int **matrix = (int **)malloc(rows * sizeof(int *));
-
-    for (int i = 0; i < rows; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
-        matrix[i] = (int *)malloc(cols * sizeof(int));
+        printf("%d\n", p_array[i]);
+    }
+}
 
-        for (int j = 0; j < cols; j++)
-        {
-            matrix[i][j] = value;
-        }
+int* freeArray(int *p_array)
+{
+    free(p_array);
+    p_array = NULL;
+    return p_array;
+}
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
+{
+    int **matrix = (int **)malloc(num_rows * sizeof(int *));
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = createArray(num_cols, value);
     }
 
     return matrix;
 }
 
-int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols)
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
 {
-    int **matrix_transpose = createMatrix(cols, rows, 0);
-
-    for (int i = 0; i < rows; i++)
+    for (unsigned int i = 0; i < num_rows; i++)
     {
-        for (int j = 0; j < cols; j++)
+        printArray(p_matrix[i], num_cols);
+    }
+}
+
+int ** freeMatrix(int **p_matrix, unsigned int num_rows)
+{
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        p_matrix[i] = freeArray(p_matrix[i]);
+    }
+
+    free(p_matrix);
+    p_matrix = NULL;
+    return p_matrix;
+}
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        for (unsigned int j = 0; j < num_cols; j++)
         {
-            matrix_transpose[j][i] = matrix_input[i][j];
+            p_matrix_transpose[j][i] = p_matrix[i][j];
         }
     }
 
-    return matrix_transpose;
+    return p_matrix_transpose;
 }

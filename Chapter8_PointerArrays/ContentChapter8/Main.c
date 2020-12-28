@@ -3,32 +3,28 @@
 
 #include "FunctionsBib.h"
 
+
 int main()
 {
-    unsigned int rows = 2;
-    unsigned int cols = 3;
+    unsigned int num_rows = 2;
+    unsigned int num_cols = 3;
 
-    int **M = createMatrix(rows, cols, 1);
-    int **M_transpose = transposeMatrix(M, rows, cols);
-
-    for (int i = 0; i < rows; i++)
+    int **matrix = createMatrix(num_rows, num_cols, 1);
+    for (unsigned int i = 0; i < num_rows; i++)
     {
-        for (int j = 0; j < cols; j++)
+        for (unsigned int j = 0; j < num_cols; j++)
         {
-            printf("M[%d][%d] = %d\n", i, j, M[i][j]);
-            M[i][j] = i + j;
+            matrix[i][j] = (i + 1) * j;
         }
     }
-
+    printMatrix(matrix, num_rows, num_cols);
     printf("\n");
 
-    for (int i = 0; i < cols; i++)
-    {
-        for (int j = 0; j < rows; j++)
-        {
-            printf("M^T[%d][%d] = %d\n", i, j, M_transpose[i][j]);
-        }
-    }
+    int **matrix_transpose = transposeMatrix(matrix, num_rows, num_cols);
+    printMatrix(matrix_transpose, num_cols, num_rows);
+
+    matrix = freeMatrix(matrix, num_rows);
+    matrix = freeMatrix(matrix_transpose, num_cols);
 
     return 0;
 }

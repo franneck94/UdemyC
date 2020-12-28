@@ -53,7 +53,7 @@ float meanArray(int array[], unsigned int length)
 {
     float sum = 0.0f;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         sum += array[i];
     }
@@ -66,7 +66,7 @@ int minArray(int array[], unsigned int length)
 {
     int min;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -86,7 +86,7 @@ int maxArray(int array[], unsigned int length)
 {
     int max;
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         if (i == 0)
         {
@@ -107,7 +107,7 @@ int *createVector(unsigned int length, int value)
     int *vector;
     vector = (int *)malloc(length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         vector[i] = value;
     }

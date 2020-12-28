@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     int length = atoi(argv[2]);
     int *data = (int *)malloc(length * sizeof(int));
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         fscanf(fp, "%d", &data[i]);
         printf("%d\n", data[i]);
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     qsort(data, length, sizeof(int), comp);
 
-    for (int i = 0; i < length; i++)
+    for (unsigned int i = 0; i < length; i++)
     {
         fprintf(fp, "%d\n", data[i]);
         printf("%d\n", data[i]);
