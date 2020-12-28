@@ -1,20 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "FunctionsBib.h"
+
 #define matrix(i, j) matrix[i * cols + j]
-
-int *createVector(unsigned int length, int value)
-{
-    int *vector;
-    vector = (int *)malloc(length * sizeof(int));
-
-    for (unsigned int i = 0; i < length; i++)
-    {
-        vector[i] = value;
-    }
-
-    return vector;
-}
 
 int main()
 {
@@ -22,17 +11,17 @@ int main()
     unsigned int cols = 3;
     unsigned int n_elements = rows * cols;
 
-    int *matrix = createVector(n_elements, 0);
-    matrix[0] = 00;
-    matrix[1] = 01;
-    matrix[2] = 02;
+    int *matrix = createArray(n_elements, 0);
+    matrix[0] = 0;
+    matrix[1] = 1;
+    matrix[2] = 2;
     matrix[3] = 10;
     matrix[4] = 11;
     matrix[5] = 12;
 
-    for (int i = 0; i < rows; i++)
+    for (unsigned int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < cols; j++)
+        for (unsigned int j = 0; j < cols; j++)
         {
             printf("M[%d][%d] = %d\n", i, j, matrix(i, j));
         }

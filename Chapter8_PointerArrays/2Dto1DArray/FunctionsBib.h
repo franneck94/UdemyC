@@ -37,3 +37,27 @@ void binom(int *a, int *b, int *c);
 // Name: meanArray
 // Parameters: int array[], unsigned int length
 float meanArray(int array[], unsigned int length);
+
+// Return Type: int
+// Name: minArray
+// Parameters: int array[], unsigned int length
+int minArray(int array[], unsigned int length);
+
+// Return Type: int
+// Name: maxArray
+// Parameters: int array[], unsigned int length
+int maxArray(int array[], unsigned int length);
+
+int *createArray(unsigned int length, int value);
+
+void printArray(int *p_array, unsigned int length);
+
+int* freeArray(int *p_array);
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
+
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
+
+int ** freeMatrix(int **p_matrix, unsigned int num_rows);
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
