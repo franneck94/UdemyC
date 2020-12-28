@@ -124,3 +124,44 @@ int maxArray(int array[], unsigned int length)
 
     return max;
 }
+
+int *createArray(unsigned int length, int value)
+{
+    int *array;
+    array = (int *)malloc(length * sizeof(int));
+
+    for (unsigned int i = 0; i < length; i++)
+    {
+        array[i] = value;
+    }
+
+    return array;
+}
+
+void printArray(int *p_array, unsigned int length)
+{
+    for (unsigned int i = 0; i < length; i++)
+    {
+        printf("%d\n", p_array[i]);
+    }
+}
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
+{
+    int **matrix = (int **)malloc(num_rows * sizeof(int *));
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = createArray(num_cols, value);
+    }
+
+    return matrix;
+}
+
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        printArray(p_matrix[i], num_cols);
+    }
+}

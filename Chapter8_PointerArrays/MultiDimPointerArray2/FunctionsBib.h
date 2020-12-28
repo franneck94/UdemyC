@@ -47,3 +47,11 @@ int minArray(int array[], unsigned int length);
 // Name: maxArray
 // Parameters: int array[], unsigned int length
 int maxArray(int array[], unsigned int length);
+
+int *createArray(unsigned int length, int value);
+
+void printArray(int *p_array, unsigned int length);
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
+
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
