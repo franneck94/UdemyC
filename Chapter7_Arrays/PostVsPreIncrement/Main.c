@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-void my_function(int val)
+void my_function(int value)
 {
-    printf("%d\n", val);
+    printf("%d\n", value);
 }
 
 int main()

@@ -8,42 +8,42 @@
 
 int main()
 {
-    double_list_t *list = list_new();
+    list_t *list = createList();
 
-    double_node_t *a = node_new("a");
-    double_node_t *b = node_new("b");
-    double_node_t *c = node_new("c");
+    node_t *a = createNode(1.0f);
+    node_t *b = createNode(2.0f);
+    node_t *c = createNode(3.0f);
 
     // a b c
-    list_rpush(list, a);
-    list_rpush(list, b);
-    list_rpush(list, c);
+    rightPush(list, a);
+    rightPush(list, b);
+    rightPush(list, c);
 
     // Assertions
     assert(a == list->head);
     assert(b == list->head->next);
     assert(c == list->tail);
-    assert(3 == list->len);
+    assert(3 == list->length);
 
     // empty
-    list_empty(list);
+    clearList(list);
 
     // Assertions
     assert(NULL == list->head);
     assert(NULL == list->tail);
-    assert(0 == list->len);
+    assert(0 == list->length);
 
-    double_node_t *d = node_new("d");
-    double_node_t *e = node_new("e");
+    node_t *d = createNode(4.0f);
+    node_t *e = createNode(5.0f);
 
-    list_lpush(list, d);
-    list_lpush(list, e);
+    leftPush(list, d);
+    leftPush(list, e);
 
     // E D
     assert(e == list->head);
     assert(d == list->tail);
 
-    list_print(list);
+    printList(list);
 
     return 0;
 }

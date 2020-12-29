@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -22,8 +21,8 @@ int main()
 
     while (fgets(line, line_size, fp) != NULL)
     {
-        int val = atoi(line);
-        printf("%d\n", val);
+        int value = atoi(line);
+        printf("%d\n", value);
     }
 
     // Close the file

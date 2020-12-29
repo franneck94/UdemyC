@@ -1,59 +1,59 @@
 #include <stdio.h>
 
 // Stack, variable value
-void function1(int val)
+void function1(int value)
 {
-    // val++; // OKAY
-    printf("function1: %d\n", val);
+    // value++; // OKAY
+    printf("function1: %d\n", value);
 }
 
 // Stack, const value
-void function2(const int val)
+void function2(const int value)
 {
-    // val++; // FORBIDDEN
-    printf("function2: %d\n", val);
+    // value++; // FORBIDDEN
+    printf("function2: %d\n", value);
 }
 
 // Pointer, variable value, variable adress
-void function3(int *val)
+void function3(int *value)
 {
-    // (*val)++; // OKAY
-    printf("function3: %d\n", *val);
+    // (*value)++; // OKAY
+    printf("function3: %d\n", *value);
 }
 
 // Pointer, const value, variable adress
 // const DataType * VariableName
-void function4(const int *val)
+void function4(const int *value)
 {
-    // (*val)++; // FORBIDDEN
+    // (*value)++; // FORBIDDEN
     int b = -2;
-    val = &b;
+    value = &b;
 
-    printf("function4: %d\n", *val);
+    printf("function4: %d\n", *value);
 }
 
 // Pointer, variable value, const adress
 // DataType * const VariableName
-void function5(int *const val)
+void function5(int *const value)
 {
-    (*val)++; // OKAY
+    (*value)++; // OKAY
     // int b = -2; // FORBIDDEN
-    // val = &b; // FORBIDDEN
+    // value = &b; // FORBIDDEN
 
-    printf("function5: %d\n", *val);
+    printf("function5: %d\n", *value);
 }
 
 // Pointer, const value, const adress
 // combination of function andf function5
 // const DataType * const VariableName
 // ReadOnly
-void function6(const int *const val)
+void function6(const int *const value)
 {
-    // (*val)++; // FORBIDDEN
+    // (*value)++; // FORBIDDEN
     // int b = -2; // FORBIDDEN
-    // val = &b; // FORBIDDEN
+    // value = &b; // FORBIDDEN
 
-    printf("function6: %d\n", *val);
+    printf("function6: %d\n", *value);
 }
 
 int main()

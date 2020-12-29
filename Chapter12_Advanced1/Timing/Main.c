@@ -5,11 +5,11 @@
 
 void doSomething()
 {
-    double val = 0.0;
+    double value = 0.0;
 
     for (int i = 0; i < 10000000; i++)
     {
-        val *= 1;
+        value *= 1;
     }
 }
 

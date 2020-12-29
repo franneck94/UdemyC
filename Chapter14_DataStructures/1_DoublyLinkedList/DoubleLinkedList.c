@@ -1,42 +1,54 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include "DoubleLinkedList.h"
 
-double_list_t *list_new()
+/**********************/
+/*      FUNCTIONS     */
+/**********************/
+
+list_t *createList()
 {
-    double_list_t *new_list = (double_list_t *)malloc(sizeof(double_list_t));
-    if (!new_list)
+    list_t *list = (list_t *)malloc(sizeof(list_t));
+
+    if (!list)
+    {
         return NULL;
+    }
 
-    new_list->head = NULL;
-    new_list->tail = NULL;
-    new_list->len = 0;
+    list->head = NULL;
+    list->tail = NULL;
+    list->length = 0;
 
-    return new_list;
+    return list;
 }
 
-double_node_t *node_new(void *val)
+node_t *createNode(float value)
 {
-    double_node_t *new_node = (double_node_t *)malloc(sizeof(double_node_t));
-    if (!new_node)
+    node_t *node = (node_t *)malloc(sizeof(node_t));
+    float *value_p = (float *)malloc(sizeof(float));
+    *value_p = value;
+
+    if (!node)
+    {
         return NULL;
+    }
 
-    new_node->next = NULL;
-    new_node->prev = NULL;
-    new_node->val = val;
+    node->next = NULL;
+    node->prev = NULL;
+    node->value = value_p;
 
-    return new_node;
+    return node;
 }
 
-void list_rpush(double_list_t *list, double_node_t *node)
+void rightPush(list_t *list, node_t *node)
 {
     if (!node || !list)
+    {
         return;
+    }
 
-    if (list->len > 0)
+    if (list->length > 0)
     {
         node->next = NULL;
         node->prev = list->tail;
@@ -51,17 +63,16 @@ void list_rpush(double_list_t *list, double_node_t *node)
         list->tail = node;
     }
 
-    list->len++;
+    list->length++;
 }
 
-void list_rpop(double_list_t *list)
+float rightPop(list_t *list)
 {
-    if (!list || list->len == 0)
-        return;
+    float value = *list->tail->value;
 
-    double_node_t *node = list->tail;
+    node_t *node = list->tail;
 
-    if (list->len > 1)
+    if (list->length > 1)
     {
         list->tail = node->prev;
         list->tail->next = NULL;
@@ -72,15 +83,19 @@ void list_rpop(double_list_t *list)
         list->head = NULL;
     }
 
-    list->len--;
+    list->length--;
+
+    return value;
 }
 
-void list_lpush(double_list_t *list, double_node_t *node)
+void leftPush(list_t *list, node_t *node)
 {
     if (!list || !node)
+    {
         return;
+    }
 
-    if (list->len > 0)
+    if (list->length > 0)
     {
         node->prev = NULL;
         node->next = list->head;
@@ -95,17 +110,16 @@ void list_lpush(double_list_t *list, double_node_t *node)
         node->next = NULL;
     }
 
-    list->len++;
+    list->length++;
 }
 
-void list_lpop(double_list_t *list)
+float leftPop(list_t *list)
 {
-    double_node_t *node = list->head;
+    float value = *list->tail->value;
 
-    if (!list || !node)
-        return;
+    node_t *node = list->head;
 
-    if (list->len > 1)
+    if (list->length > 1)
     {
         list->head = node->next;
         list->head->prev = NULL;
@@ -116,19 +130,23 @@ void list_lpop(double_list_t *list)
         list->head = NULL;
     }
 
-    list->len--;
+    list->length--;
+
+    return value;
 }
 
-double_node_t *list_find(double_list_t *list, void *val)
+node_t *findValue(list_t *list, float *value)
 {
     if (!list)
+    {
         return NULL;
+    }
 
-    double_node_t *node = list->head;
+    node_t *node = list->head;
 
     while (node != NULL)
     {
-        if (node->val == val)
+        if (node->value == value)
         {
             return node;
         }
@@ -139,15 +157,17 @@ double_node_t *list_find(double_list_t *list, void *val)
     return NULL;
 }
 
-double_node_t *list_at(double_list_t *list, int index)
+node_t *valueAtIndex(list_t *list, unsigned int index)
 {
-    if (!list || index < 0 || index >= list->len)
+    if (!list || index >= list->length)
+    {
         return NULL;
+    }
 
-    int current_index = 0;
-    double_node_t *node = list->head;
+    unsigned int current_index = 0;
+    node_t *node = list->head;
 
-    while (current_index < list->len)
+    while (current_index < list->length)
     {
         if (current_index == index)
         {
@@ -161,33 +181,37 @@ double_node_t *list_at(double_list_t *list, int index)
     return NULL;
 }
 
-void list_empty(double_list_t *list)
+void clearList(list_t *list)
 {
     if (!list)
+    {
         return;
+    }
 
-    unsigned int len = list->len;
-    double_node_t *next;
-    double_node_t *curr = list->head;
+    unsigned int length = list->length;
+    node_t *next;
+    node_t *curr = list->head;
 
-    while (len > 0)
+    while (length > 0)
     {
         next = curr->next;
 
         free(curr);
         curr = next;
-        len--;
+        length--;
     }
 
-    list->len = 0;
+    list->length = 0;
     list->head = NULL;
     list->tail = NULL;
 }
 
-void list_remove(double_list_t *list, double_node_t *node)
+void removeNode(list_t *list, node_t *node)
 {
     if (!list || !node)
+    {
         return;
+    }
 
     if (node->prev)
     {
@@ -208,21 +232,24 @@ void list_remove(double_list_t *list, double_node_t *node)
     }
 
     free(node);
-    list->len--;
+    list->length--;
 }
 
-void list_print(double_list_t *list)
+void printList(list_t *list)
 {
     if (!list)
+    {
         return;
+    }
 
-    int index = 0;
-    double_node_t *node = list->head;
-    printf("\nPrinting DoubleLinkedList that contains %d elements.\n", list->len);
+    unsigned int index = 0;
+    node_t *node = list->head;
+
+    printf("\nList contains %d elements.\n", list->length);
 
     while (node != NULL)
     {
-        printf("Current node  value: %s, At position %d.\n", node->val, index);
+        printf("Value: %f, Index %d.\n", *node->value, index);
         node = node->next;
         index++;
     }

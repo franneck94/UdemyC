@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
         printf("argv[%d] = %s\n", i, argv[i]);
     }
 
-    int val = atoi(argv[1]);
-    printf("%d\n", val);
+    int value = atoi(argv[1]);
+    printf("%d\n", value);
 
     float val2 = atof(argv[2]);
     printf("%f\n", val2);
