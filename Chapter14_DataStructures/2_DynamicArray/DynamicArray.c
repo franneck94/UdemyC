@@ -48,7 +48,7 @@ void pushValue(dynamic_array_t *array, float value)
 
 float popValue(dynamic_array_t *array)
 {
-    float value = array->data[array->length - 1];
+    float value = array->data[array->length - 1u];
 
     array->data[array->length - 1] = 0.0f;
     array->length--;

@@ -18,7 +18,7 @@ list_t *createList()
 
     list->head = NULL;
     list->tail = NULL;
-    list->length = 0;
+    list->length = 0u;
 
     return list;
 }
@@ -48,7 +48,7 @@ void rightPush(list_t *list, node_t *node)
         return;
     }
 
-    if (list->length > 0)
+    if (list->length > 0u)
     {
         node->next = NULL;
         node->prev = list->tail;
@@ -72,7 +72,7 @@ float rightPop(list_t *list)
 
     node_t *node = list->tail;
 
-    if (list->length > 1)
+    if (list->length > 1u)
     {
         list->tail = node->prev;
         list->tail->next = NULL;
@@ -95,7 +95,7 @@ void leftPush(list_t *list, node_t *node)
         return;
     }
 
-    if (list->length > 0)
+    if (list->length > 0u)
     {
         node->prev = NULL;
         node->next = list->head;
@@ -119,7 +119,7 @@ float leftPop(list_t *list)
 
     node_t *node = list->head;
 
-    if (list->length > 1)
+    if (list->length > 1u)
     {
         list->head = node->next;
         list->head->prev = NULL;
@@ -164,7 +164,7 @@ node_t *valueAtIndex(list_t *list, unsigned int index)
         return NULL;
     }
 
-    unsigned int current_index = 0;
+    unsigned int current_index = 0u;
     node_t *node = list->head;
 
     while (current_index < list->length)
@@ -192,7 +192,7 @@ void clearList(list_t *list)
     node_t *next;
     node_t *curr = list->head;
 
-    while (length > 0)
+    while (length > 0u)
     {
         next = curr->next;
 
@@ -201,7 +201,7 @@ void clearList(list_t *list)
         length--;
     }
 
-    list->length = 0;
+    list->length = 0u;
     list->head = NULL;
     list->tail = NULL;
 }
@@ -242,7 +242,7 @@ void printList(list_t *list)
         return;
     }
 
-    unsigned int index = 0;
+    unsigned int index = 0u;
     node_t *node = list->head;
 
     printf("\nList contains %d elements.\n", list->length);

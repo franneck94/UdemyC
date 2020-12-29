@@ -1,7 +1,7 @@
 #ifndef DynamicArray_H
 #define DynamicArray_H
 
-#define INIT_CAPACITY 10
+#define INIT_CAPACITY 10u
 
 /**********************/
 /* DEFINES AND TYPES  */
