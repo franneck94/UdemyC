@@ -1,13 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Vector.h"
+#include "FunctionsBib.h"
+
+int getNumberFromUser()
+{
+    int number_from_user; //0x00: 12
+
+    printf("Pls enter a interger number!\n");
+    scanf("%d", &number_from_user);
+
+    return number_from_user; // return 12;
+}
+
 
 float meanVector(Vector *vec)
 {
     float sum = 0.0f;
 
-    for (int i = 0; i < vec->length; i++)
+    for (unsigned int i = 0; i < vec->length; i++)
     {
         sum += vec->data[i];
     }
@@ -16,11 +27,12 @@ float meanVector(Vector *vec)
     return mean;
 }
 
+
 int minVector(Vector *vec)
 {
     int min;
 
-    for (int i = 0; i < vec->length; i++)
+    for (unsigned int i = 0; i < vec->length; i++)
     {
         if (i == 0)
         {
@@ -36,11 +48,12 @@ int minVector(Vector *vec)
     return min;
 }
 
+
 int maxVector(Vector *vec)
 {
     int max;
 
-    for (int i = 0; i < vec->length; i++)
+    for (unsigned int i = 0; i < vec->length; i++)
     {
         if (i == 0)
         {
@@ -56,15 +69,32 @@ int maxVector(Vector *vec)
     return max;
 }
 
+
 int *createVector(unsigned int length, int value)
 {
-    int *vector;
-    vector = (int *)malloc(length * sizeof(int));
+    int *p_data;
+    p_data = (int *)malloc(length * sizeof(int));
 
     for (unsigned int i = 0; i < length; i++)
     {
-        vector[i] = value;
+        p_data[i] = value;
     }
 
-    return vector;
+    return p_data;
+}
+
+
+void printVector(Vector *vec)
+{
+    for (unsigned int i = 0; i < vec->length; i++)
+    {
+        printf("%d\n", vec->data[i]);
+    }
+}
+
+
+int *freeVector(Vector *vec)
+{
+    free(vec->data);
+    vec->data = NULL;
 }
