@@ -1,6 +1,9 @@
+/**********************/
+/* DEFINES AND TYPES  */
+/**********************/
 struct Vector
 {
-    int *data;
+    float *data;
     unsigned int length;
 };
 
@@ -8,7 +11,37 @@ struct Vector
 typedef struct Vector Vector;
 
 
+/**********************/
+/*  HELPER FUNCTIONS  */
+/**********************/
 int getNumberFromUser();
+
+
+Vector *createVector(unsigned int length, int value);
+
+
+void printVector(Vector *vec);
+
+
+void freeVector(Vector *vec);
+
+
+/**********************/
+/*  MATH. FUNCTIONS   */
+/**********************/
+Vector* addVectors(Vector *vec1, Vector *vec2);
+
+
+Vector* subVectors(Vector *vec1, Vector *vec2);
+
+
+float multiplyVectors(Vector *vec1, Vector *vec2);
+
+
+Vector *multiplyScalar(Vector *vec, float scalar);
+
+
+Vector *divideScalar(Vector *vec, float scalar);
 
 
 float meanVector(Vector *vec);
@@ -19,11 +52,3 @@ int minVector(Vector *vec);
 
 int maxVector(Vector *vec);
 
-
-int *createVector(unsigned int length, int value);
-
-
-void printVector(Vector *vec);
-
-
-int* freeVector(Vector *vec);

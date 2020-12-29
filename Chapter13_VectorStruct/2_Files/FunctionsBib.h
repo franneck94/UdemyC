@@ -1,19 +1,64 @@
-#ifndef FUNCTIONS_BIB_H
-#define FUNCTIONS_BIB_H
+/**********************/
+/* DEFINES AND TYPES  */
+/**********************/
+struct Vector
+{
+    float *data;
+    unsigned int length;
+};
 
-// Return Type: void
-// Name: printEvenOrOdd
-// Parameters: int number
-void printEvenOrOdd(int number);
 
-// Return Type: int
-// Name: getNumberFromUser
-// Parameters: None
+typedef struct Vector Vector;
+
+
+/**********************/
+/*  HELPER FUNCTIONS  */
+/**********************/
 int getNumberFromUser();
 
-// Return Type: unsigned int
-// Name: factorial
-// Parameters: unsigned int i
-unsigned int factorial(unsigned int i);
 
-#endif // FUNCTIONS_BIB_H
+Vector *createVector(unsigned int length, int value);
+
+
+void printVector(Vector *vec);
+
+
+void freeVector(Vector *vec);
+
+
+/**********************/
+/*  I/O. FUNCTIONS    */
+/**********************/
+
+int readInVectorData(Vector *vec, const char *path);
+
+
+int writeOutVectorData(Vector *vec, const char *path);
+
+
+/**********************/
+/*  MATH. FUNCTIONS   */
+/**********************/
+Vector* addVectors(Vector *vec1, Vector *vec2);
+
+
+Vector* subVectors(Vector *vec1, Vector *vec2);
+
+
+float multiplyVectors(Vector *vec1, Vector *vec2);
+
+
+Vector *multiplyScalar(Vector *vec, float scalar);
+
+
+Vector *divideScalar(Vector *vec, float scalar);
+
+
+float meanVector(Vector *vec);
+
+
+int minVector(Vector *vec);
+
+
+int maxVector(Vector *vec);
+
