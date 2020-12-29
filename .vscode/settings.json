@@ -8,5 +8,14 @@
     // "compilerCpp": "clang++",
     // "debuggerCpp": "lldb",
     // For all OS
-    "make": "make"
+    "make": "make",
+    "files.associations": {
+        "*.h": "cpp",
+        "system_error": "c",
+        "xlocale": "c",
+        "tuple": "c",
+        "utility": "c",
+        "xstring": "c",
+        "xutility": "c"
+    }
 }

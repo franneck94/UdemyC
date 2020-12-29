@@ -5,15 +5,12 @@ struct Friend
 {
     char *name;
     char *prename;
-    uint32_t year;
-    uint32_t month;
-    uint32_t day;
+    unsigned int year;
+    unsigned int month;
+    unsigned int day;
 };
 
-typedef struct Friend Friend_t;
-typedef unsigned int uint32_t;
-
-void printFriend(Friend_t *friend)
+void printFriend(struct Friend *friend)
 {
     printf("%s %s's birthday is: %u.%u.%u.\n",
         friend->prename,
@@ -24,17 +21,17 @@ void printFriend(Friend_t *friend)
     );
 }
 
-void changeName(Friend_t *friend, char *new_name)
+void changeName(struct Friend *friend, char *new_name)
 {
     friend->name = new_name;
 }
 
 int main()
 {
-    Friend_t jan = { .name="Schaffranek", .prename="Jan", .year=1994u, .month=2u, .day=24u };
-    Friend_t lara = { .name="Hausmann", .prename="Lara", .year=1992, .month=12, .day=12 };
+    struct Friend jan = { .name="Schaffranek", .prename="Jan", .year=1994u, .month=2u, .day=24u };
+    struct Friend lara = { .name="Hausmann", .prename="Lara", .year=1992, .month=12, .day=12 };
 
-    Friend_t friend_book[2];
+    struct Friend friend_book[2];
     friend_book[0] = jan;
     friend_book[1] = lara;
 
