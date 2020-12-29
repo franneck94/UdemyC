@@ -57,12 +57,12 @@ void freeVector(Vector *vec)
 
 
 /**********************/
-/*  I/O. FUNCTIONS    */
+/*  I/O FUNCTIONS     */
 /**********************/
 
-int readInVectorData(Vector *vec, const char *path)
+int readInVectorData(Vector *vec, const char *filepath)
 {
-    FILE *fp = fopen(path, "r");
+    FILE *fp = fopen(filepath, "r");
 
     if (fp == NULL)
     {
@@ -75,12 +75,14 @@ int readInVectorData(Vector *vec, const char *path)
     }
 
     fclose(fp);
+
     return 0;
 }
 
-int writeOutVectorData(Vector *vec, const char *path)
+
+int writeOutVectorData(Vector *vec, const char *filepath)
 {
-    FILE *fp = fopen(path, "w");
+    FILE *fp = fopen(filepath, "w");
 
     if (fp == NULL)
     {
@@ -90,12 +92,17 @@ int writeOutVectorData(Vector *vec, const char *path)
     for (unsigned int i = 0; i < vec->length; i++)
     {
         if (i < vec->length - 1)
+        {
             fprintf(fp, "%f\n", vec->data[i]);
+        }
         else
+        {
             fprintf(fp, "%f", vec->data[i]);
+        }
     }
 
     fclose(fp);
+
     return 0;
 }
 

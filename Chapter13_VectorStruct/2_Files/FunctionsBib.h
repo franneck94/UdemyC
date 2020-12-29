@@ -27,13 +27,13 @@ void freeVector(Vector *vec);
 
 
 /**********************/
-/*  I/O. FUNCTIONS    */
+/*  I/O FUNCTIONS     */
 /**********************/
 
-int readInVectorData(Vector *vec, const char *path);
+int readInVectorData(Vector *vec, const char *filepath);
 
 
-int writeOutVectorData(Vector *vec, const char *path);
+int writeOutVectorData(Vector *vec, const char *filepath);
 
 
 /**********************/

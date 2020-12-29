@@ -19,7 +19,10 @@ int main()
     Vector *v6 = divideScalar(v1, scalar);
     printVector(v6);
 
-    writeOutVectorData(v6, "data.txt");
+    writeOutVectorData(v6, "v6.txt");
+    Vector *v6_copy = createVector(3, 0);
+    readInVectorData(v6_copy, "v6.txt");
+    printVector(v6_copy);
 
     float result = multiplyVectors(v1, v2);
     printf("%f\n", result);
