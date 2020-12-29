@@ -59,3 +59,5 @@ int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
 void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
 
 int ** freeMatrix(int **p_matrix, unsigned int num_rows);
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);

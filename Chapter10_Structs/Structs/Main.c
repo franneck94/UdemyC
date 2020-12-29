@@ -1,9 +1,5 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdlib.h>
-#include <string.h>
-
-#include "FunctionsBib.h"
 
 struct Friend
 {

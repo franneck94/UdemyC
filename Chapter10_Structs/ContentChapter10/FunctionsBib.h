@@ -1,3 +1,4 @@
+
 struct Vector
 {
     int *data;
@@ -6,47 +7,53 @@ struct Vector
 
 typedef struct Vector Vector;
 
-// Return Type: void
-// Name: printEvenOrOdd
-// Parameters: int number
+
 void printEvenOrOdd(int number);
 
-// Return Type: int
-// Name: getNumberFromUser
-// Parameters: None
+
 int getNumberFromUser();
 
-// Return Type: unsigned int
-// Name: factorial
-// Parameters: unsigned int i
+
+int max(int number_a, int number_b);
+
+
+int min(int number_a, int number_b);
+
+
+float mean(int number_a, int number_b);
+
+
 unsigned int factorial(unsigned int i);
 
-// Return Type: float
-// Name: meanVector
-// Parameters: Vector* vec
-float meanVector(Vector *vec);
 
-// Return Type: int
-// Name: minVector
-// Parameters: Vector* vec
-int minVector(Vector *vec);
+void binom(int *a, int *b, int *c);
 
-// Return Type: int
-// Name: maxVector
-// Parameters: Vector* vec
-int maxVector(Vector *vec);
 
-// Return Type: int*
-// Name: createVector
-// Parameters: unsigned int length, int value
-int *createVector(unsigned int length, int value);
+float meanArray(int array[], unsigned int length);
 
-// Return Type: int**
-// Name: createMatrix
-// Parameters: unsigned int rows, unsigned int cols, int value
-int **createMatrix(unsigned int rows, unsigned int cols, int value);
 
-// Return Type: int**
-// Name: transposeMatrix
-// Parameters: int** matrix_input, unsigned int rows, unsigned int cols
-int **transposeMatrix(int **matrix_input, unsigned int rows, unsigned int cols);
+int minArray(int array[], unsigned int length);
+
+
+int maxArray(int array[], unsigned int length);
+
+
+int *createArray(unsigned int length, int value);
+
+
+void printArray(int *p_array, unsigned int length);
+
+
+int* freeArray(int *p_array);
+
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
+
+
+void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
+
+
+int ** freeMatrix(int **p_matrix, unsigned int num_rows);
+
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
