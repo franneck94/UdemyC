@@ -7,15 +7,15 @@
 
 typedef struct node
 {
-    struct node *next;
-    struct node *prev;
+    node_t *next;
+    node_t *prev;
     float *value;
 } node_t;
 
 typedef struct list
 {
-    struct node *head;
-    struct node *tail;
+    node_t *head;
+    node_t *tail;
     unsigned int length;
 } list_t;
 

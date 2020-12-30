@@ -138,124 +138,25 @@ float leftPop(list_t *list)
 
 node_t *findValue(list_t *list, float value)
 {
-    if (!list)
-    {
-        return NULL;
-    }
 
-    node_t *node = list->head;
-
-    while(node != NULL)
-    {
-        if(*node->value == value)
-        {
-            return node;
-        }
-
-        node = node->next;
-    }
-
-    return NULL;
 }
 
 node_t *valueAtIndex(list_t *list, unsigned int index)
 {
-    if(!list || index >= list->length)
-    {
-        return NULL;
-    }
 
-    unsigned int current_index = 0u;
-    node_t *node = list->head;
-
-    while(current_index < list->length)
-    {
-        if (current_index == index)
-        {
-            return node;
-        }
-
-        node = node->next;
-        current_index++;
-    }
-
-    return NULL;
 }
 
 void clearList(list_t *list)
 {
-    if (!list)
-    {
-        return;
-    }
 
-    unsigned int length = list->length;
-    node_t *next;
-    node_t *current = list->head;
-
-    while(length > 0u)
-    {
-        next = current->next;
-
-        free(current->value);
-        free(current);
-
-        current = next;
-        length--;
-    }
-
-    list->length = 0u;
-    list->head = NULL;
-    list->tail = NULL;
 }
 
 void removeNode(list_t *list, node_t *node)
 {
-    if (!list || !node)
-    {
-        return;
-    }
 
-    if(node->prev)
-    {
-        node->prev->next = node->next;
-    }
-    else
-    {
-        list->head = node->next;
-    }
-    
-    if (node->next)
-    {
-        node->next->prev = node->prev;
-    }
-    else
-    {
-        list->tail = node->prev;
-    }
-
-    free(node->value);
-    free(node);
-
-    list->length--;
 }
 
 void printList(list_t *list)
 {
-    if (!list)
-    {
-        return;
-    }
 
-    unsigned int index = 0;
-    node_t *current = list->head;
-
-    printf("\nList contains %d elements.\n", list->length);
-
-    while(current != NULL)
-    {
-        printf("Index: %d, Value: %f", index, *current->value);
-        current = current->next;
-        index++;
-    }
 }
