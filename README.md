@@ -4,7 +4,7 @@ Dies ist der Code zu meinem Udemy Kurs:
 *C Komplettkurs: Praxisnahe Programmierung für C Einsteiger* von Jan Schaffranek.
 
 Erhalte den Kurs vom 01.12.2020 bis zum 31.12.2020 zum aktuellen Bestpreis.
-Rabatt-Link: [C Kurs im Rabatt](https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_DEC_2020)
+Rabatt-Link: [C Kurs im Rabatt](https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_JAN_2021)
 
 ## Bewertungen von Kursteilnehmern
 
