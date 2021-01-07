@@ -87,15 +87,10 @@ float meanArray(int array[], unsigned int length)
 
 int minArray(int array[], unsigned int length)
 {
-    int min;
+    int min = array[0];
 
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 1; i < length; i++)
     {
-        if (i == 0)
-        {
-            min = array[i];
-        }
-
         if (array[i] < min)
         {
             min = array[i];
@@ -107,15 +102,10 @@ int minArray(int array[], unsigned int length)
 
 int maxArray(int array[], unsigned int length)
 {
-    int max;
+    int max = array[0];
 
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 1; i < length; i++)
     {
-        if (i == 0)
-        {
-            max = array[i];
-        }
-
         if (array[i] > max)
         {
             max = array[i];
