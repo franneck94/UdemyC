@@ -1,14 +1,10 @@
 #include <stdio.h>
 
-// 48byte
 typedef struct
 {
     char *name;
 } s_user_data;
 
-// s_user_data als stack variable -> lokale Kopie der 48byte
-// s_user_data als pointer -> wird nur der Pointer erstellt, der benötigt 4 oder 8byte
-// s_account.user_data->name
 typedef struct
 {
     int ID;
