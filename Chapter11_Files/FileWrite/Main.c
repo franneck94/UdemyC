@@ -13,7 +13,7 @@ int main()
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/FileWrite/OutputData.txt";
+    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/FileWrite/OutputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "w");
 
@@ -23,21 +23,23 @@ int main()
     }
 
     // Write the values to the file
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         if (i < v1.length - 1)
+        {
             fprintf(fp, "%d\n", v1.data[i]);
+        }
         else
+        {
             fprintf(fp, "%d", v1.data[i]);
+        }
     }
 
     // Close the file
     fclose(fp);
 
     // Free vector data
-    free(v1.data);
-    v1.data = NULL;
-    v1.length = 0;
+    freeVector(&v1);
 
     return 0;
 }

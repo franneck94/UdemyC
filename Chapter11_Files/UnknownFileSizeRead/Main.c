@@ -2,11 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "FunctionsBib.h"
-
 int main()
 {
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/UnknownFileSizeRead/InputData.txt";
+    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/UnknownFileSizeRead/InputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "r");
 

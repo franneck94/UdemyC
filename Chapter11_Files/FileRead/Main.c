@@ -6,7 +6,7 @@
 
 int main()
 {
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/FileRead/InputData.txt";
+    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/FileRead/InputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "r");
 
@@ -17,7 +17,7 @@ int main()
 
     Vector v1 = { .data = createVector(5, 0), .length = 5 };
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         fscanf(fp, "%d", &v1.data[i]);
     }
@@ -25,15 +25,13 @@ int main()
     // Close the file
     fclose(fp);
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         printf("%d\n", v1.data[i]);
     }
 
     // Free vector data
-    free(v1.data);
-    v1.data = NULL;
-    v1.length = 0;
+    freeVector(&v1);
 
     return 0;
 }

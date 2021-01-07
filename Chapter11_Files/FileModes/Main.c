@@ -16,7 +16,7 @@ int main()
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/FileModes/Data.txt";
+    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/FileModes/Data.txt";
 
     // r (read)
     // w (write, creates if not exist)
@@ -35,7 +35,7 @@ int main()
     int line_size = 50;
     char *line = malloc(line_size * sizeof(char));
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         char str[12]; // 12 chars fits all values for int32
         sprintf(str, "%d\n", v1.data[i]);
@@ -44,6 +44,9 @@ int main()
 
     // Close the file
     fclose(fp);
+
+    // Free vector data
+    freeVector(&v1);
 
     return 0;
 }

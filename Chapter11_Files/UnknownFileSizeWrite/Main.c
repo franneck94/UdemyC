@@ -16,7 +16,7 @@ int main()
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyCKurs/Kapitel 11 - Dateien/UnknownFileSizeWrite/OutputData.txt";
+    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/UnknownFileSizeWrite/OutputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "w");
 
@@ -25,7 +25,7 @@ int main()
         return 1;
     }
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         char str[12]; // 12 chars fits all values for int32
         sprintf(str, "%d\n", v1.data[i]);
