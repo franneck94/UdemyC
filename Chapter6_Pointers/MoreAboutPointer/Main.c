@@ -1,21 +1,21 @@
 #include <stdio.h>
 
-void add(double *value1, double *value2, double add_value)
+void do_something(double param_in, double *param_out1, double *param_out2)
 {
-    *value1 += add_value; // * content (value) of the variable that is pointed to
-    *value2 += add_value; // * content (value) of the variable that is pointed to
+    *param_out1 += param_in;
+    *param_out2 += param_in;
 }
 
 int main()
 {
-    double my_value1 = 3.0;
-    double my_value2 = 2.0;
-    double my_add_value = 1.3;
+    double argument_in = 1.0;
+    double argument_out1 = 2.0; // 0xAA
+    double argument_out2 = 3.0; // 0xFF
 
-    add(&my_value1, &my_value2, my_add_value);
+    do_something(argument_in, &argument_out1, &argument_out2);
 
-    printf("%lf\n", my_value1);
-    printf("%lf\n", my_value2);
+    printf("%lf\n", argument_out1);
+    printf("%lf\n", argument_out2);
 
     return 0;
 }

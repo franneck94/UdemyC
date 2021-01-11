@@ -14,7 +14,7 @@ int main()
         // something
     }
 
-    printf("%d\n", i); // i from line 11
+    printf("%d\n", i); // i from line 10
 
     return 0;
 }
