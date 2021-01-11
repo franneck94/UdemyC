@@ -36,12 +36,14 @@ int compareNumbers(int number_a, int number_b)
     }
 }
 
-unsigned int factorial(unsigned int i)
+unsigned long long factorial(unsigned int n)
 {
-    if (i <= 1)
+    if (n > 1)
+    {
+        return n * factorial(n - 1);
+    }
+    else
     {
         return 1;
     }
-
-    return i * factorial(i - 1);
 }

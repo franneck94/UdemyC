@@ -13,7 +13,5 @@ int getNumberFromUser();
 // Parameters: int number_a, int number_b
 int compareNumbers(int number_a, int number_b);
 
-// Return Type: unsigned int
-// Name: factorial
-// Parameters: unsigned int i
-unsigned int factorial(unsigned int i);
+
+unsigned long long factorial(unsigned int n);

@@ -16,6 +16,7 @@
         "tuple": "c",
         "utility": "c",
         "xstring": "c",
-        "xutility": "c"
+        "xutility": "c",
+        "cstdlib": "cpp"
     }
 }
