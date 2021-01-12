@@ -16,12 +16,12 @@ int main()
 
     friends[0] = "Hans Schaffranek";
     friends[1] = "Peter Lustig";
-    friends[2] = "Hans Meier";
+    friends[2] = "Hans Schaffranek";
 
     // int strncmp(char *str1, char *str2, int n);
-    int same_name_01 = strncmp(friends[0], friends[1], 4);
-    int same_name_02 = strncmp(friends[0], friends[2], 4);
-    int same_name_12 = strncmp(friends[1], friends[2], 4);
+    int same_name_01 = strcmp(friends[0], friends[1]);
+    int same_name_02 = strcmp(friends[0], friends[2]);
+    int same_name_12 = strcmp(friends[1], friends[2]);
 
     // 0: Same Strings
     // !=0: Str1 and Str2 not the same
