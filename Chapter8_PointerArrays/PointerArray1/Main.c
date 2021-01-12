@@ -5,17 +5,17 @@
 
 int main()
 {
-    unsigned int length = getNumberFromUser();
+    int length = getNumberFromUser();
+    int *array = (int *)malloc(length * sizeof(int));
 
-    int *array;
-
-    // malloc: memory allocation
-    array = (int *)malloc(length * sizeof(int));
-
-    for (unsigned int i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
-        array[i] = i;
-        printf("Index: %d\n", array[i]);
+        array[i] = 1;
+    }
+
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d\n", array[i]);
     }
 
     free(array);
