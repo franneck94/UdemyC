@@ -68,5 +68,5 @@ float mean(int number_a, int number_b)
 
 int binom(int *a, int *b)
 {
-    return (*a) * (*a) + 2 * (*a) * (*b) + (*b) * (*b);
+    return ((*a) * (*a)) + 2 * ((*a) * (*b)) + ((*b) * (*b));
 }
