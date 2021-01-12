@@ -5,8 +5,7 @@ int main()
 {
     int number_friends = 3;
 
-    char **friends;
-    friends = (char **)malloc(3 * sizeof(char *));
+    char **friends = (char **)malloc(number_friends * sizeof(char *));
 
     for (int i = 0; i < number_friends; i++)
     {
