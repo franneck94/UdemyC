@@ -7,8 +7,8 @@ int main()
     char name[] = "Jan Schaffranek";
 
     printf("strlen: %zu\n", strlen(name));
-    printf("strchr: %s\n", strchr(name, 'S'));
-    printf("strstr: %s\n", strstr(name, "Schaff"));
+    printf("strchr: %s\n", strchr(name, 'a'));
+    printf("strstr: %s\n", strstr(name, "fran"));
 
     char dst[strlen(name) + 1];
     strcpy(dst, name);
