@@ -8,6 +8,7 @@ TODO.txt
 !*/
 
 .vscode/c_cpp_properties.json
+*/c_cpp_properties.json
 lectures/
 *.pptx
 *.png
