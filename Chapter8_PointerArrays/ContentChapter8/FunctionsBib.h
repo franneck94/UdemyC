@@ -52,12 +52,12 @@ int *createArray(unsigned int length, int value);
 
 void printArray(int *p_array, unsigned int length);
 
-int* freeArray(int *p_array);
+int *freeArray(int *p_array);
 
 int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value);
 
 void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
 
-int ** freeMatrix(int **p_matrix, unsigned int num_rows);
+int **freeMatrix(int **p_matrix, unsigned int num_rows);
 
 int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols);
