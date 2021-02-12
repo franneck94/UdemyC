@@ -23,6 +23,8 @@ dynamic_array_t *createDynamicArray()
 
     float *p_data = (float *)malloc(array->capacity * sizeof(float));
     array->data = p_data;
+
+    return array;
 }
 
 void expandDynamicArray(dynamic_array_t *array)
