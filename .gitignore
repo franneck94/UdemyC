@@ -6,11 +6,10 @@
 TODO.txt
 # Unignore all dirs
 !*/
+*.pdf
 
 .vscode/c_cpp_properties.json
 */c_cpp_properties.json
-lectures/
-*.pptx
 *.png
 *.out
 *.zip

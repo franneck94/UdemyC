@@ -1,8 +1,6 @@
-
-{  
+{
     "version": "2.0.0", 
     "tasks": [
-        // C Helper Tasks
         {
             "label": "Makefile_Debug",
             "type": "shell",
@@ -29,7 +27,6 @@
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Release"
             ]
         },
-        // Single Build Tasks
         {
             "label": "C: Debug (Single File)",
             "type": "shell",
@@ -72,7 +69,6 @@
                 "$gcc"
             ]
         },
-        // Folder Build Tasks
         {
             "label": "C: Debug (Folder)",
             "type": "shell",
@@ -113,7 +109,6 @@
                 "$gcc"
             ]
         },
-        // Execution Tasks
         {
             "label": "Execute: Debug Program",
             "type": "shell",
@@ -152,7 +147,6 @@
                 "$gcc"
             ]
         },
-        // Util Tasks
         {
             "label": "Makefile Clean",
             "type": "shell",
