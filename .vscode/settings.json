@@ -1,13 +1,7 @@
 {
-    // Windows, Linux
-    "compilerC": "gcc",
-    "compilerCpp": "g++",
-    // MacOS
-    // "compilerC": "clang",
-    // "compilerCpp": "clang++",
-    // For all OS
-    "make": "make",
-    "files.associations": {
-        "assert.h": "c"
-    }
+    "C_Cpp_Runner.compilerPathC": "C:\\cygwin64\\bin\\gcc.exe",
+    "C_Cpp_Runner.compilerPathCpp": "C:\\cygwin64\\bin\\g++.exe",
+    "C_Cpp_Runner.debuggerPath": "C:\\cygwin64\\bin\\gdb.exe",
+    "C_Cpp_Runner.makePath": "C:\\cygwin64\\bin\\make.exe",
+    "C_Cpp_Runner.standardC": "c90"
 }
