@@ -47,7 +47,7 @@ void my_printf(char *format, ...)
             }
             else if (*format == 's')
             {
-                char *value = va_arg(args, char*);
+                char *value = va_arg(args, char *);
 
                 while (*value != '\0')
                 {

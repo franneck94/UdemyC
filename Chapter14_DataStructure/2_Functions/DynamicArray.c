@@ -13,7 +13,7 @@ dynamic_array_t *createDynamicArray()
 {
     dynamic_array_t *array = (dynamic_array_t *)malloc(sizeof(dynamic_array_t));
 
-    if(!array)
+    if (!array)
     {
         return NULL;
     }
@@ -42,7 +42,7 @@ void pushValue(dynamic_array_t *array, float value)
     array->data[array->length] = value;
     array->length++;
 
-    if(array->length == array->capacity)
+    if (array->length == array->capacity)
     {
         expandDynamicArray(array);
     }
@@ -55,7 +55,7 @@ float popValue(dynamic_array_t *array)
     array->data[array->length - 1] = 0.0f;
     array->length--;
 
-    if(array->length < array->capacity / 2u)
+    if (array->length < array->capacity / 2u)
     {
         shrinkDynamicArray(array);
     }
@@ -67,7 +67,7 @@ void clearDynamicArray(dynamic_array_t *array)
 {
     free(array->data);
     array->data = NULL,
-    array->length = 0u;
+        array->length = 0u;
     array->capacity = INIT_CAPACITY;
 }
 
@@ -75,7 +75,7 @@ void printDynamicArray(dynamic_array_t *array)
 {
     printf("DynamicArray contains %d elements with a capacity of %d.\n", array->length, array->capacity);
 
-    for(unsigned int i = 0; i < array->length; i++)
+    for (unsigned int i = 0; i < array->length; i++)
     {
         printf("%f\n", array->data[i]);
     }

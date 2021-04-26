@@ -26,4 +26,4 @@ int *createVector(unsigned int length, int value);
 void printVector(Vector *vec);
 
 
-int* freeVector(Vector *vec);
+int *freeVector(Vector *vec);

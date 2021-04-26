@@ -16,7 +16,7 @@ int *createArray(unsigned int length, int value)
     return array;
 }
 
-void init_time_array(int* p_array, unsigned int length)
+void init_time_array(int *p_array, unsigned int length)
 {
     for (unsigned int i = 0; i < length; i++)
     {

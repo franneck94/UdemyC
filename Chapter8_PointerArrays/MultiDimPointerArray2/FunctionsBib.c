@@ -147,7 +147,7 @@ void printArray(int *p_array, unsigned int length)
     }
 }
 
-int* freeArray(int *p_array)
+int *freeArray(int *p_array)
 {
     free(p_array);
     p_array = NULL;
@@ -174,7 +174,7 @@ void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
     }
 }
 
-int ** freeMatrix(int **p_matrix, unsigned int num_rows)
+int **freeMatrix(int **p_matrix, unsigned int num_rows)
 {
     for (unsigned int i = 0; i < num_rows; i++)
     {

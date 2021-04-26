@@ -39,10 +39,10 @@ int writeOutVectorData(Vector *vec, const char *filepath);
 /**********************/
 /*  MATH. FUNCTIONS   */
 /**********************/
-Vector* addVectors(Vector *vec1, Vector *vec2);
+Vector *addVectors(Vector *vec1, Vector *vec2);
 
 
-Vector* subVectors(Vector *vec1, Vector *vec2);
+Vector *subVectors(Vector *vec1, Vector *vec2);
 
 
 float multiplyVectors(Vector *vec1, Vector *vec2);

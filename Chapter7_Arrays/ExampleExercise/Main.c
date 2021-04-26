@@ -12,26 +12,26 @@ int main()
     Berechne danach von den Array Werten das Minimum und Maximum.
     */
 
-   int data[1000] = {0};
+    int data[1000] = { 0 };
 
-   int user_input;
-   int length = 0;
+    int user_input;
+    int length = 0;
 
-   printf("Start with your input!\n");
-   do
-   {
-       scanf("%d", &user_input);
+    printf("Start with your input!\n");
+    do
+    {
+        scanf("%d", &user_input);
 
-       if (user_input > 0)
-       {
-           data[length] = user_input;
-           length++;
-       }
-       else
-       {
-           break;
-       }
-   } while (true);
+        if (user_input > 0)
+        {
+            data[length] = user_input;
+            length++;
+        }
+        else
+        {
+            break;
+        }
+    } while (true);
 
     int min = minArray(data, length);
     int max = maxArray(data, length);

@@ -12,6 +12,7 @@ c_cpp_properties.json
 build/
 Debug/
 Release/
+!LICENSE
 
 .vscode/c_cpp_properties.json
 */c_cpp_properties.json

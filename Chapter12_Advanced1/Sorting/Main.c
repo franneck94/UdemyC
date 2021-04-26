@@ -3,8 +3,8 @@
 
 int comp(const void *value1, const void *value2)
 {
-    int left = *((int *) value1);
-    int right = *((int *) value2);
+    int left = *((int *)value1);
+    int right = *((int *)value2);
 
     if (left > right)
     {
@@ -26,7 +26,7 @@ int main()
 
     qsort(&data, 4, sizeof(int), comp);
 
-    for(int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)
     {
         printf("data[%d] = %d\n", i, data[i]);
     }
