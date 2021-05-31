@@ -7,6 +7,7 @@ TODO.txt
 # Unignore all dirs
 !*/
 *.pdf
+settings.json
 c_cpp_properties.json
 !Makefile
 build/
