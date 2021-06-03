@@ -15,11 +15,11 @@ Debug/
 Release/
 !LICENSE
 
-Chapter16_SimpleCSVReader/1
-Chapter16_SimpleCSVReader/2
-Chapter16_SimpleCSVReader/3
-Chapter16_SimpleCSVReader/4
-Chapter16_SimpleCSVReader/5
+Chapter16_SimpleCSVReader/1/
+Chapter16_SimpleCSVReader/2/
+Chapter16_SimpleCSVReader/3/
+Chapter16_SimpleCSVReader/4/
+Chapter16_SimpleCSVReader/5/
 
 .vscode/c_cpp_properties.json
 */c_cpp_properties.json
