@@ -59,7 +59,6 @@ int main(int argc, char **argv)
     sort_records(my_records, SORT_DESCENDING);
     print_records(my_records, "Descending Sort");
 
-
     return_code = write_simple_csv(output_filepath, my_records);
 
     if (return_code != SUCCESS)
