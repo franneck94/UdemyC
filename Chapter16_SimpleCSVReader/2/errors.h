@@ -5,6 +5,6 @@ typedef enum
 {
     SUCCESS = 0,
     FAILURE = 1
-} RETURN_CODES;
+} RETURN_CODES
 
 #endif // ERRORS_H

@@ -85,45 +85,12 @@ RETURN_CODES read_simple_csv(const char * const file_path, records_t * const rec
         return FAILURE;
     }
 
-    return_code = fill_records(records, entries, num_lines);
-
-    if (return_code != SUCCESS)
-    {
-        return return_code;
-    }
+    // fill_records
 
     return SUCCESS;
 }
 
 RETURN_CODES write_simple_csv(const char * const file_path, const records_t * const records)
 {
-    FILE *fp = fopen(file_path, "w");
 
-    if (fp == NULL)
-    {
-        int errornum = errno;
-        fprintf(stderr, "Error in opening file: %s\n", strerror(errornum));
-        return FAILURE;
-    }
-
-    for (unsigned int i = 0; i < records->length; i++)
-    {
-        const entry_t * const entry = &records->entries[i];
-        int printed_caracters = fprintf(fp, "%c,%d\n", entry->letter, entry->value);
-
-        if (printed_caracters < NUM_VALUES)
-        {
-            break;
-        }
-    }
-
-    int return_close = fclose(fp);
-    fp = NULL;
-
-    if (return_close == EOF)
-    {
-        return FAILURE;
-    }
-
-    return SUCCESS;
 }

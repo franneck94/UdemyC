@@ -109,7 +109,12 @@ RETURN_CODES write_simple_csv(const char * const file_path, const records_t * co
     for (unsigned int i = 0; i < records->length; i++)
     {
         const entry_t * const entry = &records->entries[i];
-        int printed_caracters = fprintf(fp, "%c,%d\n", entry->letter, entry->value);
+        int printed_caracters = fprintf(fp, "%c,%d", entry->letter, entry->value);
+
+        if (i < records->length - 1)
+        {
+            fprintf(fp, "\n");
+        }
 
         if (printed_caracters < NUM_VALUES)
         {
