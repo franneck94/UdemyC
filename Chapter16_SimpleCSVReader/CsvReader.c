@@ -5,7 +5,11 @@
 
 #include "CsvReader.h"
 
-ERROR_TYPES line_count(const char *file_path, unsigned int *num_lines)
+#define NEW_LINE_ASCII 10
+#define BUFFER_SIZE 32
+#define NUM_VALUES 2
+
+RETURN_TYPES line_count(const char * const file_path, unsigned int * const num_lines)
 {
     FILE *fp = fopen(file_path, "r");
 
@@ -21,8 +25,10 @@ ERROR_TYPES line_count(const char *file_path, unsigned int *num_lines)
 
     while (fscanf(fp, "%c", &temp) != -1)
     {
-        if (temp == 10)
+        if (temp == NEW_LINE_ASCII)
+        {
             count++;
+        }
     }
 
     *num_lines = count;
@@ -30,7 +36,7 @@ ERROR_TYPES line_count(const char *file_path, unsigned int *num_lines)
     return SUCCESS;
 }
 
-ERROR_TYPES read_simple_csv(const char *file_path, records_t *records)
+RETURN_TYPES read_simple_csv(const char * const file_path, records_t * const records)
 {
     FILE *fp = fopen(file_path, "r");
 
@@ -42,35 +48,48 @@ ERROR_TYPES read_simple_csv(const char *file_path, records_t *records)
     }
 
     unsigned int num_lines = 0;
-    ERROR_TYPES err_line_count = line_count(file_path, &num_lines);
+    RETURN_TYPES err_line_count = line_count(file_path, &num_lines);
     if (err_line_count == FAILURE)
+    {
         return err_line_count;
+    }
 
     entry_t *entries = create_entries(num_lines);
 
     if (entries == NULL)
+    {
         return FAILURE;
+    }
 
     for (unsigned int i = 0; i < num_lines; ++i)
     {
-        int scanned_arguments = fscanf(fp, "%c,%d\n", &entries[i].letter, &entries[i].value);
+        char buffer[BUFFER_SIZE] = { '\0' };
+        fgets(buffer, BUFFER_SIZE, fp);
+        buffer[strcspn(buffer, "\r\n")] = '\0';
 
-        if (scanned_arguments != 2)
+        int scanned_arguments = sscanf(buffer, "%c,%d", &entries[i].letter, &entries[i].value);
+
+        if (scanned_arguments != NUM_VALUES)
         {
-            num_lines = i - 1;
+            num_lines = i;
             break;
         }
     }
 
-    fclose(fp);
+    int return_close = fclose(fp);
     fp = NULL;
+
+    if (return_close == EOF)
+    {
+        return FAILURE;
+    }
 
     fill_records(records, entries, num_lines);
 
     return SUCCESS;
 }
 
-ERROR_TYPES write_simple_csv(const char *file_path, records_t *records)
+RETURN_TYPES write_simple_csv(const char * const file_path, const records_t * const records)
 {
     FILE *fp = fopen(file_path, "w");
 
@@ -83,25 +102,27 @@ ERROR_TYPES write_simple_csv(const char *file_path, records_t *records)
 
     for (unsigned int i = 0; i < records->length; ++i)
     {
-        int printed_characters = 0;
+        const entry_t * const entry = &records->entries[i];
+        int printed_characters = fprintf(fp, "%c,%d", entry->letter, entry->value);
 
         if (i < records->length - 1)
         {
-            printed_characters = fprintf(fp, "%c,%d\n", records->entries[i].letter, records->entries[i].value);
-        }
-        else
-        {
-            printed_characters = fprintf(fp, "%c,%d", records->entries[i].letter, records->entries[i].value);
+            fprintf(fp, "\n");
         }
 
-        if (printed_characters < 2)
+        if (printed_characters < NUM_VALUES)
         {
-            break;
+            return FAILURE;
         }
     }
 
-    fclose(fp);
+    int return_close = fclose(fp);
     fp = NULL;
+
+    if (return_close == EOF)
+    {
+        return FAILURE;
+    }
 
     return SUCCESS;
 }
