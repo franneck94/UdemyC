@@ -8,6 +8,7 @@ int main()
 {
     dynamic_array_t *dynamic_array = createDynamicArray();
 
+    assert(NULL != dynamic_array);
     assert(0u == dynamic_array->length);
     assert(10u == dynamic_array->capacity);
 
@@ -63,6 +64,8 @@ int main()
     assert(14.0f == dynamic_array->data[8]);
 
     printDynamicArray(dynamic_array);
+    clearDynamicArray(dynamic_array);
+    dynamic_array = freeDynamicArray(dynamic_array);
 
     return 0;
 }

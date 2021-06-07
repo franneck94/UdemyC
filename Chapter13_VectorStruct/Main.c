@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "FunctionsBib.h"
+#include "Vector.h"
 
 int main()
 {
@@ -19,20 +19,21 @@ int main()
     Vector *v6 = divideScalar(v1, scalar);
     printVector(v6);
 
-    writeOutVectorData(v6, "v6.txt");
+    (void)writeOutVectorData(v6, "v6.txt");
     Vector *v6_copy = createVector(3, 0);
-    readInVectorData(v6_copy, "v6.txt");
+    (void)readInVectorData(v6_copy, "v6.txt");
     printVector(v6_copy);
 
     float result = multiplyVectors(v1, v2);
     printf("%f\n", result);
 
-    freeVector(v1);
-    freeVector(v2);
-    freeVector(v3);
-    freeVector(v4);
-    freeVector(v5);
-    freeVector(v6);
+    v1 = freeVector(v1);
+    v2 = freeVector(v2);
+    v3 = freeVector(v3);
+    v4 = freeVector(v4);
+    v5 = freeVector(v5);
+    v6 = freeVector(v6);
+    v6_copy = freeVector(v6_copy);
 
     return 0;
 }

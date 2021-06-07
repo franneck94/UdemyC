@@ -1,0 +1,14 @@
+---
+# NOTE there must be no spaces before the '-', so put the comma last.
+Checks: '
+bugprone-*,
+-bugprone-macro-parentheses,
+-bugprone-reserved-identifier,
+-facebook-hte-RelativeInclude,
+performance-*,
+-performance-noexcept-move-constructor,
+-performance-unnecessary-value-param,
+'
+AnalyzeTemporaryDtors: false
+CheckOptions:
+...

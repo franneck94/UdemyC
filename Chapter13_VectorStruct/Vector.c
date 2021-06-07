@@ -1,60 +1,59 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <float.h>
 
-#include "FunctionsBib.h"
+#include "Vector.h"
 
 /**********************/
-/*  HELPER FUNCTIONS  */
+/*   MAIN FUNCTIONS   */
 /**********************/
 
-int getNumberFromUser()
-{
-    int number_from_user; //0x00: 12
-
-    printf("Pls enter a interger number!\n");
-    scanf("%d", &number_from_user);
-
-    return number_from_user; // return 12;
-}
-
-
-Vector *createVector(unsigned int length, int value)
+Vector *createVector(const unsigned int length, const float value)
 {
     Vector *vec = (Vector *)malloc(sizeof(Vector));
-    float *data = (float *)malloc(length * sizeof(float));
+
+    if (vec == NULL)
+    {
+        return NULL;
+    }
+
+    vec->data = (float *)malloc(length * sizeof(float));
+    vec->length = length;
+
+    if (vec->data == NULL)
+    {
+        free(vec);
+        vec = NULL;
+
+        return NULL;
+    }
 
     for (unsigned int i = 0; i < length; i++)
     {
-        data[i] = value;
+        vec->data[i] = value;
     }
-
-    vec->data = data;
-    vec->length = length;
 
     return vec;
 }
 
-
-void printVector(Vector *vec)
+void *freeVector(Vector *vec)
 {
-    for (unsigned int i = 0; i < vec->length; i++)
+    if (vec == NULL)
     {
-        printf("%f\n", vec->data[i]);
+        return NULL;
     }
 
-    printf("\n");
-}
-
-
-void freeVector(Vector *vec)
-{
-    free(vec->data);
-    vec->data = NULL;
+    if (vec->data != NULL)
+    {
+        free(vec->data);
+        vec->data = NULL;
+    }
 
     free(vec);
     vec = NULL;
-}
 
+    return NULL;
+}
 
 /**********************/
 /*  I/O FUNCTIONS     */
@@ -62,6 +61,11 @@ void freeVector(Vector *vec)
 
 int readInVectorData(Vector *vec, const char *filepath)
 {
+    if (vec == NULL || filepath == NULL)
+    {
+        return 1;
+    }
+
     FILE *fp = fopen(filepath, "r");
 
     if (fp == NULL)
@@ -75,13 +79,18 @@ int readInVectorData(Vector *vec, const char *filepath)
     }
 
     fclose(fp);
+    fp = NULL;
 
     return 0;
 }
 
-
 int writeOutVectorData(Vector *vec, const char *filepath)
 {
+    if (vec == NULL || filepath == NULL)
+    {
+        return 1;
+    }
+
     FILE *fp = fopen(filepath, "w");
 
     if (fp == NULL)
@@ -102,16 +111,36 @@ int writeOutVectorData(Vector *vec, const char *filepath)
     }
 
     fclose(fp);
+    fp = NULL;
 
     return 0;
 }
 
+void printVector(const Vector *vec)
+{
+    if (vec == NULL)
+    {
+        return;
+    }
+
+    for (unsigned int i = 0; i < vec->length; i++)
+    {
+        printf("%f\n", vec->data[i]);
+    }
+
+    printf("\n");
+}
 
 /**********************/
 /*  MATH. FUNCTIONS   */
 /**********************/
-Vector *addVectors(Vector *vec1, Vector *vec2)
+Vector *addVectors(const Vector *vec1, const Vector *vec2)
 {
+    if (vec1 == NULL || vec2 == NULL)
+    {
+        return NULL;
+    }
+
     Vector *result = createVector(vec1->length, 0);
 
     for (unsigned int i = 0; i < vec1->length; i++)
@@ -122,9 +151,13 @@ Vector *addVectors(Vector *vec1, Vector *vec2)
     return result;
 }
 
-
-Vector *subVectors(Vector *vec1, Vector *vec2)
+Vector *subVectors(const Vector *vec1, const Vector *vec2)
 {
+    if (vec1 == NULL || vec2 == NULL)
+    {
+        return NULL;
+    }
+
     Vector *result = createVector(vec1->length, 0);
 
     for (unsigned int i = 0; i < vec1->length; i++)
@@ -135,10 +168,14 @@ Vector *subVectors(Vector *vec1, Vector *vec2)
     return result;
 }
 
-
-float multiplyVectors(Vector *vec1, Vector *vec2)
+float multiplyVectors(const Vector *vec1, const Vector *vec2)
 {
     float result = 0.0f;
+
+    if (vec1 == NULL || vec2 == NULL)
+    {
+        return result;
+    }
 
     for (unsigned int i = 0; i < vec1->length; i++)
     {
@@ -148,9 +185,13 @@ float multiplyVectors(Vector *vec1, Vector *vec2)
     return result;
 }
 
-
-Vector *multiplyScalar(Vector *vec, float scalar)
+Vector *multiplyScalar(const Vector *vec, const float scalar)
 {
+    if (vec == NULL)
+    {
+        return NULL;
+    }
+
     Vector *result = createVector(vec->length, 0);
 
     for (unsigned int i = 0; i < vec->length; i++)
@@ -161,9 +202,13 @@ Vector *multiplyScalar(Vector *vec, float scalar)
     return result;
 }
 
-
-Vector *divideScalar(Vector *vec, float scalar)
+Vector *divideScalar(const Vector *vec, const float scalar)
 {
+    if (vec == NULL)
+    {
+        return NULL;
+    }
+
     Vector *result = createVector(vec->length, 0);
 
     for (unsigned int i = 0; i < vec->length; i++)
@@ -174,32 +219,37 @@ Vector *divideScalar(Vector *vec, float scalar)
     return result;
 }
 
-
-float meanVector(Vector *vec)
+float meanVector(const Vector *vec)
 {
     float sum = 0.0f;
+
+    if (vec == NULL)
+    {
+        return sum;
+    }
 
     for (unsigned int i = 0; i < vec->length; i++)
     {
         sum += vec->data[i];
     }
 
-    float mean = sum / vec->length;
+    float mean = sum / (float)vec->length;
     return mean;
 }
 
-
-int minVector(Vector *vec)
+float minVector(const Vector *vec)
 {
-    int min;
+    float min = FLT_MAX;
 
-    for (unsigned int i = 0; i < vec->length; i++)
+    if (vec == NULL)
     {
-        if (i == 0)
-        {
-            min = vec->data[i];
-        }
+        return min;
+    }
 
+    min = vec->data[0];
+
+    for (unsigned int i = 1; i < vec->length; i++)
+    {
         if (vec->data[i] < min)
         {
             min = vec->data[i];
@@ -209,18 +259,19 @@ int minVector(Vector *vec)
     return min;
 }
 
-
-int maxVector(Vector *vec)
+float maxVector(const Vector *vec)
 {
-    int max;
+    float max = FLT_MIN;
 
-    for (unsigned int i = 0; i < vec->length; i++)
+    if (vec == NULL)
     {
-        if (i == 0)
-        {
-            max = vec->data[i];
-        }
+        return max;
+    }
 
+    max = vec->data[0];
+
+    for (unsigned int i = 1; i < vec->length; i++)
+    {
         if (vec->data[i] > max)
         {
             max = vec->data[i];
