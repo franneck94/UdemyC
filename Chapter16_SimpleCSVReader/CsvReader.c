@@ -21,7 +21,7 @@ RETURN_CODES line_count(const char * const file_path, unsigned int * const num_l
     }
 
     unsigned int count = 1;
-    char temp;
+    char temp = 0;
 
     while (fscanf(fp, "%c", &temp) != EOF)
     {
@@ -60,6 +60,7 @@ RETURN_CODES read_simple_csv(const char * const file_path, records_t * const rec
 
     if (return_code != SUCCESS)
     {
+        fclose(fp);
         return return_code;
     }
 
@@ -67,6 +68,7 @@ RETURN_CODES read_simple_csv(const char * const file_path, records_t * const rec
 
     if (entries == NULL)
     {
+        fclose(fp);
         return FAILURE;
     }
 

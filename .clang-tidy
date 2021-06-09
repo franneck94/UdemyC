@@ -1,14 +1,17 @@
 ---
-# NOTE there must be no spaces before the '-', so put the comma last.
-Checks: '
-bugprone-*,
--bugprone-macro-parentheses,
--bugprone-reserved-identifier,
--facebook-hte-RelativeInclude,
-performance-*,
--performance-noexcept-move-constructor,
--performance-unnecessary-value-param,
-'
-AnalyzeTemporaryDtors: false
-CheckOptions:
+Checks: '-*,clang-*,bugprone-*,cppcoreguidelines-*,modernize-*,google-*,
+-modernize-use-trailing-return-type,
+-cppcoreguidelines-pro-bounds-constant-array-index,
+-cppcoreguidelines-pro-bounds-pointer-arithmetic,
+-cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+-cppcoreguidelines-special-member-functions,
+-cppcoreguidelines-avoid-magic-numbers,
+-cppcoreguidelines-owning-memory,
+-clang-diagnostic-pragma-once-outside-header,
+-bugprone-exception-escape,
+-clang-diagnostic-c++17-extensions,
+-clang-diagnostic-deprecated-declarations,
+-clang-diagnostic-format'
+AnalyzeTemporaryDtors:  false
+FormatStyle:            file
 ...
