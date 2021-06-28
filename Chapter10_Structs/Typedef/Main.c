@@ -16,12 +16,11 @@ typedef unsigned int uint32_t;
 void printFriend(Friend_t *friend)
 {
     printf("%s %s's birthday is: %u.%u.%u.\n",
-        friend->prename,
-        friend->name,
-        friend->day,
-        friend->month,
-        friend->year
-    );
+           friend->prename,
+           friend->name,
+           friend->day,
+           friend->month,
+           friend->year);
 }
 
 void changeName(Friend_t *friend, char *new_name)
@@ -31,8 +30,8 @@ void changeName(Friend_t *friend, char *new_name)
 
 int main()
 {
-    Friend_t jan = { .name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u };
-    Friend_t lara = { .name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12 };
+    Friend_t jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u};
+    Friend_t lara = {.name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12};
 
     Friend_t friend_book[2];
     friend_book[0] = jan;

@@ -17,7 +17,7 @@ int main()
         return 1;
     }
 
-    Vector v1 = { .data = createVector(8, 1), .length = 8 };
+    Vector v1 = {.data = createVector(8, 1), .length = 8};
 
     for (unsigned int i = 0; i < v1.length; i++)
     {

@@ -25,8 +25,8 @@ void *delete_entries(entry_t *entries);
 
 records_t *create_records();
 
-RETURN_CODES fill_records(records_t * const records, entry_t * const entries, const unsigned int length);
+RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length);
 
-RETURN_CODES print_records(const records_t * const records, const char * const header);
+RETURN_CODES print_records(const records_t *const records, const char *const header);
 
 #endif // RECORD_H

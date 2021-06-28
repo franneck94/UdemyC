@@ -4,14 +4,14 @@
 int main()
 {
     // Char Array (Stack)
-    char name1[4] = { 'J', 'a', 'n', '\0' };
+    char name1[4] = {'J', 'a', 'n', '\0'};
 
     for (int i = 0; i < 4; i++)
     {
         printf("%c\n", name1[i]);
     }
 
-    char name2[] = { 'J', 'a', 'n', '\0' };
+    char name2[] = {'J', 'a', 'n', '\0'};
 
     for (int i = 0; i < 4; i++)
     {

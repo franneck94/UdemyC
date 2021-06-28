@@ -25,9 +25,9 @@ int gets_sc(char *buffer, int n)
 int main()
 {
     int buffer_size = 32;
-    char input[32] = { '\0' };
-    char output1[32] = { '\0' };
-    char output2[32] = { '\0' };
+    char input[32] = {'\0'};
+    char output1[32] = {'\0'};
+    char output2[32] = {'\0'};
 
     printf("Enter a string : ");
 

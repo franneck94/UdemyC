@@ -33,12 +33,12 @@ records_t *create_records();
 
 void *delete_records(records_t *records);
 
-RETURN_CODES fill_records(records_t * const records, entry_t * const entries, const unsigned int length);
+RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length);
 
-RETURN_CODES print_records(const records_t * const records, const char * const header);
+RETURN_CODES print_records(const records_t *const records, const char *const header);
 
-RETURN_CODES random_fill_records(records_t * const records);
+RETURN_CODES random_fill_records(records_t *const records);
 
-RETURN_CODES sort_records(const records_t * const records, const SORTING_SCHEME sorting_scheme);
+RETURN_CODES sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme);
 
 #endif // RECORD_H

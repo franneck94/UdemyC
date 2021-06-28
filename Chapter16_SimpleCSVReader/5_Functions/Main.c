@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "Record.h"
 #include "CsvReader.h"
+#include "Record.h"
 
 #define FOLDER_LEN 128
 #define FILE_LEN 64
@@ -13,7 +13,7 @@ int main()
 {
     records_t *my_records = create_records();
 
-    char input_filepath[FOLDER_LEN + FILE_LEN] = { '\0' };
+    char input_filepath[FOLDER_LEN + FILE_LEN] = {'\0'};
     strncpy(input_filepath, PROJECT_PATH, FOLDER_LEN);
     strncat(input_filepath, "data_in.csv", FILE_LEN);
 
@@ -36,7 +36,7 @@ int main()
     sort_records(my_records, SORT_DESCENDING);
     print_records(my_records, "Descending Sort");
 
-    char output_filepath[FOLDER_LEN + FILE_LEN] = { '\0' };
+    char output_filepath[FOLDER_LEN + FILE_LEN] = {'\0'};
     strncpy(output_filepath, PROJECT_PATH, FOLDER_LEN);
     strncat(output_filepath, "data_out.csv", FILE_LEN);
 

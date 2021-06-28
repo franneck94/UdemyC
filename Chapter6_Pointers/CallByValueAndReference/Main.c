@@ -16,7 +16,6 @@ void sub(float val_sub)
     val_sub = val_sub - 1.0f;
 }
 
-
 int main()
 {
     float val_main = 0.0f;

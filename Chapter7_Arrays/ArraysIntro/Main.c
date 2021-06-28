@@ -14,14 +14,14 @@ int main()
         printf("numbers[%d] = %d\n", i, numbers[i]);
     }
 
-    int numbers2[4] = { 13, 12, 11, 10 };
+    int numbers2[4] = {13, 12, 11, 10};
 
     for (int i = 0; i < 4; i++)
     {
         printf("numbers2[%d] = %d\n", i, numbers2[i]);
     }
 
-    int numbers3[4] = { 13, 12, 11 };
+    int numbers3[4] = {13, 12, 11};
 
     for (int i = 0; i < 4; i++)
     {

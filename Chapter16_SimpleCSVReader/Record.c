@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #include "Record.h"
@@ -40,7 +40,7 @@ void *delete_records(records_t *records)
     return NULL;
 }
 
-RETURN_CODES fill_records(records_t * const records, entry_t * const entries, const unsigned int length)
+RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length)
 {
     if (records == NULL || entries == NULL)
     {
@@ -53,7 +53,7 @@ RETURN_CODES fill_records(records_t * const records, entry_t * const entries, co
     return SUCCESS;
 }
 
-RETURN_CODES print_records(const records_t * const records, const char * const header)
+RETURN_CODES print_records(const records_t *const records, const char *const header)
 {
     if (records == NULL)
     {
@@ -67,7 +67,7 @@ RETURN_CODES print_records(const records_t * const records, const char * const h
 
     for (unsigned int i = 0; i < records->length; i++)
     {
-        const entry_t * const entry = &records->entries[i];
+        const entry_t *const entry = &records->entries[i];
         int printed_caracters = printf("%c, %d\n", entry->letter, entry->value);
 
         if (printed_caracters < NUM_VALUES)
@@ -119,7 +119,7 @@ static int comp_descending(const void *value1, const void *value2)
     }
 }
 
-RETURN_CODES random_fill_records(records_t * const records)
+RETURN_CODES random_fill_records(records_t *const records)
 {
     if (records == NULL)
     {
@@ -128,7 +128,7 @@ RETURN_CODES random_fill_records(records_t * const records)
 
     srand(42);
 
-    const int lower_letter = 97; // 'a'
+    const int lower_letter = 97;  // 'a'
     const int upper_letter = 122; // 'z'
     const int lower_value = 0;
     const int upper_value = 99;
@@ -145,7 +145,7 @@ RETURN_CODES random_fill_records(records_t * const records)
     return SUCCESS;
 }
 
-RETURN_CODES sort_records(const records_t * const records, const SORTING_SCHEME sorting_scheme)
+RETURN_CODES sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme)
 {
     if (records == NULL)
     {
@@ -154,20 +154,20 @@ RETURN_CODES sort_records(const records_t * const records, const SORTING_SCHEME 
 
     switch (sorting_scheme)
     {
-        case SORT_ASCENDING:
-        {
-            qsort(records->entries, records->length, sizeof(entry_t), comp_ascending);
-            break;
-        }
-        case SORT_DESCENDING:
-        {
-            qsort(records->entries, records->length, sizeof(entry_t), comp_descending);
-            break;
-        }
-        default:
-        {
-            break;
-        }
+    case SORT_ASCENDING:
+    {
+        qsort(records->entries, records->length, sizeof(entry_t), comp_ascending);
+        break;
+    }
+    case SORT_DESCENDING:
+    {
+        qsort(records->entries, records->length, sizeof(entry_t), comp_descending);
+        break;
+    }
+    default:
+    {
+        break;
+    }
     }
 
     return SUCCESS;

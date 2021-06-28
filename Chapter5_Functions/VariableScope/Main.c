@@ -10,7 +10,6 @@ void func()
     printf("(FUNC) b = %d\n", b);
 }
 
-
 int main()
 {
     int c = 3;

@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #include "Record.h"
@@ -28,7 +28,7 @@ records_t *create_records()
     return records;
 }
 
-RETURN_CODES fill_records(records_t * const records, entry_t * const entries, const unsigned int length)
+RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length)
 {
     if (records == NULL || entries == NULL)
     {
@@ -41,7 +41,7 @@ RETURN_CODES fill_records(records_t * const records, entry_t * const entries, co
     return SUCCESS;
 }
 
-RETURN_CODES print_records(const records_t * const records, const char * const header)
+RETURN_CODES print_records(const records_t *const records, const char *const header)
 {
     if (records == NULL)
     {
@@ -55,7 +55,7 @@ RETURN_CODES print_records(const records_t * const records, const char * const h
 
     for (unsigned int i = 0; i < records->length; i++)
     {
-        const entry_t * const entry = &records->entries[i];
+        const entry_t *const entry = &records->entries[i];
         int printed_caracters = printf("%c, %d\n", entry->letter, entry->value);
 
         if (printed_caracters < NUM_VALUES)

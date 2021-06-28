@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #include "Record.h"
@@ -26,7 +26,7 @@ records_t *create_records()
     return records;
 }
 
-RETURN_CODES fill_records(records_t * const records, entry_t * const entries, const unsigned int length)
+RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length)
 {
     if (records == NULL || entries == NULL)
     {

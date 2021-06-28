@@ -16,7 +16,6 @@ int *createArray(unsigned int length, int value)
     return array;
 }
 
-
 int main()
 {
     unsigned int length = getNumberFromUser();

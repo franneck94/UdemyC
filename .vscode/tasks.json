@@ -13,7 +13,8 @@
                 "C_COMPILER=${config:compilerC}",
                 "LANGUAGE_MODE=C",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Debug"
-            ]
+            ],
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "Makefile_Release",
@@ -27,7 +28,8 @@
                 "C_COMPILER=${config:compilerC}",
                 "LANGUAGE_MODE=C",
                 "EXECUTABLE_NAME=${fileBasenameNoExtension}Release"
-            ]
+            ],
+            "problemMatcher": ["$gcc"]
         },
         {
             "label": "C: Debug (Single File)",

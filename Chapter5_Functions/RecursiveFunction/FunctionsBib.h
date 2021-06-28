@@ -13,5 +13,4 @@ int getNumberFromUser();
 // Parameters: int number_a, int number_b
 int compareNumbers(int number_a, int number_b);
 
-
 unsigned long long factorial(unsigned int n);

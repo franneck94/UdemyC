@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "FunctionsBib.h"
 
@@ -12,7 +12,7 @@ int main()
     Berechne danach von den Array Werten das Minimum und Maximum.
     */
 
-    int data[1000] = { 0 };
+    int data[1000] = {0};
 
     int user_input;
     int length = 0;

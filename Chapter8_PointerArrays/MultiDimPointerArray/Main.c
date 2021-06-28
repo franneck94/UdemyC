@@ -3,7 +3,6 @@
 
 #include "FunctionsBib.h"
 
-
 int main()
 {
     unsigned int num_rows = 2;

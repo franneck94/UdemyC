@@ -13,7 +13,6 @@ int getNumberFromUser()
     return number_from_user; // return 12;
 }
 
-
 float meanVector(Vector *vec)
 {
     float sum = 0.0f;
@@ -26,7 +25,6 @@ float meanVector(Vector *vec)
     float mean = sum / vec->length;
     return mean;
 }
-
 
 int minVector(Vector *vec)
 {
@@ -48,7 +46,6 @@ int minVector(Vector *vec)
     return min;
 }
 
-
 int maxVector(Vector *vec)
 {
     int max;
@@ -69,7 +66,6 @@ int maxVector(Vector *vec)
     return max;
 }
 
-
 int *createVector(unsigned int length, int value)
 {
     int *p_data;
@@ -83,7 +79,6 @@ int *createVector(unsigned int length, int value)
     return p_data;
 }
 
-
 void printVector(Vector *vec)
 {
     for (unsigned int i = 0; i < vec->length; i++)
@@ -91,7 +86,6 @@ void printVector(Vector *vec)
         printf("%d\n", vec->data[i]);
     }
 }
-
 
 int *freeVector(Vector *vec)
 {
