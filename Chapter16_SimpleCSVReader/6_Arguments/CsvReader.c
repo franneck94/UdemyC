@@ -1,7 +1,8 @@
+#include <errno.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdio.h>
-#include <errno.h>
+
 
 #include "CsvReader.h"
 
@@ -9,7 +10,7 @@
 #define BUFFER_SIZE 64
 #define NUM_VALUES 2
 
-RETURN_CODES line_count(const char * const file_path, unsigned int * const num_lines)
+RETURN_CODES line_count(const char *const file_path, unsigned int *const num_lines)
 {
     FILE *fp = fopen(file_path, "r");
 
@@ -44,7 +45,7 @@ RETURN_CODES line_count(const char * const file_path, unsigned int * const num_l
     return SUCCESS;
 }
 
-RETURN_CODES read_simple_csv(const char * const file_path, records_t * const records)
+RETURN_CODES read_simple_csv(const char *const file_path, records_t *const records)
 {
     FILE *fp = fopen(file_path, "r");
 
@@ -72,7 +73,7 @@ RETURN_CODES read_simple_csv(const char * const file_path, records_t * const rec
 
     for (unsigned int i = 0; i < num_lines; i++)
     {
-        char buffer[BUFFER_SIZE] = { '\0' };
+        char buffer[BUFFER_SIZE] = {'\0'};
         fgets(buffer, BUFFER_SIZE, fp);
         buffer[strcspn(buffer, "\r\n")] = '\0';
 
@@ -103,7 +104,7 @@ RETURN_CODES read_simple_csv(const char * const file_path, records_t * const rec
     return SUCCESS;
 }
 
-RETURN_CODES write_simple_csv(const char * const file_path, const records_t * const records)
+RETURN_CODES write_simple_csv(const char *const file_path, const records_t *const records)
 {
     FILE *fp = fopen(file_path, "w");
 
@@ -116,7 +117,7 @@ RETURN_CODES write_simple_csv(const char * const file_path, const records_t * co
 
     for (unsigned int i = 0; i < records->length; i++)
     {
-        const entry_t * const entry = &records->entries[i];
+        const entry_t *const entry = &records->entries[i];
         int printed_caracters = fprintf(fp, "%c,%d\n", entry->letter, entry->value);
 
         if (printed_caracters < NUM_VALUES)

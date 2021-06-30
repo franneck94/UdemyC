@@ -20,7 +20,8 @@ int main()
 
         if ((selection > 20) || (selection < 1))
         {
-            printf("You did not enter a valid number!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
+            printf("You did not enter a valid number!\nPlease try again! You have %d guesses left!\n\n",
+                   n_rounds - (i + 1));
             i++;
             continue;
         }
@@ -32,11 +33,14 @@ int main()
         }
         else if (selection < goal)
         {
-            printf("Not correct, the right number is greater than yours!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
+            printf(
+                "Not correct, the right number is greater than yours!\nPlease try again! You have %d guesses left!\n\n",
+                n_rounds - (i + 1));
         }
         else if (selection > goal)
         {
-            printf("Not correct, the right number is less than yours!\nPlease try again! You have %d guesses left!\n\n", n_rounds - (i + 1));
+            printf("Not correct, the right number is less than yours!\nPlease try again! You have %d guesses left!\n\n",
+                   n_rounds - (i + 1));
         }
 
         i++;

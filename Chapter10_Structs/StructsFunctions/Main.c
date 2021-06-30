@@ -12,12 +12,7 @@ struct Friend
 
 void printFriend(struct Friend *friend)
 {
-    printf("%s %s's birthday is: %u.%u.%u.\n",
-           friend->prename,
-           friend->name,
-           friend->day,
-           friend->month,
-           friend->year);
+    printf("%s %s's birthday is: %u.%u.%u.\n", friend->prename, friend->name, friend->day, friend->month, friend->year);
 }
 
 void changeName(struct Friend *friend, char *new_name)

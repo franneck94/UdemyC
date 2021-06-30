@@ -15,12 +15,7 @@ typedef unsigned int uint32_t;
 
 void printFriend(Friend_t *friend)
 {
-    printf("%s %s's birthday is: %u.%u.%u.\n",
-           friend->prename,
-           friend->name,
-           friend->day,
-           friend->month,
-           friend->year);
+    printf("%s %s's birthday is: %u.%u.%u.\n", friend->prename, friend->name, friend->day, friend->month, friend->year);
 }
 
 void changeName(Friend_t *friend, char *new_name)
