@@ -6,13 +6,10 @@
 TODO.txt
 valgrind-out.txt
 **/*/.vscode/
-launch.json
 # Unignore all dirs
 !*/
 *.pdf
-settings.json
 c_cpp_properties.json
-launch.json
 !Makefile
 build/
 Debug/
