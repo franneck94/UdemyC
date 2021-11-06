@@ -50,5 +50,11 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
-    "formatContextMenu.closeAfterSave": true
+    "formatContextMenu.closeAfterSave": true,
+    "clang-tidy.compilerArgsBefore": [
+      "-D_CRT_SECURE_NO_WARNINGS"
+    ],
+    "clang-tidy.compilerArgs": [
+      "-std=c99"
+    ]
 }
