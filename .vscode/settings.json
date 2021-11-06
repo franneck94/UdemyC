@@ -15,7 +15,11 @@
     "explorer.confirmDelete": false,
     "files.autoSave": "onFocusChange",
     "files.associations": {
-        ".clang*": "yaml"
+        "*.pyx": "python",
+        ".clang*": "yaml",
+        "*.gpj": "jsonc",
+        "*.gvw": "jsonc",
+        "stdio.h": "c"
     },
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
