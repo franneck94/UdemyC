@@ -1,7 +1,7 @@
 {
-    "compilerC": "gcc",
-    "compilerCpp": "g++",
-    "make": "make",
+    "compilerC": "C:/cygwin64/bin/gcc.exe",
+    "compilerCpp": "C:/cygwin64/bin/g++.exe",
+    "make": "C:/cygwin64/bin/make.exe",
     "editor.tabSize": 4,
     "editor.rulers": [
         80,
@@ -15,23 +15,22 @@
     "explorer.confirmDelete": false,
     "files.autoSave": "onFocusChange",
     "files.associations": {
-        "*.pyx": "python",
-        ".clang*": "yaml",
-        "*.gpj": "jsonc",
-        "*.gvw": "jsonc",
-        "stdio.h": "c"
+        ".clang*": "yaml"
     },
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "C_Cpp.clang_format_sortIncludes": true,
     "C_Cpp.vcFormat.indent.preserveComments": true,
     "C_Cpp.vcFormat.indent.namespaceContents": false,
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
     "C_Cpp.vcFormat.space.pointerReferenceAlignment": "right",
+    "C_Cpp.simplifyStructuredComments": false,
     "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.formatting": "clangFormat",
     "cmake.configureOnOpen": false,
     "cmake.autoSelectActiveFolder": false,
     "cmake.configureOnEdit": false,
@@ -56,10 +55,10 @@
     },
     "formatContextMenu.closeAfterSave": true,
     "clang-tidy.compilerArgsBefore": [
-      "-D_CRT_SECURE_NO_WARNINGS",
-      "-xc"
-    ],
-    "clang-tidy.compilerArgs": [
-      "-std=c99"
-    ]
+        "-D_CRT_SECURE_NO_WARNINGS",
+        "-xc"
+      ],
+      "clang-tidy.compilerArgs": [
+        "-std=c++17"
+      ]
 }

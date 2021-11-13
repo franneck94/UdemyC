@@ -7,7 +7,7 @@
 
 int main()
 {
-    int v[LENGTH] = { 1, 2, 3 };
+    int v[LENGTH] = {1, 2, 3};
 
     int min_v = minArray(v, LENGTH);
     int max_v = maxArray(v, LENGTH);
