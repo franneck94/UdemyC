@@ -7,7 +7,7 @@ const unsigned int LENGTH = 3;
 
 int main()
 {
-    int array[D_LENGTH] = {1, 2, 3};
+    int array[D_LENGTH] = { 1, 2, 3 };
 
     return 0;
 }

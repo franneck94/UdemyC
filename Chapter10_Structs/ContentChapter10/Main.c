@@ -5,7 +5,7 @@
 
 int main()
 {
-    Vector v1 = {.data = createVector(3, 1), .length = 3};
+    Vector v1 = { .data = createVector(3, 1), .length = 3 };
     v1.data[1] = 2;
 
     printVector(&v1);

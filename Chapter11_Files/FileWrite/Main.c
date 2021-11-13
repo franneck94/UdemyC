@@ -6,7 +6,7 @@
 
 int main()
 {
-    Vector v1 = {.data = createVector(5, 0), .length = 5};
+    Vector v1 = { .data = createVector(5, 0), .length = 5 };
 
     for (int i = 0; i < v1.length; i++)
     {

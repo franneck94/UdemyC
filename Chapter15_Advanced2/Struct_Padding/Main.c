@@ -38,16 +38,16 @@ typedef struct
 int main()
 {
     s_data s;
-    printf("Size in byte: %lu\n", sizeof(s));
+    printf("Size in byte: %llu\n", sizeof(s));
 
     s_data2 s2;
-    printf("Size in byte: %lu\n", sizeof(s2));
+    printf("Size in byte: %llu\n", sizeof(s2));
 
     s_data3 s3;
-    printf("Size in byte: %lu\n", sizeof(s3));
+    printf("Size in byte: %llu\n", sizeof(s3));
 
     s_data4 s4;
-    printf("Size in byte: %lu\n", sizeof(s4));
+    printf("Size in byte: %llu\n", sizeof(s4));
 
     return 0;
 }

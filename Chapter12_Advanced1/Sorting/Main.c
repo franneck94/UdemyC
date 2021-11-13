@@ -22,7 +22,7 @@ int comp(const void *value1, const void *value2)
 
 int main()
 {
-    int data[4] = {-2, 3, -1, 12};
+    int data[4] = { -2, 3, -1, 12 };
 
     qsort(&data, 4, sizeof(int), comp);
 

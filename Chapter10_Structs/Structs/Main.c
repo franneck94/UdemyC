@@ -12,8 +12,8 @@ struct Friend
 
 int main()
 {
-    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u};
-    struct Friend lara = {.name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12};
+    struct Friend jan = { .name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u };
+    struct Friend lara = { .name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12 };
 
     printf("%u\n", jan.year);
     printf("%u\n", jan.month);

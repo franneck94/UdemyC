@@ -28,7 +28,7 @@ float meanVector(Vector *vec)
 
 int minVector(Vector *vec)
 {
-    int min;
+    int min = 0;
 
     for (unsigned int i = 0; i < vec->length; i++)
     {
@@ -48,7 +48,7 @@ int minVector(Vector *vec)
 
 int maxVector(Vector *vec)
 {
-    int max;
+    int max = 0;
 
     for (unsigned int i = 0; i < vec->length; i++)
     {
@@ -91,4 +91,6 @@ int *freeVector(Vector *vec)
 {
     free(vec->data);
     vec->data = NULL;
+
+    return NULL;
 }

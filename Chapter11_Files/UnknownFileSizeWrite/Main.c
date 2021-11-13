@@ -9,7 +9,7 @@ int main()
     unsigned int length = 10;
     int fill_value = 0;
 
-    Vector v1 = {.data = createVector(length, fill_value), .length = length};
+    Vector v1 = { .data = createVector(length, fill_value), .length = length };
 
     for (int i = 0; i < v1.length; i++)
     {

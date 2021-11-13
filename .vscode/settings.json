@@ -56,7 +56,8 @@
     },
     "formatContextMenu.closeAfterSave": true,
     "clang-tidy.compilerArgsBefore": [
-      "-D_CRT_SECURE_NO_WARNINGS"
+      "-D_CRT_SECURE_NO_WARNINGS",
+      "-xc"
     ],
     "clang-tidy.compilerArgs": [
       "-std=c99"
