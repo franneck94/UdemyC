@@ -2,8 +2,8 @@
 
 int main()
 {
-    float a = 5.0;
-    float b = 2.0;
+    float a = 5.0f;
+    float b = 2.0f;
     float c;
 
     // Addition

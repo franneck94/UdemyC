@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define PI 3.14159
+#define PI 3.14159f
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     }
     else
     {
-        float perimeter = 2 * radius * PI;
+        float perimeter = 2.0f * radius * PI;
         float area = radius * radius * PI;
 
         printf("The perimeter is %f and the area is %f", perimeter, area);

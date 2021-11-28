@@ -7,7 +7,7 @@ int main()
     // &: Memoryaddress
     printf("Value: %d\n", my_value);
     printf("Memory address: %p\n", &my_value);
-    printf("Size: %lu\n", sizeof(my_value));
+    printf("Size: %llu\n", sizeof(my_value));
 
     return 0;
 }
