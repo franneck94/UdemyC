@@ -28,15 +28,14 @@ Dann ist mein Kurs genau richtig für dich!
 ☑️ Abfragen und Logik  
 ☑️ Schleifen  
 ☑️ Funktionen und Header  
-☑️ Compiler Abläufe  
-☑️ Zeiger  
-☑️ Stack und Heap Speicher  
-☑️ Arrays und Strings  
-☑️ Strukturen und Dateien  
-☑️ Datenstrukturen  
+☑️ Compiler Abläufe (Preprocess, Compiling, Linking)  
+☑️ Zeiger und Speicherverwaltung  
+☑️ Stack und Heap Speicher  
+☑️ Arrays und Strings  
+☑️ Strukturen und Enums  
+☑️ Dateien I/O Operationen
 
 Werde noch heute ein Profi, in der Technologie von Morgen!
 Wir sehen uns im Kurs!
-
 
 \* Alle Angaben ohne Gewähr
