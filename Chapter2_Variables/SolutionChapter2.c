@@ -1,25 +1,26 @@
+#include <stdint.h>
 #include <stdio.h>
 
 int main()
 {
-    unsigned int age;
-    unsigned int days;
-    unsigned int hours;
-    unsigned int minutes;
-    unsigned int seconds;
+    uint64_t age;
+    uint64_t days;
+    uint64_t hours;
+    uint64_t minutes;
+    uint64_t seconds;
 
     printf("Please enter your age in years: ");
-    scanf("%u", &age);
+    scanf("%llu", &age);
 
-    days = age * 365u;
-    hours = days * 24u;
-    minutes = hours * 60u;
-    seconds = minutes * 60u;
+    days = age * 365ul;
+    hours = days * 24ul;
+    minutes = hours * 60ul;
+    seconds = minutes * 60ul;
 
-    printf("You are living since %u days\n", days);
-    printf("You are living since %u hours\n", hours);
-    printf("You are living since %u minutes\n", minutes);
-    printf("You are living since %u seconds\n", seconds);
+    printf("You are living since %llu days\n", days);
+    printf("You are living since %llu hours\n", hours);
+    printf("You are living since %llu minutes\n", minutes);
+    printf("You are living since %llu seconds\n", seconds);
 
     return 0;
 }
