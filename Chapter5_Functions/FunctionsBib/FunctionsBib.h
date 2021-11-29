@@ -1,14 +1,22 @@
-// Return Type: void
-// Name: printEvenOrOdd
-// Parameters: int number
+/**
+ * @brief Print out if number is even or odd
+ *
+ * @param number
+ */
 void printEvenOrOdd(int number);
 
-// Return Type: int
-// Name: getNumberFromUser
-// Parameters: None
+/**
+ * @brief Get the Number From User object
+ *
+ * @return
+ */
 int getNumberFromUser();
 
-// Return Type: int
-// Name: compareNumbers
-// Parameters: int number_a, int number_b
+/**
+ * @brief Return the larger number
+ *
+ * @param number_a
+ * @param number_b
+ * @return
+ */
 int compareNumbers(int number_a, int number_b);

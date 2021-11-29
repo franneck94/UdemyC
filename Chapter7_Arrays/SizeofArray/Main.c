@@ -10,8 +10,8 @@ int main()
     int num_cols = sizeof(M[0]) / sizeof(int);
     printf("%u\n", num_cols);
 
-    int num_rows = matrix_size / (num_cols * sizeof(int));
-    printf("%u\n", num_rows);
+    unsigned long num_rows = matrix_size / (num_cols * sizeof(int));
+    printf("%lu\n", num_rows);
 
     return 0;
 }

@@ -1,6 +1,13 @@
 #include <stdio.h>
 
-#include "FunctionsBib.h"
+/**
+ * @brief Return a^2 + ab + b^2
+ *
+ * @param a
+ * @param b
+ * @return
+ */
+int binom(int *a, int *b);
 
 int main()
 {

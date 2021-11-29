@@ -2,18 +2,6 @@
 
 #include "FunctionsBib.h"
 
-void printEvenOrOdd(int number)
-{
-    if ((number % 2) == 0)
-    {
-        printf("Even!\n");
-    }
-    else
-    {
-        printf("Odd!\n");
-    }
-}
-
 int getNumberFromUser()
 {
     int number_from_user; //0x00: 12
@@ -22,16 +10,6 @@ int getNumberFromUser()
     scanf("%d", &number_from_user);
 
     return number_from_user; // return 12;
-}
-
-unsigned int factorial(unsigned int i)
-{
-    if (i <= 1)
-    {
-        return 1;
-    }
-
-    return i * factorial(i - 1);
 }
 
 int max(int number_a, int number_b)
