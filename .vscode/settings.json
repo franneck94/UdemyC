@@ -22,7 +22,8 @@
         "*.gvw": "jsonc",
         "random": "c",
         "stdint.h": "c",
-        "stdint-gcc.h": "c"
+        "stdint-gcc.h": "c",
+        "stdlib.h": "c"
     },
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,

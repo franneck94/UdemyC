@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,6 +33,11 @@ int main()
     printf("Enter your Birthday (DD MM YYYY)\n");
     scanf("%2d %2d %4d", &day2, &month2, &year2);
     printf("Name: %s %s, Birthday: %2d %2d %4d", prename2, lastname2, day2, month2, year2);
+
+    free(prename2);
+    free(lastname2);
+    prename2 = NULL;
+    lastname2 = NULL;
 
     return 0;
 }
