@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 int main()
 {

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 #define matrix(i, j) matrix[i * cols + j]
 

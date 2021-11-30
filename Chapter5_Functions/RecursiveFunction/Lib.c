@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 void printEvenOrOdd(int number)
 {

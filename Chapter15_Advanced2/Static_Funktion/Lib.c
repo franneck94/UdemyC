@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 static int my_inner_computation(int a, int b)
 {

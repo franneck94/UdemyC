@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "AnotherBib.h"
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 int main()
 {

@@ -1,7 +1,7 @@
 #ifndef ANOTHER_BIB_H
 #define ANOTHER_BIB_H
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 void dummyFunction();
 
