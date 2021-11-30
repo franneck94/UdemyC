@@ -1,14 +1,5 @@
 #include <stdio.h>
 
-/**
- * @brief Return a^2 + ab + b^2
- *
- * @param a
- * @param b
- * @return
- */
-int binom(int *a, int *b);
-
 int main()
 {
     int a = 4;
@@ -17,7 +8,7 @@ int main()
 
     printf("a=%d, b=%d\n", a, b);
     printf("Call binom function!\n");
-    c = binom(&a, &b);
+    binom(a, b, &c);
     printf("c=%d\n", c);
 
     return 0;
