@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "FunctionsBib.h"
+#include "Lib.h"
 
 int *createArray(unsigned int length, int value)
 {
