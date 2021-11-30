@@ -1,27 +1,29 @@
-#include <stdint.h>
 #include <stdio.h>
+#include <stdint.h>
 
 int main()
 {
-    uint64_t a = UINT64_MAX;
-    uint32_t b = UINT32_MAX;
-    uint16_t c = UINT16_MAX;
-    uint8_t d = UINT8_MAX;
+    uint64_t a1 = 0;
+    uint32_t b1 = 0;
+    uint16_t c1 = 0;
+    uint8_t d1 = 0;
 
-    int64_t e = INT64_MAX;
-    int32_t f = INT32_MAX;
-    int16_t g = INT16_MAX;
-    int8_t h = INT8_MAX;
+    int64_t a2 = 0;
+    int32_t b2 = 0;
+    int16_t c2 = 0;
+    int8_t d2 = 0;
 
-    printf("%lu", a);
-    printf("%u", b);
-    printf("%hu", c);
-    printf("%u", d);
+    printf("%lu", a1);
+    printf("%ld", a2);
 
-    printf("%ld", e);
-    printf("%d", f);
-    printf("%hd", g);
-    printf("%hhu", h);
+    printf("%u", b1);
+    printf("%d", b2);
+
+    printf("%hu", c1);
+    printf("%hd", c2);
+
+    printf("%hhu", d1);
+    printf("%hhd", d2);
 
     return 0;
 }

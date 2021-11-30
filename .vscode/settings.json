@@ -1,8 +1,8 @@
 {
-    "C_Cpp_Config.cCompilerPath": "C:/cygwin64/bin/gcc.exe",
-    "C_Cpp_Config.cppCompilerPath": "C:/cygwin64/bin/g++.exe",
-    "C_Cpp_Config.debuggerPath": "C:/cygwin64/bin/gdb.exe",
-    "C_Cpp_Config.makePath": "C:/cygwin64/bin/make.exe",
+    "C_Cpp_Config.cCompilerPath": "/usr/bin/gcc",
+    "C_Cpp_Config.cppCompilerPath": "/usr/bin/g++",
+    "C_Cpp_Config.debuggerPath": "/usr/bin/gdb",
+    "C_Cpp_Config.makePath": "/usr/bin/make",
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
     "editor.renderWhitespace": "trailing",
