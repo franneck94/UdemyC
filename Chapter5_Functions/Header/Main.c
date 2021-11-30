@@ -1,13 +1,35 @@
 #include <stdio.h>
 
-#include "FunctionsBib.h"
+void printEvenOrOdd(int number);
+
+int getNumberFromUser();
 
 int main()
 {
-    int number_user_a = getNumberFromUser();
-    int number_user_b = getNumberFromUser();
-    int bigger_number = compareNumbers(number_user_a, number_user_b);
-    printf("Bigger number is: %d", bigger_number);
+    int user_number = getNumberFromUser();
+    printEvenOrOdd(user_number);
 
     return 0;
+}
+
+void printEvenOrOdd(int number)
+{
+    if ((number % 2) == 0)
+    {
+        printf("Even!\n");
+    }
+    else
+    {
+        printf("Odd!\n");
+    }
+}
+
+int getNumberFromUser()
+{
+    int number_from_user;
+
+    printf("Please enter an integer number: ");
+    scanf("%d", &number_from_user);
+
+    return number_from_user;
 }

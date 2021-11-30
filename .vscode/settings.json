@@ -60,5 +60,9 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 4,
-    "formatContextMenu.closeAfterSave": true
+    "formatContextMenu.closeAfterSave": true,
+    "clang-tidy.compilerArgsBefore": [
+        "-D_CRT_SECURE_NO_WARNINGS",
+        "-std=c99"
+    ]
 }
