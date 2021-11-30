@@ -6,6 +6,8 @@ Willkommen bei der nächsten Programmier-Übung in diesem Kurs.
 
 ## Aufgaben der Programmierübung
 
+Die Funktionen sollen in der Lib.h/Lib.c implementiert werden.
+
 - Programmiere eine Funktion, die das Minimum von zwei Integer-Zahlen zurückgibt
 - Programmiere eine Funktion, die das Maximum von zwei Integer-Zahlen zurückgibt
 - Programmiere eine Funktion, die den Mittelwert von zwei Integer-Zahlen zurückgibt
