@@ -15,7 +15,7 @@ int main()
 
     printf("Min: %d\n", min_v);
     printf("Max: %d\n", max_v);
-    printf("Max: %f\n", mean_v);
+    printf("Mean: %f\n", mean_v);
 
     return 0;
 }

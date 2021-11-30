@@ -1,15 +1,24 @@
 #include <stdio.h>
 
-#include "Lib.h"
+float meanArray(int *array, unsigned int length)
+{
+    int sum = 0;
 
-#define LENGTH 10u
+    for (unsigned int i = 0; i < length; i++)
+    {
+        sum += array[i];
+    }
+
+    return (float)(sum) / (float)(length);
+}
 
 int main()
 {
-    int v[LENGTH] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int array[10] = {1, 2, 3, 4, 5, 6, 8, 9, 10};
 
-    float mean_v = meanArray(v, LENGTH);
-    printf("Mean: %f\n", mean_v);
+    float mean = meanArray(array, 10);
+
+    printf("%f\n", mean);
 
     return 0;
 }

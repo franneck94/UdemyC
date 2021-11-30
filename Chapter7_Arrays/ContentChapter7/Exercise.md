@@ -8,7 +8,6 @@ Willkommen bei der nächsten Programmier-Übung in diesem Kurs.
 
 - Erstelle eine Funktion, die das Minimum eines Integer Arrays berechnet und diesen returned
 - Erstelle eine Funktion, die das Maximum eines Integer Arrays berechnet und diesen returned
-- Erstelle eine Funktion, die den Mittelwert eines Integer Arrays berechnet und diesen returned
 
 ## Beispiel
 
@@ -17,7 +16,6 @@ Das heißt, bei einem Array mit den Werten [1,2,3] kommt folgender Output raus:
 ```terminal
 Min: 1
 Max: 3
-Mean: 2.000000
 ```
 
 ## Hinweise
