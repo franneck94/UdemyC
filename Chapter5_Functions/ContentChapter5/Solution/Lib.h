@@ -3,10 +3,10 @@
 
 int getNumberFromUser();
 
-int max(int number_a, int number_b);
+int min(int a, int b);
 
-int min(int number_a, int number_b);
+int max(int a, int b);
 
-float mean(int number_a, int number_b);
+float mean(int a, int b);
 
 #endif

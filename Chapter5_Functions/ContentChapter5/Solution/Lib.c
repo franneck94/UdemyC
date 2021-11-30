@@ -11,3 +11,34 @@ int getNumberFromUser()
 
     return number_from_user; // return 12;
 }
+
+int min(int a, int b)
+{
+    if (a < b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+
+int max(int a, int b)
+{
+    if (a > b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
+}
+
+float mean(int a, int b)
+{
+    float result = (a + b) / 2.0f;
+
+    return result;
+}
