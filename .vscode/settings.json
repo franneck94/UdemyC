@@ -1,8 +1,8 @@
 {
-    "C_Cpp_Config.cCompilerPath": "/usr/bin/gcc",
-    "C_Cpp_Config.cppCompilerPath": "/usr/bin/g++",
-    "C_Cpp_Config.debuggerPath": "/usr/bin/gdb",
-    "C_Cpp_Config.makePath": "/usr/bin/make",
+    "C_Cpp_Config.cCompilerPath": "C:/cygwin64/bin/gcc.exe",
+    "C_Cpp_Config.cppCompilerPath": "C:/cygwin64/bin/g++.exe",
+    "C_Cpp_Config.debuggerPath": "C:/cygwin64/bin/gdb.exe",
+    "C_Cpp_Config.makePath": "/usr/bin/make.exe",
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
     "editor.renderWhitespace": "trailing",
@@ -39,14 +39,13 @@
     "C_Cpp.default.cStandard": "c99",
     "C_Cpp.formatting": "clangFormat",
     "[c]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "[cpp]": {
-        "editor.formatOnSave": false,
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
-    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
     "cmake.configureOnOpen": false,
     "cmake.autoSelectActiveFolder": false,
     "cmake.configureOnEdit": false,
