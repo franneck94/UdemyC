@@ -28,6 +28,18 @@ int *freeArray(int *array)
     return NULL;
 }
 
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
+{
+    int **matrix = (int **)malloc(num_rows * sizeof(int *));
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = createArray(num_cols, value);
+    }
+
+    return matrix;
+}
+
 int main()
 {
     unsigned int length = 3;
@@ -40,6 +52,16 @@ int main()
     }
 
     array = freeArray(array);
+
+    int **matrix = createMatrix(2, 3, 1337);
+
+    for (unsigned int i = 0; i < 2; i++)
+    {
+        for (unsigned int j = 0; j < 3; j++)
+        {
+            printf("%d\n", matrix[i][j]);
+        }
+    }
 
     return 0;
 }
