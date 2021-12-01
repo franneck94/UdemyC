@@ -3,8 +3,12 @@
 
 int *createArray(unsigned int length, int value)
 {
-    int *array;
-    array = (int *)malloc(length * sizeof(int));
+    int *array = (int *)malloc(length * sizeof(int));
+
+    if (array == NULL)
+    {
+        return NULL;
+    }
 
     for (unsigned int i = 0; i < length; i++)
     {
@@ -14,19 +18,27 @@ int *createArray(unsigned int length, int value)
     return array;
 }
 
-void printArray(int *p_array, unsigned int length)
+void printArray(int *array, unsigned int length)
 {
+    if (array == NULL)
+    {
+        return;
+    }
+
     for (unsigned int i = 0; i < length; i++)
     {
-        printf("%d\n", p_array[i]);
+        printf("%d\n", array[i]);
     }
 }
 
-int *freeArray(int *p_array)
+int *freeArray(int *array)
 {
-    free(p_array);
-    p_array = NULL;
-    return p_array;
+    if (array != NULL)
+    {
+        free(array);
+    }
+
+    return NULL;
 }
 
 int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
@@ -41,24 +53,43 @@ int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
     return matrix;
 }
 
-void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+void printMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols)
 {
+    if (matrix == NULL)
+    {
+        return;
+    }
+
     for (unsigned int i = 0; i < num_rows; i++)
     {
-        printArray(p_matrix[i], num_cols);
+        printArray(matrix[i], num_cols);
     }
 }
 
-int **freeMatrix(int **p_matrix, unsigned int num_rows)
+int **freeMatrix(int **matrix, unsigned int num_rows)
 {
     for (unsigned int i = 0; i < num_rows; i++)
     {
-        p_matrix[i] = freeArray(p_matrix[i]);
+        matrix[i] = freeArray(matrix[i]);
     }
 
-    free(p_matrix);
-    p_matrix = NULL;
-    return p_matrix;
+    free(matrix);
+    return NULL;
+}
+
+int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        for (unsigned int j = 0; j < num_cols; j++)
+        {
+            p_matrix_transpose[j][i] = p_matrix[i][j];
+        }
+    }
+
+    return p_matrix_transpose;
 }
 
 int main()

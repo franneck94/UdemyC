@@ -18,6 +18,19 @@ int *createArray(unsigned int length, int value)
     return array;
 }
 
+void printArray(int *array, unsigned int length)
+{
+    if (array == NULL)
+    {
+        return;
+    }
+
+    for (unsigned int i = 0; i < length; i++)
+    {
+        printf("%d\n", array[i]);
+    }
+}
+
 int *freeArray(int *array)
 {
     if (array != NULL)
@@ -40,28 +53,41 @@ int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
     return matrix;
 }
 
+void printMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    if (matrix == NULL)
+    {
+        return;
+    }
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        printArray(matrix[i], num_cols);
+    }
+}
+
+int **freeMatrix(int **matrix, unsigned int num_rows)
+{
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = freeArray(matrix[i]);
+    }
+
+    free(matrix);
+    return NULL;
+}
+
 int main()
 {
     unsigned int length = 3;
 
     int *array = createArray(length, 1);
-
-    for (unsigned int i = 0; i < length; i++)
-    {
-        printf("%d\n", array[i]);
-    }
-
+    printArray(array, length);
     array = freeArray(array);
 
     int **matrix = createMatrix(2, 3, 1337);
-
-    for (unsigned int i = 0; i < 2; i++)
-    {
-        for (unsigned int j = 0; j < 3; j++)
-        {
-            printf("%d\n", matrix[i][j]);
-        }
-    }
+    printMatrix(matrix, 2, 3);
+    matrix = freeMatrix(matrix, 2);
 
     return 0;
 }
