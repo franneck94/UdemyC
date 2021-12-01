@@ -1,202 +1,56 @@
+#include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 #include "Lib.h"
 
-void printEvenOrOdd(int number)
+float meanArray(int *array, unsigned int length)
 {
-    if ((number % 2) == 0)
-    {
-        printf("Even!\n");
-    }
-    else
-    {
-        printf("Odd!\n");
-    }
-}
-
-int getNumberFromUser()
-{
-    int number_from_user; //0x00: 12
-
-    printf("Pls enter a interger number!\n");
-    scanf("%d", &number_from_user);
-
-    return number_from_user; // return 12;
-}
-
-unsigned int factorial(unsigned int i)
-{
-    if (i <= 1)
-    {
-        return 1;
-    }
-
-    return i * factorial(i - 1);
-}
-
-int max(int number_a, int number_b)
-{
-    if (number_a < number_b)
-    {
-        return number_b;
-    }
-    else
-    {
-        return number_a;
-    }
-}
-
-int min(int number_a, int number_b)
-{
-    if (number_a > number_b)
-    {
-        return number_b;
-    }
-    else
-    {
-        return number_a;
-    }
-}
-
-float mean(int number_a, int number_b)
-{
-    float sum = number_a + number_b;
-    float mean = sum / 2.0f;
-
-    return mean;
-}
-
-void binom(int *a, int *b, int *c)
-{
-    // a^2 + ab + b^2
-    *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);
-}
-
-float meanArray(int array[], unsigned int length)
-{
-    float sum = 0.0f;
+    int sum = 0;
 
     for (unsigned int i = 0; i < length; i++)
     {
         sum += array[i];
     }
 
-    float mean = sum / length;
-    return mean;
+    return (float)(sum) / (float)(length);
 }
 
-int minArray(int array[], unsigned int length)
+int minArray(int *array, unsigned int length)
 {
-    int min;
-
-    for (unsigned int i = 0; i < length; i++)
+    if (length == 0)
     {
-        if (i == 0)
-        {
-            min = array[i];
-        }
-
-        if (array[i] < min)
-        {
-            min = array[i];
-        }
+        return INT32_MIN;
     }
 
-    return min;
-}
+    int current_min = array[0];
 
-int maxArray(int array[], unsigned int length)
-{
-    int max;
-
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 1; i < length; i++)
     {
-        if (i == 0)
+        if (array[i] < current_min)
         {
-            max = array[i];
-        }
-
-        if (array[i] > max)
-        {
-            max = array[i];
+            current_min = array[i];
         }
     }
 
-    return max;
+    return current_min;
 }
 
-int *createArray(unsigned int length, int value)
+int maxArray(int *array, unsigned int length)
 {
-    int *array;
-    array = (int *)malloc(length * sizeof(int));
-
-    for (unsigned int i = 0; i < length; i++)
+    if (length == 0)
     {
-        array[i] = value;
+        return INT32_MIN;
     }
 
-    return array;
-}
+    int current_max = array[0];
 
-void printArray(int *p_array, unsigned int length)
-{
-    for (unsigned int i = 0; i < length; i++)
+    for (unsigned int i = 1; i < length; i++)
     {
-        printf("%d\n", p_array[i]);
-    }
-}
-
-int *freeArray(int *p_array)
-{
-    free(p_array);
-    p_array = NULL;
-    return p_array;
-}
-
-int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
-{
-    int **matrix = (int **)malloc(num_rows * sizeof(int *));
-
-    for (unsigned int i = 0; i < num_rows; i++)
-    {
-        matrix[i] = createArray(num_cols, value);
-    }
-
-    return matrix;
-}
-
-void printMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
-{
-    for (unsigned int i = 0; i < num_rows; i++)
-    {
-        printArray(p_matrix[i], num_cols);
-    }
-}
-
-int **freeMatrix(int **p_matrix, unsigned int num_rows)
-{
-    for (unsigned int i = 0; i < num_rows; i++)
-    {
-        p_matrix[i] = freeArray(p_matrix[i]);
-    }
-
-    free(p_matrix);
-    p_matrix = NULL;
-    return p_matrix;
-}
-
-int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
-{
-    int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
-
-    for (unsigned int i = 0; i < num_rows; i++)
-    {
-        for (unsigned int j = 0; j < num_cols; j++)
+        if (array[i] > current_max)
         {
-            p_matrix_transpose[j][i] = p_matrix[i][j];
+            current_max = array[i];
         }
     }
 
-    return p_matrix_transpose;
+    return current_max;
 }

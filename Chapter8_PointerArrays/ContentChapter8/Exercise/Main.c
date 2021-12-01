@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
-
 int main()
 {
     unsigned int num_rows = 2;

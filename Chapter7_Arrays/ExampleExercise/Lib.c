@@ -1,56 +1,56 @@
+#include <stdint.h>
 #include <stdio.h>
 
 #include "Lib.h"
 
-float meanArray(int array[], unsigned int length)
+float meanArray(int *array, unsigned int length)
 {
-    float sum = 0.0f;
+    int sum = 0;
 
     for (unsigned int i = 0; i < length; i++)
     {
         sum += array[i];
     }
 
-    float mean = sum / length;
-    return mean;
+    return (float)(sum) / (float)(length);
 }
 
-int minArray(int array[], unsigned int length)
+int minArray(int *array, unsigned int length)
 {
-    int min;
-
-    for (unsigned int i = 0; i < length; i++)
+    if (length == 0)
     {
-        if (i == 0)
-        {
-            min = array[i];
-        }
+        return INT32_MIN;
+    }
 
-        if (array[i] < min)
+    int current_min = array[0];
+
+    for (unsigned int i = 1; i < length; i++)
+    {
+        if (array[i] < current_min)
         {
-            min = array[i];
+            current_min = array[i];
         }
     }
 
-    return min;
+    return current_min;
 }
 
-int maxArray(int array[], unsigned int length)
+int maxArray(int *array, unsigned int length)
 {
-    int max;
-
-    for (unsigned int i = 0; i < length; i++)
+    if (length == 0)
     {
-        if (i == 0)
-        {
-            max = array[i];
-        }
+        return INT32_MIN;
+    }
 
-        if (array[i] > max)
+    int current_max = array[0];
+
+    for (unsigned int i = 1; i < length; i++)
+    {
+        if (array[i] > current_max)
         {
-            max = array[i];
+            current_max = array[i];
         }
     }
 
-    return max;
+    return current_max;
 }

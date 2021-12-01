@@ -73,7 +73,7 @@ void binom(int *a, int *b, int *c)
     *c = (*a) * (*a) + (*a) * (*b) + (*b) * (*b);
 }
 
-float meanArray(int array[], unsigned int length)
+float meanArray(int *array, unsigned int length)
 {
     float sum = 0.0f;
 

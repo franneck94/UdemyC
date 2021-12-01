@@ -51,7 +51,8 @@ int main()
 {
     unsigned int length = getNumberFromUser();
 
-    int *array = createArray(length, 0);
+    int *array;
+    = createArray(length, 0);
 
     init_time_array(array, length);
     compute_time_array(array, length);

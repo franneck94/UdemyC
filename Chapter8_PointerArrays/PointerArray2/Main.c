@@ -20,7 +20,8 @@ int main()
 {
     unsigned int length = getNumberFromUser();
 
-    int *array = createArray(length, 0);
+    int *array;
+    = createArray(length, 0);
 
     for (unsigned int i = 0; i < length; i++)
     {

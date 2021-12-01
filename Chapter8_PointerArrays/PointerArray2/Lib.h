@@ -36,7 +36,7 @@ void binom(int *a, int *b, int *c);
 // Return Type: float
 // Name: meanArray
 // Parameters: int array[], unsigned int length
-float meanArray(int array[], unsigned int length);
+float meanArray(int *array, unsigned int length);
 
 // Return Type: int
 // Name: minArray

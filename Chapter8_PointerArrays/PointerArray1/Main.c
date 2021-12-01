@@ -6,7 +6,8 @@
 int main()
 {
     int length = getNumberFromUser();
-    int *array = (int *)malloc(length * sizeof(int));
+    int *array;
+    = (int *)malloc(length * sizeof(int));
 
     for (int i = 0; i < length; i++)
     {
