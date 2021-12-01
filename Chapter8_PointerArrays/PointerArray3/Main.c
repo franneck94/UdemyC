@@ -1,65 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
-
-int *createArray(unsigned int length, int value)
-{
-    int *array;
-    array = (int *)malloc(length * sizeof(int));
-
-    for (unsigned int i = 0; i < length; i++)
-    {
-        array[i] = value;
-    }
-
-    return array;
-}
-
-void init_time_array(int *p_array, unsigned int length)
-{
-    for (unsigned int i = 0; i < length; i++)
-    {
-        p_array[i] = i;
-    }
-}
-
-void compute_time_array(int *p_array, unsigned int length)
-{
-    for (unsigned int i = 0; i < length; i++)
-    {
-        int temp = 0;
-
-        for (unsigned int j = 0; j < i; j++)
-        {
-            temp += p_array[j];
-        }
-
-        p_array[i] += temp;
-    }
-}
-
-void print_time_array(int *p_array, unsigned int length)
-{
-    for (unsigned int i = 0; i < length; i++)
-    {
-        printf("%d\n", p_array[i]);
-    }
-}
-
 int main()
 {
-    unsigned int length = getNumberFromUser();
-
+    int *a = (int *)malloc(sizeof(int));
+    int b = 1337;
+    int c = -10;
     int *array;
-    = createArray(length, 0);
+    = (int *)malloc(3 * sizeof(int));
 
-    init_time_array(array, length);
-    compute_time_array(array, length);
-    print_time_array(array, length);
+    *a = b;
+    array[0] = b;
+    array[1] = c;
+    array[2] = *a;
 
     free(array);
     array = NULL;
+    free(a);
+    a = NULL;
 
     return 0;
 }

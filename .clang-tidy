@@ -1,10 +1,5 @@
 ---
-Checks: '
-bugprone-*,
-clang-analyzer-*,
--bugprone-exception-escape,
--bugprone-branch-clone
-'
+Checks: 'clang-analyzer-*''
 WarningsAsErrors: '*'
 HeaderFilterRegex: '.*'
 AnalyzeTemporaryDtors: false

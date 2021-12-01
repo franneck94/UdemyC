@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
-
 int *createArray(unsigned int length, int value)
 {
-    int *array;
-    array = (int *)malloc(length * sizeof(int));
+    int *array = (int *)malloc(length * sizeof(int));
+
+    if (array == NULL)
+    {
+        return NULL;
+    }
 
     for (unsigned int i = 0; i < length; i++)
     {
@@ -16,20 +18,28 @@ int *createArray(unsigned int length, int value)
     return array;
 }
 
+int *freeArray(int *array)
+{
+    if (array != NULL)
+    {
+        free(array);
+    }
+
+    return NULL;
+}
+
 int main()
 {
-    unsigned int length = getNumberFromUser();
+    unsigned int length = 3;
 
-    int *array;
-    = createArray(length, 0);
+    int *array = createArray(length, 1);
 
     for (unsigned int i = 0; i < length; i++)
     {
         printf("%d\n", array[i]);
     }
 
-    free(array);
-    array = NULL;
+    array = freeArray(array);
 
     return 0;
 }

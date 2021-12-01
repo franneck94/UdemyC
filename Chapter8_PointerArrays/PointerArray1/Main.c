@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
-
 int main()
 {
-    int length = getNumberFromUser();
-    int *array;
-    = (int *)malloc(length * sizeof(int));
+    unsigned int length = 3;
 
-    for (int i = 0; i < length; i++)
+    int *array = (int *)malloc(length * sizeof(int));
+
+    for (unsigned int i = 0; i < length; i++)
     {
-        array[i] = 1;
+        array[i] = (int)(i);
     }
 
-    for (int i = 0; i < length; i++)
+    // ....
+
+    for (unsigned int i = 0; i < length; i++)
     {
         printf("%d\n", array[i]);
     }
