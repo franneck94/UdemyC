@@ -1,18 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
+int *createArray(unsigned int length, int value)
+{
+    int *array = (int *)malloc(length * sizeof(int));
+
+    if (array == NULL)
+    {
+        return NULL;
+    }
+
+    for (unsigned int i = 0; i < length; i++)
+    {
+        array[i] = value;
+    }
+
+    return array;
+}
+
+int *freeArray(int *array)
+{
+    if (array != NULL)
+    {
+        free(array);
+    }
+
+    return NULL;
+}
 
 int main()
 {
-    unsigned int num_rows = 2;
-    unsigned int num_cols = 2;
+    unsigned int length = 3;
 
-    int **matrix = createMatrix(num_rows, num_cols, 1);
-    printMatrix(matrix, num_rows, num_cols);
+    int *array = createArray(length, 1);
 
-    free(matrix);
-    matrix = NULL;
+    for (unsigned int i = 0; i < length; i++)
+    {
+        printf("%d\n", array[i]);
+    }
+
+    array = freeArray(array);
 
     return 0;
 }
