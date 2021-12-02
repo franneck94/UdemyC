@@ -5,6 +5,7 @@
     "C_Cpp_Config.makePath": "C:/cygwin64/bin/make.exe",
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
+    "editor.fontSize": 22,
     "editor.renderWhitespace": "trailing",
     "editor.suggestSelection": "first",
     "diffEditor.ignoreTrimWhitespace": false,

@@ -4,19 +4,42 @@
 
 int main()
 {
-    char name[] = "Jan Schaffranek";
+    int number_friends = 3;
 
-    printf("strlen: %zu\n", strlen(name));
-    printf("strchr: %s\n", strchr(name, 'a'));
-    printf("strstr: %s\n", strstr(name, "fran"));
+    char **friends;
+    friends = (char **)malloc(3 * sizeof(char *));
 
-    char dst[strlen(name) + 1];
-    strcpy(dst, name);
-    printf("strcpy: %s\n", dst);
+    for (int i = 0; i < number_friends; i++)
+    {
+        friends[i] = (char *)malloc(20 * sizeof(char));
+    }
 
-    char prename[] = "Jan ";
-    char lastname[] = "Schaffranek";
-    printf("strcat: %s\n", strcat(prename, lastname));
+    strncpy(friends[0], "Jan Schaffranek", 20);
+    strncpy(friends[1], "Peter Lustig", 20);
+    strncpy(friends[2], "Hans Meier", 20);
+
+    char *found1 = strchr(friends[0], 'S');
+    char *found2 = strchr(friends[1], 'u');
+    char *found3 = strchr(friends[2], 'e');
+    printf("found 01: %s\n", found1);
+    printf("found 02: %s\n", found2);
+    printf("found 12: %s\n", found3);
+
+    char *found4 = strrchr(friends[0], 'a');
+    char *found5 = strrchr(friends[1], 'e');
+    char *found6 = strrchr(friends[2], 'e');
+    printf("found 01: %s\n", found4);
+    printf("found 02: %s\n", found5);
+    printf("found 12: %s\n", found6);
+
+    for (int i = 0; i < number_friends; i++)
+    {
+        free(friends[i]);
+        friends[i] = NULL;
+    }
+
+    free(friends);
+    friends = NULL;
 
     return 0;
 }

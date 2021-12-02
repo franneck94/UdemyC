@@ -11,17 +11,20 @@ char *join(char *delimiter, char **list)
     int index = 0;
     while (list[index] != NULL)
     {
-        if (index > 0)
+        if (strlen(result) + strlen(list[index]) > default_len - 1)
         {
-            strcat(result, delimiter);
+            const size_t used_result_len = strlen(result) + 1;
+            result = realloc(result, used_result_len);
         }
 
-        strcat(result, list[index]);
+        if (index > 0)
+        {
+            strncat(result, delimiter, strlen(delimiter));
+        }
+
+        strncat(result, list[index], strlen(list[index]));
         ++index;
     }
-
-    const size_t used_result_len = strlen(result) + 1;
-    result = realloc(result, used_result_len);
 
     if (index == 0)
     {

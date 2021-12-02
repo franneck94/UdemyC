@@ -26,4 +26,5 @@ Mean[12, 8] = 10.000000
 
 ## Hinweise
 
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.Meine Musterlösung werde ich im folgenden Video vorstellen.
+Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
+Meine Musterlösung werde ich im folgenden Video vorstellen.

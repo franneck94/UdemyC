@@ -26,4 +26,5 @@ You are living since 819936000 seconds
 
 Ein oft gemachter Fehler ist, dass das Alter mit der scanf Funktion nicht richtig eingelesen wird!
 
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.Meine Musterlösung werde ich im folgenden Video vorstellen.
+Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
+Meine Musterlösung werde ich im folgenden Video vorstellen.

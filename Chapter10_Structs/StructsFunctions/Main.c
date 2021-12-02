@@ -17,13 +17,14 @@ void printFriend(struct Friend *friend)
 
 void changeName(struct Friend *friend, char *new_name)
 {
+
     friend->name = new_name;
 }
 
 int main()
 {
     struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u};
-    struct Friend lara = {.name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12};
+    struct Friend lara = {.name = "Hausmann", .prename = "Lara", .year = 1992u, .month = 12u, .day = 12u};
 
     struct Friend friend_book[2];
     friend_book[0] = jan;

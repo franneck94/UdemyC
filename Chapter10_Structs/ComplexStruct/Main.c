@@ -4,9 +4,9 @@
 
 typedef enum
 {
-    FRIENDSHIT_ORIGIN_SCHOOL,
-    FRIENDSHIT_ORIGIN_FAMILY,
-    FRIENDSHIT_ORIGIN_OTHER,
+    FRIENDSHIP_ORIGIN_SCHOOL,
+    FRIENDSHIP_ORIGIN_FAMILY,
+    FRIENDSHIP_ORIGIN_OTHER,
 } FriendshipOrigin_t;
 
 typedef struct
@@ -44,11 +44,11 @@ int main()
     Friend_t jan = {.name = "Schaffranek",
                     .prename = "Jan",
                     .birthday = {.year = 1994u, .month = 2u, .day = 24u},
-                    .origin = FRIENDSHIT_ORIGIN_FAMILY};
+                    .origin = FRIENDSHIP_ORIGIN_FAMILY};
     Friend_t lara = {.name = "Hausmann",
                      .prename = "Lara",
                      .birthday = {.year = 1992, .month = 12, .day = 12},
-                     .origin = FRIENDSHIT_ORIGIN_SCHOOL};
+                     .origin = FRIENDSHIP_ORIGIN_SCHOOL};
 
     Friend_t friend_book[2];
     friend_book[0] = jan;

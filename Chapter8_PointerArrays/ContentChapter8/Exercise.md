@@ -16,4 +16,5 @@ In dieser Übung werden wir eine Transponierte-Matrix "berechnen". Wenn ihr gar 
 
 Was ist eine Transponierte Matrix? <https://de.wikipedia.org/wiki/Transponierte_Matrix>
 
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.Meine Musterlösung werde ich im folgenden Video vorstellen.
+Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
+Meine Musterlösung werde ich im folgenden Video vorstellen.

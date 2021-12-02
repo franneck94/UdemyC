@@ -1,11 +1,58 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "Lib.h"
+struct Vector; // { }
+
+typedef struct Vector Vector;
+
+int *createArray(unsigned int length, int value)
+{
+    int *data = (int *)malloc(length * sizeof(int));
+
+    if (data == NULL)
+    {
+        return NULL;
+    }
+
+    for (unsigned int i = 0; i < length; i++)
+    {
+        data[i] = value;
+    }
+
+    return data;
+}
+
+int *freeArray(int *array)
+{
+    if (array != NULL)
+    {
+        free(array);
+    }
+
+    return NULL;
+}
+
+float meanVector(Vector *vector)
+{
+}
+
+int minVector(Vector *vector)
+{
+}
+
+int maxVector(Vector *vector)
+{
+}
+
+
+void printVector(Vector *vector)
+{
+}
 
 int main()
 {
-    Vector v1 = {.data = createVector(3, 1), .length = 3};
+    Vector v1 = {.data = createArray(3, 1), .length = 3};
     v1.data[1] = 2;
 
     printVector(&v1);

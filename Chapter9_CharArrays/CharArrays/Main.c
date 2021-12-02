@@ -39,5 +39,8 @@ int main()
 
     printf("%s", name4);
 
+    free(name4);
+    name4 = NULL;
+
     return 0;
 }

@@ -14,27 +14,36 @@ int main()
         friends[i] = (char *)malloc(20 * sizeof(char));
     }
 
-    friends[0] = "Hans Schaffranek";
-    friends[1] = "Peter Lustig";
-    friends[2] = "Hans Schaffranek";
+    strncpy(friends[0], "Jan Schaffranek", 20);
+    strncpy(friends[1], "Peter Lustig", 20);
+    strncpy(friends[2], "Hans Meier", 20);
 
     // int strncmp(char *str1, char *str2, int n);
     int same_name_01 = strcmp(friends[0], friends[1]);
     int same_name_02 = strcmp(friends[0], friends[2]);
     int same_name_12 = strcmp(friends[1], friends[2]);
 
-    // 0: Same Strings
-    // !=0: Str1 and Str2 not the same
-
+    // 0: Same Strings, !=0: Str1 and Str2 not the same
     printf("same 01: %d\n", same_name_01);
     printf("same 02: %d\n", same_name_02);
     printf("same 12: %d\n", same_name_12);
 
-    char *name_new;
-    name_new = (char *)malloc(20 * sizeof(char));
+    char *found_01 = strstr(friends[0], "an");
+    char *found_02 = strstr(friends[1], " Lust");
+    char *found_03 = strstr(friends[2], "s M");
 
-    strcpy(name_new, friends[1]);
-    printf("Name new: %s", name_new);
+    printf("same 01: %s\n", found_01);
+    printf("same 02: %s\n", found_02);
+    printf("same 12: %s\n", found_03);
+
+    for (int i = 0; i < number_friends; i++)
+    {
+        free(friends[i]);
+        friends[i] = NULL;
+    }
+
+    free(friends);
+    friends = NULL;
 
     return 0;
 }

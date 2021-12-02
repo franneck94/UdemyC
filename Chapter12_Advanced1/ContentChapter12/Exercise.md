@@ -13,4 +13,5 @@ Willkommen bei der nächsten Programmier-Übung in diesem Kurs.
 
 ## Hinweise
 
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.Meine Musterlösung werde ich im folgenden Video vorstellen.
+Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
+Meine Musterlösung werde ich im folgenden Video vorstellen.
