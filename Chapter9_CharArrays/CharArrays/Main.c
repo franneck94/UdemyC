@@ -3,44 +3,30 @@
 
 int main()
 {
-    // Char Array (Stack)
-    char name1[4] = {'J', 'a', 'n', '\0'};
-
-    for (int i = 0; i < 4; i++)
-    {
-        printf("%c\n", name1[i]);
-    }
-
-    char name2[] = {'J', 'a', 'n', '\0'};
-
-    for (int i = 0; i < 4; i++)
-    {
-        printf("%c\n", name2[i]);
-    }
-
+    char name1[] = {'J', 'a', 'n', '\0'};
+    char name2[4] = {'J', 'a', 'n', '\0'};
     char name3[] = "Jan";
+    char name4[32] = {'\0'};
+    char *name5 = (char *)malloc(32 * sizeof(char));
+    name5[0] = 'J';
+    name5[1] = 'a';
+    name5[2] = 'n';
+    name5[3] = '\0';
 
-    for (int i = 0; i < 4; i++)
+    for (unsigned int i = 0; i < 3; i++)
     {
-        printf("%c\n", name3[i]);
+        printf("%c", name5[i]);
     }
+    printf("\n");
 
-    // Char Array (Heap)
-    char *name4 = (char *)malloc(4 * sizeof(char));
-    name4[0] = 'J';
-    name4[1] = 'a';
-    name4[2] = 'n';
-    name4[4] = '\0';
+    printf("%s\n", name1);
+    printf("%s\n", name2);
+    printf("%s\n", name3);
+    printf("%s\n", name4);
+    printf("%s\n", name5);
 
-    for (int i = 0; i < 4; i++)
-    {
-        printf("%c\n", name4[i]);
-    }
-
-    printf("%s", name4);
-
-    free(name4);
-    name4 = NULL;
+    free(name5);
+    name5 = NULL;
 
     return 0;
 }

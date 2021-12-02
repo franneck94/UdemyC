@@ -2,44 +2,93 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+char **createFriendBook(unsigned int number_friends)
 {
-    int number_friends = 3;
+    char **friends = (char **)malloc(number_friends * sizeof(char *));
 
-    char **friends;
-    friends = (char **)malloc(3 * sizeof(char *));
+    if (friends == NULL)
+    {
+        return NULL;
+    }
 
-    for (int i = 0; i < number_friends; i++)
+    for (unsigned int i = 0; i < number_friends; i++)
     {
         friends[i] = (char *)malloc(20 * sizeof(char));
     }
+
+    return friends;
+}
+
+char **freeFriendBook(char **friends, unsigned int num_friends)
+{
+    for (unsigned int i = 0; i < num_friends; i++)
+    {
+        free(friends[i]);
+    }
+
+    free(friends);
+    return NULL;
+}
+
+int main()
+{
+    unsigned int number_friends = 3;
+    char **friends = createFriendBook(number_friends);
 
     strncpy(friends[0], "Jan Schaffranek", 20);
     strncpy(friends[1], "Peter Lustig", 20);
     strncpy(friends[2], "Hans Meier", 20);
 
-    char *found1 = strchr(friends[0], 'S');
-    char *found2 = strchr(friends[1], 'u');
-    char *found3 = strchr(friends[2], 'e');
-    printf("found 01: %s\n", found1);
-    printf("found 02: %s\n", found2);
-    printf("found 12: %s\n", found3);
+    strncat(friends[0], " Dr.", 5);
 
-    char *found4 = strrchr(friends[0], 'a');
-    char *found5 = strrchr(friends[1], 'e');
-    char *found6 = strrchr(friends[2], 'e');
-    printf("found 01: %s\n", found4);
-    printf("found 02: %s\n", found5);
-    printf("found 12: %s\n", found6);
-
-    for (int i = 0; i < number_friends; i++)
+    for (unsigned int i = 0; i < number_friends; i++)
     {
-        free(friends[i]);
-        friends[i] = NULL;
+        printf("%s\n", friends[i]);
     }
 
-    free(friends);
-    friends = NULL;
+    long unsigned int length0 = strlen(friends[0]);
+    long unsigned int length1 = strlen(friends[1]);
+    long unsigned int length2 = strlen(friends[2]);
+
+    printf("%lu\n", length0);
+    printf("%lu\n", length1);
+    printf("%lu\n", length2);
+
+    int compare0 = strncmp(friends[0], friends[1], 20);
+    int compare1 = strncmp(friends[0], friends[2], 20);
+    int compare2 = strncmp(friends[1], friends[2], 20);
+
+    printf("%d\n", compare0);
+    printf("%d\n", compare1);
+    printf("%d\n", compare2);
+
+    char *found_char0 = strchr(friends[0], 'n');
+    char *found_char1 = strrchr(friends[0], 'n');
+
+    if (found_char0 != NULL)
+    {
+        printf("%s\n", found_char0);
+    }
+    if (found_char1 != NULL)
+    {
+        printf("%s\n", found_char1);
+    }
+
+    char *found_substr = strstr(friends[1], "Jan");
+
+    if (found_substr != NULL)
+    {
+        printf("%s\n", found_substr);
+    }
+
+    char *token = strtok(friends[0], " ");
+
+    if (token != NULL)
+    {
+        printf("%s\n", token);
+    }
+
+    friends = freeFriendBook(friends, number_friends);
 
     return 0;
 }

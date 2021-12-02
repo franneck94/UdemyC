@@ -2,35 +2,49 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main()
+char **createFriendBook(unsigned int number_friends)
 {
-    int number_friends = 3;
-
     char **friends = (char **)malloc(number_friends * sizeof(char *));
 
-    for (int i = 0; i < number_friends; i++)
+    if (friends == NULL)
+    {
+        return NULL;
+    }
+
+    for (unsigned int i = 0; i < number_friends; i++)
     {
         friends[i] = (char *)malloc(20 * sizeof(char));
     }
 
-    strncpy(friends[0], "Jan Schaffranek", 20);
-    strncpy(friends[1], "Peter Lustig", 20);
-    strncpy(friends[2], "Hans Meier", 20);
+    return friends;
+}
 
-    for (int i = 0; i < number_friends; i++)
-    {
-        printf("Friend: %s\n", friends[i]);
-    }
-
-    // Clean-up
-    for (int i = 0; i < number_friends; i++)
+char **freeFriendBook(char **friends, unsigned int num_friends)
+{
+    for (unsigned int i = 0; i < num_friends; i++)
     {
         free(friends[i]);
-        friends[i] = NULL;
     }
 
     free(friends);
-    friends = NULL;
+    return NULL;
+}
+
+int main()
+{
+    unsigned int number_friends = 3;
+    char **friends = createFriendBook(number_friends);
+
+    strcpy(friends[0], "Jan Schaffranek");
+    strcpy(friends[1], "Peter Lustig");
+    strcpy(friends[2], "Hans Meier");
+
+    for (unsigned int i = 0; i < number_friends; i++)
+    {
+        printf("%s\n", friends[i]);
+    }
+
+    friends = freeFriendBook(friends, number_friends);
 
     return 0;
 }
