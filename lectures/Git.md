@@ -14,4 +14,4 @@
 
 ## Github Video Guide (Youtube)
 
-<https://www.youtube.com/watch?v=HJAwAKwFX-A>
+- <https://www.youtube.com/watch?v=HJAwAKwFX-A>
