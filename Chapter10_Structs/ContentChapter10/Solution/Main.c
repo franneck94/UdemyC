@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Vector
+typedef struct Vector
 {
     int *data;
     unsigned int length;
-};
-
-typedef struct Vector Vector;
+} Vector;
 
 int *createArray(unsigned int length, int value)
 {
@@ -39,20 +37,14 @@ int *freeArray(int *array)
 
 float meanVector(Vector *vector)
 {
-    if (vector->length == 0)
-    {
-        return 0.0f;
-    }
-
-    float sum = 0.0f;
+    int sum = 0;
 
     for (unsigned int i = 0; i < vector->length; i++)
     {
-        sum += (float)(vector->data[i]);
+        sum += vector->data[i];
     }
 
-    float mean = (float)(sum) / (float)(vector->length);
-    return mean;
+    return (float)(sum) / (float)(vector->length);
 }
 
 int minVector(Vector *vector)
@@ -95,14 +87,8 @@ int maxVector(Vector *vector)
     return current_max;
 }
 
-
 void printVector(Vector *vector)
 {
-    if (vector == NULL)
-    {
-        return;
-    }
-
     for (unsigned int i = 0; i < vector->length; i++)
     {
         printf("%d\n", vector->data[i]);

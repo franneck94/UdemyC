@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 struct Friend
 {
@@ -11,28 +9,22 @@ struct Friend
     unsigned int day;
 };
 
-void printFriend(struct Friend *friend)
+void print_friend(struct Friend *friend)
 {
-    printf("%s %s's birthday is: %u.%u.%u.\n", friend->prename, friend->name, friend->day, friend->month, friend->year);
-}
-
-void changeName(struct Friend *friend, char *new_name)
-{
-    strncpy(friend->name, new_name, 50);
+    printf("%s %s\n", friend->prename, friend->name);
+    printf("%u.%u.%u\n", friend->day, friend->month, friend->year);
 }
 
 int main()
 {
-    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u};
-    struct Friend lara = {.name = "Hausmann", .prename = "Lara", .year = 1992u, .month = 12u, .day = 12u};
+    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994U, .month = 2U, .day = 24U};
+    struct Friend peter = {.name = "Lustig", .prename = "Peter", .year = 1959U, .month = 8U, .day = 13};
+    struct Friend hans = {.name = "Meier", .prename = "Hans", .year = 1970U, .month = 12U, .day = 31};
+    struct Friend friend_book[] = {jan, peter, hans};
 
-    struct Friend friend_book[2];
-    friend_book[0] = jan;
-    friend_book[1] = lara;
-
-    printFriend(&friend_book[1]);
-    changeName(&friend_book[1], "Haussmann");
-    printFriend(&friend_book[1]);
+    print_friend(&friend_book[0]);
+    print_friend(&friend_book[1]);
+    print_friend(&friend_book[2]);
 
     return 0;
 }

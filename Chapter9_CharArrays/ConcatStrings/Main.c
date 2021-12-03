@@ -47,11 +47,40 @@ int strings_equal(char *str1, char *str2)
     return 1;
 }
 
+char *concatenate(char *dst, char *src, size_t n)
+{
+    if (dst == NULL)
+    {
+        return NULL;
+    }
+
+    if (src == NULL || n == 0)
+    {
+        return dst;
+    }
+
+    size_t dst_len = strlen(dst);
+    dst += dst_len;
+
+    size_t i = 0;
+    while ((*src != '\0') && (i < n - 1))
+    {
+        *dst = *src;
+        dst++;
+        src++;
+
+        i++;
+    }
+
+    *dst = '\0';
+
+    return dst;
+}
 
 int main()
 {
-    char name[] = "Jan";
-    char lastname[] = "Schaffranek";
+    char name[32] = "Jan";
+    char lastname[16] = "Schaffranek";
 
     printf("name: %s\n", name);
     printf("lastname: %s\n", lastname);
@@ -76,6 +105,10 @@ int main()
     char test[] = "Ja";
     int equal4 = strings_equal(name, test);
     printf("Name == test = %d\n", equal4);
+
+    concatenate(name, " ", 2);
+    concatenate(name, lastname, 16);
+    printf("Name + Lastname: %s\n", name);
 
     return 0;
 }

@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 struct Friend
 {
@@ -11,28 +9,24 @@ struct Friend
     unsigned int day;
 };
 
+
 int main()
 {
-    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994u, .month = 2u, .day = 24u};
-    struct Friend lara = {.name = "Hausmann", .prename = "Lara", .year = 1992, .month = 12, .day = 12};
+    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994U, .month = 2U, .day = 24U};
+    struct Friend peter = {.name = "Lustig", .prename = "Peter", .year = 1959U, .month = 8U, .day = 13};
+    struct Friend hans = {.name = "Meier", .prename = "Hans", .year = 1970U, .month = 12U, .day = 31};
 
-    printf("%u\n", jan.year);
-    printf("%u\n", jan.month);
-    printf("%u\n", jan.day);
     printf("%s\n", jan.name);
     printf("%s\n", jan.prename);
-
-    strncpy(jan.name, "Schafranek", 50);
-
     printf("%u\n", jan.year);
-    printf("%u\n", jan.month);
-    printf("%u\n", jan.day);
-    printf("%s\n", jan.name);
-    printf("%s\n", jan.prename);
 
-    struct Friend friend_book[2];
-    friend_book[0] = jan;
-    friend_book[1] = lara;
+    printf("%s\n", peter.name);
+    printf("%s\n", peter.prename);
+    printf("%u\n", peter.year);
+
+    printf("%s\n", hans.name);
+    printf("%s\n", hans.prename);
+    printf("%u\n", hans.year);
 
     return 0;
 }
