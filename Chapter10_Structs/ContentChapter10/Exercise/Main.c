@@ -4,7 +4,7 @@
 
 struct Vector; // { }
 
-typedef struct Vector Vector;
+// typedef
 
 int *createArray(unsigned int length, int value)
 {

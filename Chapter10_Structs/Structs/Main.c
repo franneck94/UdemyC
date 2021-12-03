@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct Friend
 {
-    char *name;
-    char *prename;
+    char name[50];
+    char prename[50];
     unsigned int year;
     unsigned int month;
     unsigned int day;
@@ -21,7 +22,7 @@ int main()
     printf("%s\n", jan.name);
     printf("%s\n", jan.prename);
 
-    jan.name = "Schafranek";
+    strncpy(jan.name, "Schafranek", 50);
 
     printf("%u\n", jan.year);
     printf("%u\n", jan.month);

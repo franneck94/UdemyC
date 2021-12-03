@@ -4,32 +4,41 @@
 
 char *join(char *delimiter, char **list)
 {
-    const size_t default_len = 100;
-    char *result = (char *)malloc(default_len * sizeof(char));
-    result[0] = '\0';
-
-    int index = 0;
-    while (list[index] != NULL)
+    if (delimiter == NULL || list == NULL || list[0] == NULL)
     {
-        if (strlen(result) + strlen(list[index]) > default_len - 1)
-        {
-            const size_t used_result_len = strlen(result) + 1;
-            result = realloc(result, used_result_len);
-        }
-
-        if (index > 0)
-        {
-            strncat(result, delimiter, strlen(delimiter));
-        }
-
-        strncat(result, list[index], strlen(list[index]));
-        ++index;
+        return NULL;
     }
 
-    if (index == 0)
+    size_t delimiter_len = strlen(delimiter);
+    size_t max_result_len = 100;
+    char *result = (char *)malloc(max_result_len * sizeof(char));
+    result[0] = '\0';
+
+    int i = 0;
+    while (list[i] != NULL)
     {
-        free(result);
-        return NULL;
+        size_t current_result_len = strlen(result);
+        size_t current_input_len = strlen(list[i]);
+
+        size_t new_result_len = current_result_len + current_input_len;
+
+        if (i > 0)
+        {
+            new_result_len += delimiter_len;
+        }
+
+        if (new_result_len > max_result_len - 2)
+        {
+            result = realloc(result, new_result_len + 1);
+        }
+
+        if (i > 0)
+        {
+            strncat(result, delimiter, max_result_len);
+        }
+
+        strncat(result, list[i], max_result_len);
+        i++;
     }
 
     return result;
@@ -41,16 +50,35 @@ int main()
     char *list2[] = {"Clara", NULL};
     char *list3[] = {"Clara", "Florian", NULL};
     char *list4[] = {"Clara", "Florian", "Jan", NULL};
-    char *s;
+    char *s = NULL;
 
-    printf("List1: %s\n", s = join(" -> ", list1));
-    free(s);
-    printf("List2: %s\n", s = join(" -> ", list2));
-    free(s);
-    printf("List3: %s\n", s = join(" -> ", list3));
-    free(s);
-    printf("List4: %s\n", s = join(" -> ", list4));
-    free(s);
+    s = join(" -> ", list1);
+    if (s != NULL)
+    {
+        printf("List1: %s\n", s);
+        free(s);
+    }
+
+    s = join(" -> ", list2);
+    if (s != NULL)
+    {
+        printf("List2: %s\n", s);
+        free(s);
+    }
+
+    s = join(" -> ", list3);
+    if (s != NULL)
+    {
+        printf("List3: %s\n", s);
+        free(s);
+    }
+
+    s = join(" -> ", list4);
+    if (s != NULL)
+    {
+        printf("List4: %s\n", s);
+        free(s);
+    }
 
     return 0;
 }
