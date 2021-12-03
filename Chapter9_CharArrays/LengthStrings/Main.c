@@ -4,7 +4,7 @@
 
 size_t string_length(char *str)
 {
-    if (str == NULL)
+    if (NULL == str)
     {
         return 0;
     }
@@ -20,18 +20,23 @@ size_t string_length(char *str)
     return i;
 }
 
+
 int main()
 {
-    char name[32] = "Jan";
-    char lastname[16] = "Schaffranek";
+    char name[] = "Jan";
+    char lastname[] = "Schaffranek";
+
     printf("name: %s\n", name);
     printf("lastname: %s\n", lastname);
 
-    size_t name_length = string_length(name);
-    size_t lastname_length = string_length(lastname);
+    size_t name_length0 = string_length(name);
+    size_t name_length1 = strlen(name);
 
-    printf("name lenght: %lu\n", name_length);
-    printf("lastname lenght: %lu\n", lastname_length);
+    size_t lastname_length0 = string_length(lastname);
+    size_t lastname_length1 = strlen(lastname);
+
+    printf("Name Length 0: %lu, 1: %lu\n", name_length0, name_length1);
+    printf("Last Name Length 0: %lu, 1: %lu\n", lastname_length0, lastname_length1);
 
     return 0;
 }
