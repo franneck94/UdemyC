@@ -40,9 +40,9 @@ int minVector(Vector *vec);
 int maxVector(Vector *vec);
 
 // Return Type: int*
-// Name: createVector
+// Name: createArray
 // Parameters: unsigned int length, int value
-int *createVector(unsigned int length, int value);
+int *createArray(unsigned int length, int value);
 
 // Return Type: int**
 // Name: createMatrix

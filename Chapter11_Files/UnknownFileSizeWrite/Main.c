@@ -9,14 +9,14 @@ int main()
     unsigned int length = 10;
     int fill_value = 0;
 
-    Vector v1 = {.data = createVector(length, fill_value), .length = length};
+    Vector v1 = {.data = createArray(length, fill_value), .length = length};
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/UnknownFileSizeWrite/OutputData.txt";
+    char path[] = "C:/Users/jan/Dropbox/_Coding/UdemyC/Chapter11_Files/UnknownFileSizeWrite/OutputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "w");
 

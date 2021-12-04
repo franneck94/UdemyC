@@ -9,7 +9,7 @@
 /*   MAIN FUNCTIONS   */
 /**********************/
 
-Vector *createVector(const unsigned int length, const float value)
+Vector *createArray(const unsigned int length, const float value)
 {
     Vector *vec = (Vector *)malloc(sizeof(Vector));
 
@@ -37,7 +37,7 @@ Vector *createVector(const unsigned int length, const float value)
     return vec;
 }
 
-void *freeVector(Vector *vec)
+void *freeArray(Vector *vec)
 {
     if (vec == NULL)
     {
@@ -142,7 +142,7 @@ Vector *addVectors(const Vector *vec1, const Vector *vec2)
         return NULL;
     }
 
-    Vector *result = createVector(vec1->length, 0);
+    Vector *result = createArray(vec1->length, 0);
 
     for (unsigned int i = 0; i < vec1->length; i++)
     {
@@ -159,7 +159,7 @@ Vector *subVectors(const Vector *vec1, const Vector *vec2)
         return NULL;
     }
 
-    Vector *result = createVector(vec1->length, 0);
+    Vector *result = createArray(vec1->length, 0);
 
     for (unsigned int i = 0; i < vec1->length; i++)
     {
@@ -193,7 +193,7 @@ Vector *multiplyScalar(const Vector *vec, const float scalar)
         return NULL;
     }
 
-    Vector *result = createVector(vec->length, 0);
+    Vector *result = createArray(vec->length, 0);
 
     for (unsigned int i = 0; i < vec->length; i++)
     {
@@ -210,7 +210,7 @@ Vector *divideScalar(const Vector *vec, const float scalar)
         return NULL;
     }
 
-    Vector *result = createVector(vec->length, 0);
+    Vector *result = createArray(vec->length, 0);
 
     for (unsigned int i = 0; i < vec->length; i++)
     {

@@ -66,7 +66,7 @@ int maxVector(Vector *vec)
     return max;
 }
 
-int *createVector(unsigned int length, int value)
+int *createArray(unsigned int length, int value)
 {
     int *p_data;
     p_data = (int *)malloc(length * sizeof(int));
@@ -87,7 +87,7 @@ void printVector(Vector *vec)
     }
 }
 
-int *freeVector(Vector *vec)
+int *freeArray(Vector *vec)
 {
     free(vec->data);
     vec->data = NULL;

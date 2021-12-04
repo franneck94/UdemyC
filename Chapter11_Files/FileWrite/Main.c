@@ -6,14 +6,14 @@
 
 int main()
 {
-    Vector v1 = {.data = createVector(5, 0), .length = 5};
+    Vector v1 = {.data = createArray(5, 0), .length = 5};
 
-    for (int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < v1.length; i++)
     {
         v1.data[i] = i * i;
     }
 
-    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/FileWrite/OutputData.txt";
+    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/FileWrite/OutputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "w");
 
@@ -39,7 +39,7 @@ int main()
     fclose(fp);
 
     // Free vector data
-    freeVector(&v1);
+    freeArray(v1.data);
 
     return 0;
 }

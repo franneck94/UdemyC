@@ -5,8 +5,8 @@
 
 int main()
 {
-    Vector *v1 = createVector(3, 1);
-    Vector *v2 = createVector(3, -1);
+    Vector *v1 = createArray(3, 1);
+    Vector *v2 = createArray(3, -1);
 
     Vector *v3 = addVectors(v1, v2);
     printVector(v3);
@@ -20,20 +20,20 @@ int main()
     printVector(v6);
 
     (void)writeOutVectorData(v6, "v6.txt");
-    Vector *v6_copy = createVector(3, 0);
+    Vector *v6_copy = createArray(3, 0);
     (void)readInVectorData(v6_copy, "v6.txt");
     printVector(v6_copy);
 
     float result = multiplyVectors(v1, v2);
     printf("%f\n", result);
 
-    v1 = freeVector(v1);
-    v2 = freeVector(v2);
-    v3 = freeVector(v3);
-    v4 = freeVector(v4);
-    v5 = freeVector(v5);
-    v6 = freeVector(v6);
-    v6_copy = freeVector(v6_copy);
+    v1 = freeArray(v1);
+    v2 = freeArray(v2);
+    v3 = freeArray(v3);
+    v4 = freeArray(v4);
+    v5 = freeArray(v5);
+    v6 = freeArray(v6);
+    v6_copy = freeArray(v6_copy);
 
     return 0;
 }

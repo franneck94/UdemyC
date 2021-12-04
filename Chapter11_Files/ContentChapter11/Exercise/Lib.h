@@ -14,8 +14,8 @@ int minVector(Vector *vec);
 
 int maxVector(Vector *vec);
 
-int *createVector(unsigned int length, int value);
+int *createArray(unsigned int length, int value);
 
 void printVector(Vector *vec);
 
-int *freeVector(Vector *vec);
+int *freeArray(Vector *vec);

@@ -88,7 +88,7 @@ int maxVector(Vector *vec)
     return max;
 }
 
-int *createVector(unsigned int length, int value)
+int *createArray(unsigned int length, int value)
 {
     int *vector;
     vector = (int *)malloc(length * sizeof(int));

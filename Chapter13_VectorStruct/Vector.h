@@ -16,9 +16,9 @@ typedef struct Vector Vector;
 /*   MAIN FUNCTIONS   */
 /**********************/
 
-Vector *createVector(const unsigned int length, const float value);
+Vector *createArray(const unsigned int length, const float value);
 
-void *freeVector(Vector *vec);
+void *freeArray(Vector *vec);
 
 /**********************/
 /*  I/O FUNCTIONS     */

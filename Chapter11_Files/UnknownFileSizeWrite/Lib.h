@@ -1,21 +1,22 @@
-struct Vector
+#ifndef LIB_H
+#define LIB_H
+
+typedef struct Vector
 {
     int *data;
     unsigned int length;
-};
+} Vector;
 
-typedef struct Vector Vector;
+int *createArray(unsigned int length, int value);
 
-int getNumberFromUser();
+int *freeArray(int *array);
 
-float meanVector(Vector *vec);
+float meanVector(Vector *vector);
 
-int minVector(Vector *vec);
+int minVector(Vector *vector);
 
-int maxVector(Vector *vec);
+int maxVector(Vector *vector);
 
-int *createVector(unsigned int length, int value);
+void printVector(Vector *vector);
 
-void printVector(Vector *vec);
-
-int *freeVector(Vector *vec);
+#endif

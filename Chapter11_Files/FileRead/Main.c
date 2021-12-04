@@ -6,7 +6,7 @@
 
 int main()
 {
-    char path[] = "C:/Users/schaf/Dropbox/_Coding/UdemyC/Chapter11_Files/FileRead/InputData.txt";
+    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/FileRead/InputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "r");
 
@@ -15,7 +15,7 @@ int main()
         return 1;
     }
 
-    Vector v1 = {.data = createVector(5, 0), .length = 5};
+    Vector v1 = {.data = createArray(5, 0), .length = 5};
 
     for (unsigned int i = 0; i < v1.length; i++)
     {
@@ -31,7 +31,7 @@ int main()
     }
 
     // Free vector data
-    freeVector(&v1);
+    freeArray(v1.data);
 
     return 0;
 }
