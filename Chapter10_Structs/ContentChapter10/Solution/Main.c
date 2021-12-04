@@ -35,9 +35,13 @@ int *freeArray(int *array)
     return NULL;
 }
 
-
 float meanVector(Vector *vector)
 {
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
     int sum = 0;
 
     for (unsigned int i = 0; i < vector->length; i++)
@@ -50,6 +54,11 @@ float meanVector(Vector *vector)
 
 int minVector(Vector *vector)
 {
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
     if (vector->length == 0)
     {
         return INT32_MIN;
@@ -70,6 +79,11 @@ int minVector(Vector *vector)
 
 int maxVector(Vector *vector)
 {
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
     if (vector->length == 0)
     {
         return INT32_MIN;

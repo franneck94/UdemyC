@@ -1,94 +1,112 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "Lib.h"
 
-int getNumberFromUser()
-{
-    int number_from_user; //0x00: 12
-
-    printf("Pls enter a interger number!\n");
-    scanf("%d", &number_from_user);
-
-    return number_from_user; // return 12;
-}
-
-float meanVector(Vector *vec)
-{
-    float sum = 0.0f;
-
-    for (unsigned int i = 0; i < vec->length; i++)
-    {
-        sum += vec->data[i];
-    }
-
-    float mean = sum / vec->length;
-    return mean;
-}
-
-int minVector(Vector *vec)
-{
-    int min;
-
-    for (unsigned int i = 0; i < vec->length; i++)
-    {
-        if (i == 0)
-        {
-            min = vec->data[i];
-        }
-
-        if (vec->data[i] < min)
-        {
-            min = vec->data[i];
-        }
-    }
-
-    return min;
-}
-
-int maxVector(Vector *vec)
-{
-    int max;
-
-    for (unsigned int i = 0; i < vec->length; i++)
-    {
-        if (i == 0)
-        {
-            max = vec->data[i];
-        }
-
-        if (vec->data[i] > max)
-        {
-            max = vec->data[i];
-        }
-    }
-
-    return max;
-}
-
 int *createArray(unsigned int length, int value)
 {
-    int *p_data;
-    p_data = (int *)malloc(length * sizeof(int));
+    int *data = (int *)malloc(length * sizeof(int));
+
+    if (data == NULL)
+    {
+        return NULL;
+    }
 
     for (unsigned int i = 0; i < length; i++)
     {
-        p_data[i] = value;
+        data[i] = value;
     }
 
-    return p_data;
+    return data;
 }
 
-void printVector(Vector *vec)
+int *freeArray(int *array)
 {
-    for (unsigned int i = 0; i < vec->length; i++)
+    if (array != NULL)
     {
-        printf("%d\n", vec->data[i]);
+        free(array);
     }
+
+    return NULL;
 }
 
-int *freeArray(Vector *vec)
+float meanVector(Vector *vector)
 {
-    free(vec->data);
-    vec->data = NULL;
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
+    int sum = 0;
+
+    for (unsigned int i = 0; i < vector->length; i++)
+    {
+        sum += vector->data[i];
+    }
+
+    return (float)(sum) / (float)(vector->length);
+}
+
+int minVector(Vector *vector)
+{
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
+    if (vector->length == 0)
+    {
+        return INT32_MIN;
+    }
+
+    int current_min = vector->data[0];
+
+    for (unsigned int i = 1; i < vector->length; i++)
+    {
+        if (vector->data[i] < current_min)
+        {
+            current_min = vector->data[i];
+        }
+    }
+
+    return current_min;
+}
+
+int maxVector(Vector *vector)
+{
+    if (vector == NULL || vector->data == NULL)
+    {
+        return 0.0f;
+    }
+
+    if (vector->length == 0)
+    {
+        return INT32_MIN;
+    }
+
+    int current_max = vector->data[0];
+
+    for (unsigned int i = 1; i < vector->length; i++)
+    {
+        if (vector->data[i] > current_max)
+        {
+            current_max = vector->data[i];
+        }
+    }
+
+    return current_max;
+}
+
+void printVector(Vector *vector)
+{
+    if (vector->data == NULL)
+    {
+        return;
+    }
+
+    for (unsigned int i = 0; i < vector->length; i++)
+    {
+        printf("%d\n", vector->data[i]);
+    }
 }

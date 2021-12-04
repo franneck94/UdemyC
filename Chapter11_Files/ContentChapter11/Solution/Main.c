@@ -9,7 +9,7 @@ int main()
     /*******************/
     /*      READ      */
     /*******************/
-    char path[] = "C:/Users/jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/InputData.txt";
+    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/Solution/InputData.txt";
     // read=r, write=w
     FILE *fp = fopen(path, "r");
     if (fp == NULL)
@@ -35,7 +35,7 @@ int main()
         v1.data[i] *= 2;
     }
 
-    char path2[] = "C:/Users/jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/OutputData.txt";
+    char path2[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/Solution/InputData.txt";
     // read=r, write=w
     FILE *fp2 = fopen(path2, "w");
     if (fp2 == NULL)
