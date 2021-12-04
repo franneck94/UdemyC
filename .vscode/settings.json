@@ -6,6 +6,7 @@
     "editor.tabSize": 4,
     "editor.rulers": [80, 120],
     "editor.fontSize": 22,
+    "markdown.preview.fontSize": 26,
     "editor.renderWhitespace": "trailing",
     "editor.suggestSelection": "first",
     "diffEditor.ignoreTrimWhitespace": false,

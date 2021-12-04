@@ -1,62 +1,76 @@
-#include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-typedef enum
+typedef enum FriendshipOrigin
 {
     FRIENDSHIP_ORIGIN_SCHOOL,
     FRIENDSHIP_ORIGIN_FAMILY,
     FRIENDSHIP_ORIGIN_OTHER,
 } FriendshipOrigin_t;
 
-typedef struct
+typedef struct Date
 {
-    uint32_t year;
-    uint32_t month;
-    uint32_t day;
+    unsigned int year;
+    unsigned int month;
+    unsigned int day;
 } Date_t;
 
-typedef struct
+typedef struct Friend
 {
-    char *name;
-    char *prename;
+    char name[50];
+    char prename[50];
     Date_t birthday;
     FriendshipOrigin_t origin;
 } Friend_t;
 
-void printFriend(Friend_t *friend)
+void print_date(Date_t *date)
 {
-    printf("%s %s's birthday is: %u.%u.%u.\n",
-           friend->prename,
-           friend->name,
-           friend->birthday.day,
-           friend->birthday.month,
-           friend->birthday.year);
+    printf("%u.%u.%u\n", date->day, date->month, date->year);
 }
 
-void changeName(Friend_t *friend, char *new_name)
+void print_friend(Friend_t *friend)
 {
-    friend->name = new_name;
+    printf("%s %s\n", friend->prename, friend->name);
+    print_date(&friend->birthday);
+
+    switch (friend->origin)
+    {
+    case FRIENDSHIP_ORIGIN_SCHOOL:
+    {
+        printf("I know him from school\n");
+        break;
+    }
+    case FRIENDSHIP_ORIGIN_FAMILY:
+    {
+        printf("I know him from my family\n");
+        break;
+    }
+    case FRIENDSHIP_ORIGIN_OTHER:
+    {
+        printf("I know him from somewhere else\n ");
+        break;
+    }
+    }
 }
 
 int main()
 {
     Friend_t jan = {.name = "Schaffranek",
                     .prename = "Jan",
-                    .birthday = {.year = 1994u, .month = 2u, .day = 24u},
+                    .birthday = {.year = 1994U, .month = 2U, .day = 24U},
                     .origin = FRIENDSHIP_ORIGIN_FAMILY};
-    Friend_t lara = {.name = "Hausmann",
-                     .prename = "Lara",
-                     .birthday = {.year = 1992, .month = 12, .day = 12},
+    Friend_t peter = {.name = "Lustig",
+                      .prename = "Peter",
+                      .birthday = {.year = 1959U, .month = 8U, .day = 13},
+                      .origin = FRIENDSHIP_ORIGIN_OTHER};
+    Friend_t hans = {.name = "Meier",
+                     .prename = "Hans",
+                     .birthday = {.year = 1970U, .month = 12U, .day = 31},
                      .origin = FRIENDSHIP_ORIGIN_SCHOOL};
+    Friend_t friend_book[] = {jan, peter, hans};
 
-    Friend_t friend_book[2];
-    friend_book[0] = jan;
-    friend_book[1] = lara;
-
-    printFriend(&friend_book[1]);
-    changeName(&friend_book[1], "Haussmann");
-    printFriend(&friend_book[1]);
+    print_friend(&friend_book[0]);
+    print_friend(&friend_book[1]);
+    print_friend(&friend_book[2]);
 
     return 0;
 }

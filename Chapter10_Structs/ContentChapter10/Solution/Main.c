@@ -35,6 +35,7 @@ int *freeArray(int *array)
     return NULL;
 }
 
+
 float meanVector(Vector *vector)
 {
     int sum = 0;
@@ -89,6 +90,11 @@ int maxVector(Vector *vector)
 
 void printVector(Vector *vector)
 {
+    if (vector->data == NULL)
+    {
+        return;
+    }
+
     for (unsigned int i = 0; i < vector->length; i++)
     {
         printf("%d\n", vector->data[i]);
@@ -98,7 +104,9 @@ void printVector(Vector *vector)
 int main()
 {
     Vector v1 = {.data = createArray(3, 1), .length = 3};
-    v1.data[1] = 2;
+    v1.data[0] = 10;
+    v1.data[1] = -10;
+    v1.data[2] = 100;
 
     printVector(&v1);
 
