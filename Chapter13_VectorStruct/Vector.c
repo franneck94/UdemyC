@@ -149,15 +149,102 @@ void printVector(const Vector *vector)
     {
         printf("%f\n", vector->data[i]);
     }
+
+    printf("\n");
 }
 
 /**********************/
 /*  MATH. FUNCTIONS   */
 /**********************/
 
+Vector *addVectors(const Vector *vec1, const Vector *vec2)
+{
+    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    {
+        return NULL;
+    }
+
+    Vector *result = createVector(vec1->length, 0.0);
+
+    for (unsigned int i = 0; i < vec1->length; i++)
+    {
+        result->data[i] = vec1->data[i] + vec2->data[i];
+    }
+
+    return result;
+}
+
+Vector *subVectors(const Vector *vec1, const Vector *vec2)
+{
+    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    {
+        return NULL;
+    }
+
+    Vector *result = createVector(vec1->length, 0.0);
+
+    for (unsigned int i = 0; i < vec1->length; i++)
+    {
+        result->data[i] = vec1->data[i] - vec2->data[i];
+    }
+
+    return result;
+}
+
+float multiplyVectors(const Vector *vec1, const Vector *vec2)
+{
+    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    {
+        return 0.0f;
+    }
+
+    float result = 0.0f;
+
+    for (unsigned int i = 0; i < vec1->length; i++)
+    {
+        result += vec1->data[i] * vec2->data[i];
+    }
+
+    return result;
+}
+
+Vector *multiplyScalar(const Vector *vec, const float scalar)
+{
+    if (vec == NULL || vec->data == NULL)
+    {
+        return NULL;
+    }
+
+    Vector *result = createVector(vec->length, 0.0);
+
+    for (unsigned int i = 0; i < vec->length; i++)
+    {
+        result->data[i] = vec->data[i] * scalar;
+    }
+
+    return result;
+}
+
+Vector *divideScalar(const Vector *vec, const float scalar)
+{
+    if (vec == NULL || vec->data == NULL || scalar == 0.0f)
+    {
+        return NULL;
+    }
+
+    Vector *result = createVector(vec->length, 0.0);
+
+    for (unsigned int i = 0; i < vec->length; i++)
+    {
+        result->data[i] = vec->data[i] / scalar;
+    }
+
+    return result;
+}
+
 float meanVector(const Vector *vector)
 {
-    int sum = 0;
+    float sum = 0.0f;
 
     for (unsigned int i = 0; i < vector->length; i++)
     {
@@ -174,7 +261,7 @@ float minVector(const Vector *vector)
         return FLT_MAX;
     }
 
-    int current_min = vector->data[0];
+    float current_min = vector->data[0];
 
     for (unsigned int i = 1; i < vector->length; i++)
     {

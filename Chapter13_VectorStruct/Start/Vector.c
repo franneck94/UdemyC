@@ -149,6 +149,8 @@ void printVector(const Vector *vector)
     {
         printf("%f\n", vector->data[i]);
     }
+
+    printf("\n");
 }
 
 /**********************/
@@ -157,7 +159,7 @@ void printVector(const Vector *vector)
 
 float meanVector(const Vector *vector)
 {
-    int sum = 0;
+    float sum = 0.0f;
 
     for (unsigned int i = 0; i < vector->length; i++)
     {
@@ -174,7 +176,7 @@ float minVector(const Vector *vector)
         return FLT_MAX;
     }
 
-    int current_min = vector->data[0];
+    float current_min = vector->data[0];
 
     for (unsigned int i = 1; i < vector->length; i++)
     {
