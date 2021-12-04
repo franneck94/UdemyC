@@ -2,42 +2,99 @@
 #include <stdlib.h>
 #include <string.h>
 
+char *join(char *delimiter, char **list)
+{
+    if (delimiter == NULL || list == NULL || list[0] == NULL)
+    {
+        return NULL;
+    }
+
+    size_t delimiter_len = strlen(delimiter);
+    size_t current_input_len = strlen(list[0]);
+
+    char *result = (char *)malloc(current_input_len * sizeof(char));
+
+    if (result == NULL)
+    {
+        return NULL;
+    }
+
+    memset(result, 0, current_input_len);
+
+    int i = 0;
+    while (list[i] != NULL)
+    {
+        size_t current_result_len;
+        if (i > 0)
+        {
+            current_result_len = strlen(result);
+        }
+        else
+        {
+            current_result_len = current_input_len;
+        }
+
+        current_input_len = strlen(list[i]);
+        size_t new_result_len = current_input_len;
+        if (i > 0)
+        {
+            new_result_len += delimiter_len;
+            new_result_len += current_result_len;
+        }
+
+        if (new_result_len > current_result_len)
+        {
+            result = realloc(result, new_result_len + 1);
+            current_result_len = new_result_len;
+        }
+
+        if (i > 0)
+        {
+            strncat(result, delimiter, current_result_len);
+        }
+
+        strncat(result, list[i], current_result_len);
+        i++;
+    }
+
+    return result;
+}
+
 int main()
 {
-    // Variante 1
-    char prename[20];
-    char lastname[20];
-    int year;
-    int month;
-    int day;
+    char *list1[] = {NULL};
+    char *list2[] = {"Clara", NULL};
+    char *list3[] = {"Clara", "Florian", NULL};
+    char *list4[] = {"Clara", "Florian", "Jan", NULL};
+    char *s = NULL;
 
-    printf("Enter your Prename: ");
-    scanf("%20s", prename);
-    printf("Enter your Lastname: ");
-    scanf("%20s", lastname);
-    printf("Enter your Birthday (DD MM YYYY)\n");
-    scanf("%2d %2d %4d", &day, &month, &year);
-    printf("Name: %s %s, Birthday: %2d %2d %4d", prename, lastname, day, month, year);
+    s = join(" -> ", list1); // ""
+    if (s != NULL)
+    {
+        printf("List1: %s\n", s);
+        free(s);
+    }
 
-    // Variante 2
-    char *prename2 = (char *)malloc(20 * sizeof(char));
-    char *lastname2 = (char *)malloc(20 * sizeof(char));
-    int year2;
-    int month2;
-    int day2;
+    s = join(" -> ", list2); // "Clara"
+    if (s != NULL)
+    {
+        printf("List2: %s\n", s);
+        free(s);
+    }
 
-    printf("\nEnter your Prename: ");
-    scanf("%20s", prename2);
-    printf("Enter your Lastname: ");
-    scanf("%20s", lastname2);
-    printf("Enter your Birthday (DD MM YYYY)\n");
-    scanf("%2d %2d %4d", &day2, &month2, &year2);
-    printf("Name: %s %s, Birthday: %2d %2d %4d", prename2, lastname2, day2, month2, year2);
+    s = join(" -> ", list3); // "Clara -> Florian"
+    if (s != NULL)
+    {
+        printf("List3: %s\n", s);
+        free(s);
+    }
 
-    free(prename2);
-    free(lastname2);
-    prename2 = NULL;
-    lastname2 = NULL;
+    s = join(" -> ", list4); // "Clara -> Florian -> Jan"
+    if (s != NULL)
+    {
+        printf("List4: %s\n", s);
+        free(s);
+    }
 
     return 0;
 }
