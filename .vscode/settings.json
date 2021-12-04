@@ -23,7 +23,8 @@
         "stdint.h": "c",
         "stdint-gcc.h": "c",
         "stdlib.h": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "stdio.h": "c"
     },
     "workbench.startupEditor": "newUntitledFile",
     "git.enableSmartCommit": true,
