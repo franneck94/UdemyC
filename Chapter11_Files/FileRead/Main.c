@@ -1,14 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "Lib.h"
 
+char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
+
 int main()
 {
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/FileRead/InputData.txt";
-    // read=r, write=w
-    FILE *fp = fopen(path, "r");
+    char input_filepath[100] = {'\0'};
+    strncpy(input_filepath, PROJECT_DIR, 100);
+    strncat(input_filepath, "Chapter11_Files/FileRead/InputData.txt", 50);
+
+    FILE *fp = fopen(input_filepath, "r");
 
     if (fp == NULL)
     {
@@ -22,7 +25,6 @@ int main()
         fscanf(fp, "%d", &v1.data[i]);
     }
 
-    // Close the file
     fclose(fp);
 
     for (unsigned int i = 0; i < v1.length; i++)
@@ -30,7 +32,6 @@ int main()
         printf("%d\n", v1.data[i]);
     }
 
-    // Free vector data
     freeArray(v1.data);
 
     return 0;

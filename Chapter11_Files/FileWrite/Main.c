@@ -1,44 +1,55 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "Lib.h"
 
+char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
+
 int main()
 {
-    Vector v1 = {.data = createArray(5, 0), .length = 5};
+    char input_filepath[100] = {'\0'};
+    strncpy(input_filepath, PROJECT_DIR, 100);
+    strncat(input_filepath, "Chapter11_Files/FileWrite/InputData.txt", 50);
 
-    for (unsigned int i = 0; i < v1.length; i++)
-    {
-        v1.data[i] = i * i;
-    }
+    char output_filepath[100] = {'\0'};
+    strncpy(output_filepath, PROJECT_DIR, 100);
+    strncat(output_filepath, "Chapter11_Files/FileWrite/OutputData.txt", 50);
 
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/FileWrite/OutputData.txt";
-    // read=r, write=w
-    FILE *fp = fopen(path, "w");
+    FILE *fp_in = fopen(input_filepath, "r");
 
-    if (fp == NULL)
+    if (fp_in == NULL)
     {
         return 1;
     }
 
-    // Write the values to the file
+    Vector v1 = {.data = createArray(5, 0), .length = 5};
+
     for (unsigned int i = 0; i < v1.length; i++)
     {
-        if (i < v1.length - 1)
-        {
-            fprintf(fp, "%d\n", v1.data[i]);
-        }
-        else
-        {
-            fprintf(fp, "%d", v1.data[i]);
-        }
+        fscanf(fp_in, "%d", &v1.data[i]);
     }
 
-    // Close the file
-    fclose(fp);
+    fclose(fp_in);
 
-    // Free vector data
+    for (unsigned int i = 0; i < v1.length; i++)
+    {
+        v1.data[i] -= 1;
+    }
+
+    FILE *fp_out = fopen(output_filepath, "w");
+
+    if (fp_out == NULL)
+    {
+        return 1;
+    }
+
+    for (unsigned int i = 0; i < v1.length; i++)
+    {
+        fprintf(fp_out, "%d\n", v1.data[i]);
+    }
+
+    fclose(fp_out);
+
     freeArray(v1.data);
 
     return 0;
