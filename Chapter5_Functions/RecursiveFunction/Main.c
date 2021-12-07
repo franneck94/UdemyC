@@ -1,24 +1,22 @@
+#include <stdint.h>
 #include <stdio.h>
 
-unsigned long long factorial(unsigned int n)
+uint64_t factorial(uint8_t n)
 {
-    if (n > 1)
-    {
-        return n * factorial(n - 1);
-    }
-    else
+    if (n == 1)
     {
         return 1;
     }
-}
 
+    return n * factorial(n - 1);
+}
 
 int main()
 {
-    unsigned int n = 5;
-    unsigned long long n_fac = factorial(n);
+    uint8_t n = 5; // 5 * 4 * 3 * 2 * 1
+    uint64_t n_faculuty = factorial(n);
 
-    printf("%d! = %llu\n", n, n_fac);
+    printf("%u! = %llu\n", n, n_faculuty);
 
     return 0;
 }
