@@ -1,6 +1,17 @@
 #include <stdio.h>
 
-#include "Lib.h"
+unsigned long long factorial(unsigned int n)
+{
+    if (n > 1)
+    {
+        return n * factorial(n - 1);
+    }
+    else
+    {
+        return 1;
+    }
+}
+
 
 int main()
 {
