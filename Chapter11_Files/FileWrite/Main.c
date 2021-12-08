@@ -9,11 +9,11 @@ int main()
 {
     char input_filepath[100] = {'\0'};
     strncpy(input_filepath, PROJECT_DIR, 100);
-    strncat(input_filepath, "Chapter11_Files/FileWrite/InputData.txt", 50);
+    strncat(input_filepath, "Chapter11_Files/FileWrite/InputData.txt", 60);
 
     char output_filepath[100] = {'\0'};
     strncpy(output_filepath, PROJECT_DIR, 100);
-    strncat(output_filepath, "Chapter11_Files/FileWrite/OutputData.txt", 50);
+    strncat(output_filepath, "Chapter11_Files/FileWrite/OutputData.txt", 60);
 
     FILE *fp_in = fopen(input_filepath, "r");
 

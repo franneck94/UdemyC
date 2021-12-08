@@ -135,7 +135,7 @@ RETURN_CODES random_fill_records(records_t *const records)
 
     for (unsigned int i = 0; i < records->length; i++)
     {
-        char random_letter = ((char)(rand()) % (upper_letter - lower_letter + 1)) + lower_letter;
+        char random_letter = (char)((rand() % (upper_letter - lower_letter + 1)) + lower_letter);
         int random_value = (rand() % (upper_value - lower_value + 1)) + lower_value;
 
         records->entries[i].letter = random_letter;

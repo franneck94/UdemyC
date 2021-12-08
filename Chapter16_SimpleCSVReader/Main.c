@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 
     if (return_code != SUCCESS)
     {
-        my_records = delete_records(my_records);
+        delete_records(my_records);
         return return_code;
     }
 
@@ -72,11 +72,11 @@ int main(int argc, char **argv)
 
     if (return_code != SUCCESS)
     {
-        my_records = delete_records(my_records);
+        delete_records(my_records);
         return return_code;
     }
 
-    my_records = delete_records(my_records);
+    delete_records(my_records);
 
     return 0;
 }

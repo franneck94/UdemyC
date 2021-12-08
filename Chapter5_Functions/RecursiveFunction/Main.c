@@ -16,7 +16,7 @@ int main()
     uint8_t n = 5; // 5 * 4 * 3 * 2 * 1
     uint64_t n_faculuty = factorial(n);
 
-    printf("%u! = %llu\n", n, n_faculuty);
+    printf("%u! = %lu\n", n, n_faculuty);
 
     return 0;
 }

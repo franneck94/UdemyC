@@ -1,51 +1,55 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #include "Lib.h"
 
+char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
+
 int main()
 {
-    unsigned int length = 10;
-    int fill_value = 0;
+    char input_filepath[100] = {'\0'};
+    strncpy(input_filepath, PROJECT_DIR, 100);
+    strncat(input_filepath, "Chapter11_Files/FileModes/InputData.txt", 60);
 
-    Vector v1 = {.data = createArray(length, fill_value), .length = length};
+    char output_filepath[100] = {'\0'};
+    strncpy(output_filepath, PROJECT_DIR, 100);
+    strncat(output_filepath, "Chapter11_Files/FileModes/OutputData.bin", 60);
 
-    for (int i = 0; i < v1.length; i++)
-    {
-        v1.data[i] = i * i;
-    }
+    FILE *fp_in = fopen(input_filepath, "r");
 
-    char path[] = "C:/Users/jan/Dropbox/_Coding/UdemyC/Chapter11_Files/FileModes/Data.txt";
-
-    // r (read)
-    // w (write, creates if not exist)
-    // a (append with writing, creates if not exist)
-    // r+ (read and  write)
-    // w+ (read and write, truncates file, creates if not exist)
-    // a+ (read and  write, creates if not exist, append with writing)
-    FILE *fp = fopen(path, "a");
-
-    if (fp == NULL)
+    if (fp_in == NULL)
     {
         return 1;
     }
 
-    // read line by line
-    int line_size = 50;
-    char *line = malloc(line_size * sizeof(char));
+    Vector v1 = {.data = createArray(5, 0), .length = 5};
 
     for (unsigned int i = 0; i < v1.length; i++)
     {
-        char str[12]; // 12 chars fits all values for int32
-        sprintf(str, "%d\n", v1.data[i]);
-        fputs(str, fp);
+        fscanf(fp_in, "%d", &v1.data[i]);
     }
 
-    // Close the file
-    fclose(fp);
+    fclose(fp_in);
 
-    // Free vector data
+    for (unsigned int i = 0; i < v1.length; i++)
+    {
+        v1.data[i] -= 1;
+    }
+
+    FILE *fp_out = fopen(output_filepath, "ab");
+
+    if (fp_out == NULL)
+    {
+        return 1;
+    }
+
+    for (unsigned int i = 0; i < v1.length; i++)
+    {
+        fprintf(fp_out, "%d\n", v1.data[i]);
+    }
+
+    fclose(fp_out);
+
     freeArray(v1.data);
 
     return 0;

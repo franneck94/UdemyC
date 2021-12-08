@@ -19,4 +19,4 @@ int maxVector(Vector *vector);
 
 void printVector(Vector *vector);
 
-#endif // LIB_H
+#endif

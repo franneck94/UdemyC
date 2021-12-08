@@ -2,19 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Lib.h"
+char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
 
 int main()
 {
-    /*******************/
-    /*      READ      */
-    /*******************/
-
-
-    /*******************/
-    /*      WRITE      */
-    /*******************/
-
+    char output_filepath[100] = {'\0'};
+    strncpy(output_filepath, PROJECT_DIR, 100);
+    strncat(output_filepath, "Chapter11_Files/ContentChapter11/Exercise/InputData.txt", 60);
 
     return 0;
 }

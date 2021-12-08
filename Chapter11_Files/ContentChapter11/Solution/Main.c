@@ -2,56 +2,38 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Lib.h"
+char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
 
 int main()
 {
-    /*******************/
-    /*      READ      */
-    /*******************/
-    char path[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/Solution/InputData.txt";
-    // read=r, write=w
-    FILE *fp = fopen(path, "r");
+    char output_filepath[100] = {'\0'};
+    strncpy(output_filepath, PROJECT_DIR, 100);
+    strncat(output_filepath, "Chapter11_Files/ContentChapter11/Solution/InputData.txt", 60);
+
+    FILE *fp = fopen(output_filepath, "r");
+
     if (fp == NULL)
     {
         return 1;
     }
 
-    Vector v1 = {.data = createArray(8, 1), .length = 8};
+    char text[10][100] = {'\0'};
 
-    for (unsigned int i = 0; i < v1.length; i++)
+    int idx = 0;
+    int line_size = 100;
+    char line[100] = {'\0'};
+
+    while ((fgets(line, line_size, fp) != NULL) && (idx < 10))
     {
-        fscanf(fp, "%d", &v1.data[i]);
+        strncpy(text[idx], line, 100);
+
+        idx++;
     }
 
-    fclose(fp);
-    fp = NULL;
-
-    /*******************/
-    /*      WRITE      */
-    /*******************/
-    for (unsigned int i = 0; i < v1.length; i++)
+    for (unsigned int i = 0; i < 10; i++)
     {
-        v1.data[i] *= 2;
+        printf("%s\n", text[i]);
     }
-
-    char path2[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter11_Files/ContentChapter11/Solution/InputData.txt";
-    // read=r, write=w
-    FILE *fp2 = fopen(path2, "w");
-    if (fp2 == NULL)
-    {
-        return 1;
-    }
-
-    for (unsigned int i = 0; i < v1.length; i++)
-    {
-        fprintf(fp2, "%d\n", v1.data[i]);
-    }
-
-    fclose(fp2);
-    fp2 = NULL;
-
-    freeArray(v1.data);
 
     return 0;
 }
