@@ -36,7 +36,7 @@ int main()
         v1.data[i] -= 1;
     }
 
-    FILE *fp_out = fopen(output_filepath, "ab");
+    FILE *fp_out = fopen(output_filepath, "w");
 
     if (fp_out == NULL)
     {

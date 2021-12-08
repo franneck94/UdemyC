@@ -12,16 +12,6 @@ int main()
     strncpy(output_filepath, PROJECT_DIR, 100);
     strncat(output_filepath, "Chapter11_Files/UnknownFileSizeWrite/OutputData.txt", 60);
 
-    unsigned int length = 10;
-    int fill_value = 0;
-
-    Vector v1 = {.data = createArray(length, fill_value), .length = length};
-
-    for (unsigned int i = 0; i < v1.length; i++)
-    {
-        v1.data[i] = (int)(i * i);
-    }
-
     FILE *fp = fopen(output_filepath, "w");
 
     if (fp == NULL)
@@ -29,16 +19,16 @@ int main()
         return 1;
     }
 
-    for (unsigned int i = 0; i < v1.length; i++)
+    int data[5] = {1, 2, 3, 4, 5};
+
+    for (unsigned int i = 0; i < 5; i++)
     {
-        char str[12] = {'\0'}; // 12 chars fits all values for int32
-        sprintf(str, "%d\n", v1.data[i]);
-        fputs(str, fp);
+        char temp[50] = {'\0'};
+        sprintf(temp, "Value: %d - LineEnd\n", data[i]);
+        fputs(temp, fp);
     }
 
     fclose(fp);
-
-    freeArray(v1.data);
 
     return 0;
 }
