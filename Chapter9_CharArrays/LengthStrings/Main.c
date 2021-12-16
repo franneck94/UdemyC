@@ -20,7 +20,6 @@ size_t string_length(char *str)
     return i;
 }
 
-
 int main()
 {
     char name[] = "Jan";

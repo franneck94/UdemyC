@@ -20,7 +20,6 @@ size_t string_length(char *str)
     return i;
 }
 
-
 int strings_equal(char *str1, char *str2)
 {
     if (NULL == str1 || NULL == str2)
