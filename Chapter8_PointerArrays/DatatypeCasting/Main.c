@@ -2,14 +2,17 @@
 
 int main()
 {
-    float my_float_number = 1337.5f;
-    printf("%f\n", my_float_number);
+    double a = 1337.23;
+    float b = (float)(a);
 
-    int my_int_number = (int)my_float_number;
-    printf("%d\n", my_int_number);
+    printf("%.16lf\n", a);
+    printf("%.16f\n", b);
 
-    double my_double_number = (double)my_int_number / 2;
-    printf("%lf\n", my_double_number);
+    int c = 123456789;
+    short d = (short)(c);
+
+    printf("%d\n", c);
+    printf("%d\n", d);
 
     return 0;
 }
