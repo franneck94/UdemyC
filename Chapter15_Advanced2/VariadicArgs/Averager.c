@@ -5,7 +5,7 @@ double average(int count, ...)
 {
     double sum = 0.0;
 
-    va_list args = NULL;
+    va_list args;
     va_start(args, count);
 
     for (int i = 0; i < count; i++)
