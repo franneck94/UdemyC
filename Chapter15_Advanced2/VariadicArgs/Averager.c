@@ -10,7 +10,8 @@ double average(int count, ...)
 
     for (int i = 0; i < count; i++)
     {
-        sum += va_arg(args, double);
+        double temp = va_arg(args, double);
+        sum += temp;
     }
 
     va_end(args);
