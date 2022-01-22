@@ -1,9 +1,13 @@
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 #include <pthread.h>
 
-#define NUM_THREADS 100
+#define NUM_THREADS 10
+#define NUM_INCREMENTS 100000
+#define EXPECTED_RESULT (NUM_THREADS * NUM_INCREMENTS)
+#define USE_MUTEX
 
 int global_counter = 0;
 pthread_mutex_t mutex1 = PTHREAD_MUTEX_INITIALIZER;
@@ -14,9 +18,17 @@ void *function(void *args)
     int *result = (int *)malloc(sizeof(int));
     *result = arg_i32 * 2;
 
-    // pthread_mutex_lock(&mutex1);
-    global_counter++;
-    // pthread_mutex_unlock(&mutex1);
+    for (int i = 0; i < NUM_INCREMENTS; i++)
+    {
+#ifdef USE_MUTEX
+        pthread_mutex_lock(&mutex1);
+        global_counter++;
+        pthread_mutex_unlock(&mutex1);
+#else
+        global_counter++;
+
+#endif
+    }
 
     pthread_exit((void *)result);
 }
@@ -44,6 +56,8 @@ int main()
     }
 
     printf("global_counter: %d\n", global_counter);
+
+    assert(global_counter == EXPECTED_RESULT);
 
     return 0;
 }
