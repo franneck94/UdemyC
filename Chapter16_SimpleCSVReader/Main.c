@@ -4,8 +4,8 @@
 #include "CsvReader.h"
 #include "Record.h"
 
-#define FOLDER_LEN 256
-#define FILE_LEN 128
+#define FOLDER_LEN (size_t)(256)
+#define FILE_LEN (size_t)(128)
 
 #define DEFAULT_PROJECT_PATH "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader/"
 #define DEFAULT_INPUT_FILENAME "data_in.csv"
@@ -22,9 +22,9 @@ int main(int argc, char **argv)
 
     if (4 == argc)
     {
-        strncpy(project_path, argv[1], FOLDER_LEN);
-        strncpy(input_filename, argv[2], FILE_LEN);
-        strncpy(output_filename, argv[3], FILE_LEN);
+        strncpy(project_path, argv[1], FOLDER_LEN - (size_t)(1U));
+        strncpy(input_filename, argv[2], FILE_LEN - (size_t)(1U));
+        strncpy(output_filename, argv[3], FILE_LEN - (size_t)(1U));
     }
     else
     {
@@ -38,20 +38,18 @@ int main(int argc, char **argv)
     strncpy(output_filepath, project_path, FOLDER_LEN);
     strncat(output_filepath, output_filename, FILE_LEN);
 
-    // CSV Functions
     records_t *my_records = create_records();
 
     read_simple_csv(input_filepath, my_records);
     print_records(my_records, "Read Input");
 
-    sort_records(my_records, SORT_ASCENDING);
+    sort_records(my_records, SORTING_SCHEME_ASCENDING);
     print_records(my_records, "Ascending Sort");
 
-    sort_records(my_records, SORT_DESCENDING);
+    sort_records(my_records, SORTING_SCHEME_DESCENDING);
     print_records(my_records, "Descending Sort");
 
     write_simple_csv(output_filepath, my_records);
-
     delete_records(my_records);
 
     return 0;

@@ -21,9 +21,9 @@ typedef struct records
 
 typedef enum
 {
-    SORT_ASCENDING = 0,
-    SORT_DESCENDING = 1
-} SORTING_SCHEME;
+    SORTING_SCHEME_ASCENDING = 0,
+    SORTING_SCHEME_DESCENDING = 1
+} sorting_scheme_t;
 
 /* DECLARATIONS */
 
@@ -41,6 +41,6 @@ void print_records(const records_t *const records, const char *const header);
 
 void random_fill_records(records_t *const records);
 
-void sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme);
+void sort_records(const records_t *const records, const sorting_scheme_t sorting_scheme);
 
 #endif // RECORD_H

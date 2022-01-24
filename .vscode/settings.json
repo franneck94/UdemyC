@@ -77,7 +77,15 @@
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
-    "-Wpedantic"
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wconversion",
+    "-Woverflow",
+    "-Wformat=2",
+    "-Wsign-conversion",
+    "-Wstrict-overflow=1",
+    "-Wnull-dereference",
+    "-Wdouble-promotion"
   ],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,

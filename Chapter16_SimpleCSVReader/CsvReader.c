@@ -5,16 +5,16 @@
 
 #include "CsvReader.h"
 
-#define NEW_LINE_CHARACTER_ASCII 10
+#define NEW_LINE_CHARACTER_ASCII (int)('\n')
 #define BUFFER_SIZE 256
 
 void line_count(const char *const file_path, size_t *const num_lines)
 {
-    FILE *fp = fopen(file_path, "r");
+    FILE *const fp = fopen(file_path, "r");
 
     if (NULL == fp)
     {
-        int errornum = errno;
+        const int errornum = errno;
         fprintf(stderr, "Error in opening file: %s\n", strerror(errornum));
     }
 
@@ -23,7 +23,7 @@ void line_count(const char *const file_path, size_t *const num_lines)
 
     while (fscanf(fp, "%c", &temp) != EOF)
     {
-        if (temp == NEW_LINE_CHARACTER_ASCII)
+        if (NEW_LINE_CHARACTER_ASCII == temp)
         {
             ++count;
         }
@@ -36,11 +36,11 @@ void line_count(const char *const file_path, size_t *const num_lines)
 
 void read_simple_csv(const char *const file_path, records_t *const records)
 {
-    FILE *fp = fopen(file_path, "r");
+    FILE *const fp = fopen(file_path, "r");
 
     if (NULL == fp)
     {
-        int errornum = errno;
+        const int errornum = errno;
         fprintf(stderr, "Error in opening file: %s\n", strerror(errornum));
     }
 
@@ -49,7 +49,7 @@ void read_simple_csv(const char *const file_path, records_t *const records)
 
     entry_t *entries = create_entries(num_lines);
 
-    if (entries == NULL)
+    if (NULL == entries)
     {
         fclose(fp);
     }
@@ -60,7 +60,7 @@ void read_simple_csv(const char *const file_path, records_t *const records)
         fgets(buffer, BUFFER_SIZE, fp);
         buffer[strcspn(buffer, "\n")] = '\0';
 
-        int scanned_arguments = sscanf(buffer, "%c,%d", &entries[i].letter, &entries[i].value);
+        const int scanned_arguments = sscanf(buffer, "%c,%d", &entries[i].letter, &entries[i].value);
 
         if (scanned_arguments != NUM_VALUES)
         {
@@ -76,11 +76,11 @@ void read_simple_csv(const char *const file_path, records_t *const records)
 
 void write_simple_csv(const char *const file_path, const records_t *const records)
 {
-    FILE *fp = fopen(file_path, "w");
+    FILE *const fp = fopen(file_path, "w");
 
     if (NULL == fp)
     {
-        int errornum = errno;
+        const int errornum = errno;
         fprintf(stderr, "Error in opening file: %s\n", strerror(errornum));
     }
 

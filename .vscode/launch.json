@@ -55,7 +55,7 @@
       "stopAtEntry": false,
       "cwd": "c:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader",
       "environment": [],
-      "program": "c:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader/build/Debug/outDebug",
+      "program": "c:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader/build/Release/outRelease",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",

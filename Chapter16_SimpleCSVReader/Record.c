@@ -77,7 +77,7 @@ void print_records(const records_t *const records, const char *const header)
     printf("\n");
 }
 
-static int comp_ascending(const void *value1, const void *value2)
+static int comp_ascending(const void *const value1, const void *const value2)
 {
     const entry_t *const left = (entry_t *)(value1);
     const entry_t *const right = (entry_t *)(value2);
@@ -96,7 +96,7 @@ static int comp_ascending(const void *value1, const void *value2)
     }
 }
 
-static int comp_descending(const void *value1, const void *value2)
+static int comp_descending(const void *const value1, const void *const value2)
 {
     const entry_t *const left = (entry_t *)(value1);
     const entry_t *const right = (entry_t *)(value2);
@@ -115,7 +115,7 @@ static int comp_descending(const void *value1, const void *value2)
     }
 }
 
-void sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme)
+void sort_records(const records_t *const records, const sorting_scheme_t sorting_scheme)
 {
     if (NULL == records)
     {
@@ -124,12 +124,12 @@ void sort_records(const records_t *const records, const SORTING_SCHEME sorting_s
 
     switch (sorting_scheme)
     {
-    case SORT_ASCENDING:
+    case SORTING_SCHEME_ASCENDING:
     {
         qsort(records->entries, records->length, sizeof(entry_t), comp_ascending);
         break;
     }
-    case SORT_DESCENDING:
+    case SORTING_SCHEME_DESCENDING:
     {
         qsort(records->entries, records->length, sizeof(entry_t), comp_descending);
         break;
