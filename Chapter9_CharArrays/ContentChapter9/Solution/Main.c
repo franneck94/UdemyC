@@ -4,7 +4,7 @@
 
 char *join(char *delimiter, char **list)
 {
-    if (delimiter == NULL || list == NULL || list[0] == NULL)
+    if (NULL == delimiter || NULL == list || list[0] == NULL)
     {
         return NULL;
     }
@@ -14,7 +14,7 @@ char *join(char *delimiter, char **list)
 
     char *result = (char *)malloc(current_input_len * sizeof(char));
 
-    if (result == NULL)
+    if (NULL == result)
     {
         return NULL;
     }
@@ -69,28 +69,28 @@ int main()
     char *s = NULL;
 
     s = join(" -> ", list1); // ""
-    if (s != NULL)
+    if (NULL != s)
     {
         printf("List1: %s\n", s);
         free(s);
     }
 
     s = join(" -> ", list2); // "Clara"
-    if (s != NULL)
+    if (NULL != s)
     {
         printf("List2: %s\n", s);
         free(s);
     }
 
     s = join(" -> ", list3); // "Clara -> Florian"
-    if (s != NULL)
+    if (NULL != s)
     {
         printf("List3: %s\n", s);
         free(s);
     }
 
     s = join(" -> ", list4); // "Clara -> Florian -> Jan"
-    if (s != NULL)
+    if (NULL != s)
     {
         printf("List4: %s\n", s);
         free(s);

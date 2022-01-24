@@ -4,9 +4,12 @@
 #include "CsvReader.h"
 #include "Record.h"
 
-#define FOLDER_LEN 128
-#define FILE_LEN 64
-#define HELP_LEN 7
+#define FOLDER_LEN 256
+#define FILE_LEN 128
+
+#define DEFAULT_PROJECT_PATH "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader/"
+#define DEFAULT_INPUT_FILENAME "data_in.csv"
+#define DEFAULT_OUTPUT_FILENAME "data_out.csv"
 
 int main(int argc, char **argv)
 {
@@ -17,28 +20,17 @@ int main(int argc, char **argv)
     char input_filepath[FOLDER_LEN + FILE_LEN] = {'\0'};
     char output_filepath[FOLDER_LEN + FILE_LEN] = {'\0'};
 
-    if (argc == 4)
+    if (4 == argc)
     {
         strncpy(project_path, argv[1], FOLDER_LEN);
         strncpy(input_filename, argv[2], FILE_LEN);
         strncpy(output_filename, argv[3], FILE_LEN);
     }
-    else if (argc == 2)
-    {
-        if (strncmp(argv[1], "--help", HELP_LEN) == 0)
-        {
-            printf("Argument 1: project_path\n");
-            printf("Argument 2: input_filename\n");
-            printf("Argument 3: output_filename\n");
-        }
-
-        return 0;
-    }
     else
     {
-        strncpy(project_path, "C:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter16_SimpleCSVReader/", FOLDER_LEN);
-        strncpy(input_filename, "data_in.csv", FILE_LEN);
-        strncpy(output_filename, "data_out.csv", FILE_LEN);
+        strncpy(project_path, DEFAULT_PROJECT_PATH, FOLDER_LEN);
+        strncpy(input_filename, DEFAULT_INPUT_FILENAME, FILE_LEN);
+        strncpy(output_filename, DEFAULT_OUTPUT_FILENAME, FILE_LEN);
     }
 
     strncpy(input_filepath, project_path, FOLDER_LEN);
@@ -49,18 +41,8 @@ int main(int argc, char **argv)
     // CSV Functions
     records_t *my_records = create_records();
 
-    RETURN_CODES return_code = read_simple_csv(input_filepath, my_records);
-
-    if (return_code != SUCCESS)
-    {
-        delete_records(my_records);
-        return return_code;
-    }
-
+    read_simple_csv(input_filepath, my_records);
     print_records(my_records, "Read Input");
-
-    random_fill_records(my_records);
-    print_records(my_records, "Fill Random");
 
     sort_records(my_records, SORT_ASCENDING);
     print_records(my_records, "Ascending Sort");
@@ -68,13 +50,7 @@ int main(int argc, char **argv)
     sort_records(my_records, SORT_DESCENDING);
     print_records(my_records, "Descending Sort");
 
-    return_code = write_simple_csv(output_filepath, my_records);
-
-    if (return_code != SUCCESS)
-    {
-        delete_records(my_records);
-        return return_code;
-    }
+    write_simple_csv(output_filepath, my_records);
 
     delete_records(my_records);
 

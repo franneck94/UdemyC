@@ -6,7 +6,7 @@ char **createFriendBook(unsigned int number_friends)
 {
     char **friends = (char **)malloc(number_friends * sizeof(char *));
 
-    if (friends == NULL)
+    if (NULL == friends)
     {
         return NULL;
     }

@@ -5,7 +5,7 @@ int *createArray(unsigned int length, int value)
 {
     int *array = (int *)malloc(length * sizeof(int));
 
-    if (array == NULL)
+    if (NULL == array)
     {
         return NULL;
     }
@@ -20,7 +20,7 @@ int *createArray(unsigned int length, int value)
 
 void printArray(int *array, unsigned int length)
 {
-    if (array == NULL)
+    if (NULL == array)
     {
         return;
     }
@@ -33,7 +33,7 @@ void printArray(int *array, unsigned int length)
 
 int *freeArray(int *array)
 {
-    if (array != NULL)
+    if (NULL != array)
     {
         free(array);
     }
@@ -55,7 +55,7 @@ int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
 
 void printMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols)
 {
-    if (matrix == NULL)
+    if (NULL == matrix)
     {
         return;
     }

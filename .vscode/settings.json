@@ -24,7 +24,8 @@
     "*.gpj": "jsonc",
     "*.gvw": "jsonc",
     "pthread.h": "c",
-    "assert.h": "c"
+    "assert.h": "c",
+    "csvreader.h": "c"
   },
   "workbench.startupEditor": "newUntitledFile",
   "git.enableSmartCommit": true,
@@ -81,9 +82,7 @@
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
-  "C_Cpp_Runner.linkerArgs": [
-    "-lpthread"
-  ],
+  "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
   "C_Cpp_Runner.includeSearch": [
     "*",

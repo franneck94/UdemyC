@@ -12,7 +12,7 @@ float *createArray(const unsigned int length, const float value)
 {
     float *data = (float *)malloc(length * sizeof(float));
 
-    if (data == NULL)
+    if (NULL == data)
     {
         return NULL;
     }
@@ -27,7 +27,7 @@ float *createArray(const unsigned int length, const float value)
 
 float *freeArray(float *array)
 {
-    if (array == NULL)
+    if (NULL == array)
     {
         return NULL;
     }
@@ -41,7 +41,7 @@ Vector *createVector(const unsigned int length, const float value)
 {
     Vector *result = (Vector *)malloc(sizeof(Vector));
 
-    if (result == NULL)
+    if (NULL == result)
     {
         return NULL;
     }
@@ -61,12 +61,12 @@ Vector *createVector(const unsigned int length, const float value)
 
 Vector *freeVector(Vector *vector)
 {
-    if (vector == NULL)
+    if (NULL == vector)
     {
         return NULL;
     }
 
-    if (vector->data != NULL)
+    if (vector->NULL != data)
     {
         free(vector->data);
         vector->data = NULL;
@@ -83,14 +83,14 @@ Vector *freeVector(Vector *vector)
 
 int readInVectorData(Vector *vec, const char *filepath)
 {
-    if (vec == NULL || filepath == NULL)
+    if (NULL == vec || NULL == filepath)
     {
         return 1;
     }
 
     FILE *fp = fopen(filepath, "r");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }
@@ -108,14 +108,14 @@ int readInVectorData(Vector *vec, const char *filepath)
 
 int writeOutVectorData(Vector *vec, const char *filepath)
 {
-    if (vec == NULL || filepath == NULL)
+    if (NULL == vec || NULL == filepath)
     {
         return 1;
     }
 
     FILE *fp = fopen(filepath, "w");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }
@@ -159,7 +159,7 @@ void printVector(const Vector *vector)
 
 Vector *addVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
     {
         return NULL;
     }
@@ -176,7 +176,7 @@ Vector *addVectors(const Vector *vec1, const Vector *vec2)
 
 Vector *subVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
     {
         return NULL;
     }
@@ -193,7 +193,7 @@ Vector *subVectors(const Vector *vec1, const Vector *vec2)
 
 float multiplyVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (vec1 == NULL || vec2 == NULL || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
     {
         return 0.0f;
     }
@@ -210,7 +210,7 @@ float multiplyVectors(const Vector *vec1, const Vector *vec2)
 
 Vector *multiplyScalar(const Vector *vec, const float scalar)
 {
-    if (vec == NULL || vec->data == NULL)
+    if (NULL == vec || vec->data == NULL)
     {
         return NULL;
     }
@@ -227,7 +227,7 @@ Vector *multiplyScalar(const Vector *vec, const float scalar)
 
 Vector *divideScalar(const Vector *vec, const float scalar)
 {
-    if (vec == NULL || vec->data == NULL || scalar == 0.0f)
+    if (NULL == vec || vec->data == NULL || scalar == 0.0f)
     {
         return NULL;
     }

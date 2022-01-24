@@ -6,7 +6,7 @@ char **createFriendBook(unsigned int number_friends)
 {
     char **friends = (char **)malloc(number_friends * sizeof(char *));
 
-    if (friends == NULL)
+    if (NULL == friends)
     {
         return NULL;
     }
@@ -65,25 +65,25 @@ int main()
     char *found_char0 = strchr(friends[0], 'n');
     char *found_char1 = strrchr(friends[0], 'n');
 
-    if (found_char0 != NULL)
+    if (NULL != found_char0)
     {
         printf("%s\n", found_char0);
     }
-    if (found_char1 != NULL)
+    if (NULL != found_char1)
     {
         printf("%s\n", found_char1);
     }
 
     char *found_substr = strstr(friends[1], "Jan");
 
-    if (found_substr != NULL)
+    if (NULL != found_substr)
     {
         printf("%s\n", found_substr);
     }
 
     char *token = strtok(friends[0], " ");
 
-    if (token != NULL)
+    if (NULL != token)
     {
         printf("%s\n", token);
     }

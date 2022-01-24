@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     FILE *fp = fopen(argv[1], "r");
-    if (fp == NULL)
+    if (NULL == fp)
     {
         printf("File %s does not exist!\n", argv[1]);
         return 1;

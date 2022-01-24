@@ -12,7 +12,7 @@ float *createArray(const unsigned int length, const float value)
 {
     float *data = (float *)malloc(length * sizeof(float));
 
-    if (data == NULL)
+    if (NULL == data)
     {
         return NULL;
     }
@@ -27,7 +27,7 @@ float *createArray(const unsigned int length, const float value)
 
 float *freeArray(float *array)
 {
-    if (array == NULL)
+    if (NULL == array)
     {
         return NULL;
     }
@@ -41,7 +41,7 @@ Vector *createVector(const unsigned int length, const float value)
 {
     Vector *result = (Vector *)malloc(sizeof(Vector));
 
-    if (result == NULL)
+    if (NULL == result)
     {
         return NULL;
     }
@@ -61,12 +61,12 @@ Vector *createVector(const unsigned int length, const float value)
 
 Vector *freeVector(Vector *vector)
 {
-    if (vector == NULL)
+    if (NULL == vector)
     {
         return NULL;
     }
 
-    if (vector->data != NULL)
+    if (vector->NULL != data)
     {
         free(vector->data);
         vector->data = NULL;
@@ -83,14 +83,14 @@ Vector *freeVector(Vector *vector)
 
 int readInVectorData(Vector *vec, const char *filepath)
 {
-    if (vec == NULL || filepath == NULL)
+    if (NULL == vec || NULL == filepath)
     {
         return 1;
     }
 
     FILE *fp = fopen(filepath, "r");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }
@@ -108,14 +108,14 @@ int readInVectorData(Vector *vec, const char *filepath)
 
 int writeOutVectorData(Vector *vec, const char *filepath)
 {
-    if (vec == NULL || filepath == NULL)
+    if (NULL == vec || NULL == filepath)
     {
         return 1;
     }
 
     FILE *fp = fopen(filepath, "w");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }

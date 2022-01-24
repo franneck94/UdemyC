@@ -5,7 +5,7 @@ int *createArray(unsigned int length, int value)
 {
     int *array = (int *)malloc(length * sizeof(int));
 
-    if (array == NULL)
+    if (NULL == array)
     {
         return NULL;
     }
@@ -20,7 +20,7 @@ int *createArray(unsigned int length, int value)
 
 int *freeArray(int *array)
 {
-    if (array != NULL)
+    if (NULL != array)
     {
         free(array);
     }

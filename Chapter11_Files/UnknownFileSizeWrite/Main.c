@@ -14,7 +14,7 @@ int main()
 
     FILE *fp = fopen(output_filepath, "w");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }

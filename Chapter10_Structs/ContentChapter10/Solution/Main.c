@@ -12,7 +12,7 @@ int *createArray(unsigned int length, int value)
 {
     int *data = (int *)malloc(length * sizeof(int));
 
-    if (data == NULL)
+    if (NULL == data)
     {
         return NULL;
     }
@@ -27,7 +27,7 @@ int *createArray(unsigned int length, int value)
 
 int *freeArray(int *array)
 {
-    if (array != NULL)
+    if (NULL != array)
     {
         free(array);
     }
@@ -37,7 +37,7 @@ int *freeArray(int *array)
 
 float meanVector(Vector *vector)
 {
-    if (vector == NULL || vector->data == NULL)
+    if (NULL == vector || vector->data == NULL)
     {
         return 0;
     }
@@ -54,7 +54,7 @@ float meanVector(Vector *vector)
 
 int minVector(Vector *vector)
 {
-    if (vector == NULL || vector->data == NULL)
+    if (NULL == vector || vector->data == NULL)
     {
         return 0;
     }
@@ -79,7 +79,7 @@ int minVector(Vector *vector)
 
 int maxVector(Vector *vector)
 {
-    if (vector == NULL || vector->data == NULL)
+    if (NULL == vector || vector->data == NULL)
     {
         return 0;
     }

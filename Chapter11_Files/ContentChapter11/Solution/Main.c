@@ -12,7 +12,7 @@ int main()
 
     FILE *fp = fopen(output_filepath, "r");
 
-    if (fp == NULL)
+    if (NULL == fp)
     {
         return 1;
     }

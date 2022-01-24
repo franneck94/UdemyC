@@ -12,7 +12,7 @@ dynamic_array_t *createDynamicArray()
 {
     dynamic_array_t *array = (dynamic_array_t *)malloc(sizeof(dynamic_array_t));
 
-    if (array == NULL)
+    if (NULL == array)
     {
         return NULL;
     }
@@ -33,7 +33,7 @@ dynamic_array_t *createDynamicArray()
 
 void *freeDynamicArray(dynamic_array_t *array)
 {
-    if (array != NULL)
+    if (NULL != array)
     {
         free(array->data);
         array->data = NULL;
@@ -86,7 +86,7 @@ float popValue(dynamic_array_t *array)
 
 void clearDynamicArray(dynamic_array_t *array)
 {
-    if (array == NULL || array->data == NULL)
+    if (NULL == array || array->data == NULL)
     {
         return;
     }

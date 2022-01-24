@@ -13,7 +13,7 @@ int main()
     free(a);
     a = NULL;
 
-    if (a != NULL)
+    if (NULL != a)
     {
         printf("%d\n", *a);
     }

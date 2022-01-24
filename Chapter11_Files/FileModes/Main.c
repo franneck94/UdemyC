@@ -17,7 +17,7 @@ int main()
 
     FILE *fp_in = fopen(input_filepath, "r");
 
-    if (fp_in == NULL)
+    if (NULL == fp_in)
     {
         return 1;
     }
@@ -38,7 +38,7 @@ int main()
 
     FILE *fp_out = fopen(output_filepath, "w");
 
-    if (fp_out == NULL)
+    if (NULL == fp_out)
     {
         return 1;
     }

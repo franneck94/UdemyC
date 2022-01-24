@@ -48,12 +48,12 @@ int strings_equal(char *str1, char *str2)
 
 char *concatenate(char *dst, char *src, size_t n)
 {
-    if (dst == NULL)
+    if (NULL == dst)
     {
         return NULL;
     }
 
-    if (src == NULL || n == 0)
+    if (NULL == src || n == 0)
     {
         return dst;
     }

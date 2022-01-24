@@ -10,7 +10,7 @@ int *createArray(unsigned int length, int value)
 {
     int *data = (int *)malloc(length * sizeof(int));
 
-    if (data == NULL)
+    if (NULL == data)
     {
         return NULL;
     }
@@ -25,7 +25,7 @@ int *createArray(unsigned int length, int value)
 
 int *freeArray(int *array)
 {
-    if (array != NULL)
+    if (NULL != array)
     {
         free(array);
     }
@@ -88,7 +88,7 @@ int maxArray(int *array, unsigned int length)
 
 void printArray(int *array, unsigned int length)
 {
-    if (array == NULL)
+    if (NULL == array)
     {
         return;
     }

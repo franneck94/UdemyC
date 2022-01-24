@@ -1,7 +1,9 @@
 #ifndef RECORD_H
 #define RECORD_H
 
-#include "errors.h"
+#include <stdint.h>
+
+#define NUM_VALUES 2
 
 /* TYPES */
 
@@ -14,7 +16,7 @@ typedef struct entry
 typedef struct records
 {
     entry_t *entries;
-    unsigned int length;
+    size_t length;
 } records_t;
 
 typedef enum
@@ -25,7 +27,7 @@ typedef enum
 
 /* DECLARATIONS */
 
-entry_t *create_entries(const unsigned int num_entries);
+entry_t *create_entries(const size_t num_entries);
 
 void *delete_entries(entry_t *entries);
 
@@ -33,12 +35,12 @@ records_t *create_records();
 
 void *delete_records(records_t *records);
 
-RETURN_CODES fill_records(records_t *const records, entry_t *const entries, const unsigned int length);
+void set_records(records_t *const records, entry_t *const entries, const size_t length);
 
-RETURN_CODES print_records(const records_t *const records, const char *const header);
+void print_records(const records_t *const records, const char *const header);
 
-RETURN_CODES random_fill_records(records_t *const records);
+void random_fill_records(records_t *const records);
 
-RETURN_CODES sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme);
+void sort_records(const records_t *const records, const SORTING_SCHEME sorting_scheme);
 
 #endif // RECORD_H
