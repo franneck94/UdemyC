@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 #include "Record.h"
 
@@ -11,16 +11,14 @@ entry_t *create_entries(const size_t num_entries)
     return entries;
 }
 
-void *delete_entries(entry_t *entries)
+void delete_entries(entry_t *entries)
 {
     if (NULL == entries)
     {
-        return NULL;
+        return;
     }
 
     free(entries);
-
-    return NULL;
 }
 
 records_t *create_records()
@@ -30,19 +28,15 @@ records_t *create_records()
     return records;
 }
 
-void *delete_records(records_t *records)
+void delete_records(records_t *records)
 {
     if (NULL == records)
     {
-        return NULL;
+        return;
     }
 
-    records->entries = delete_entries(records->entries);
-    records->length = 0;
-
+    delete_entries(records->entries);
     free(records);
-
-    return NULL;
 }
 
 void set_records(records_t *const records, entry_t *const entries, const size_t length)
@@ -68,16 +62,17 @@ void print_records(const records_t *const records, const char *const header)
         printf("Records %s:\n", header);
     }
 
-    for (size_t i = 0; i < records->length; i++)
+    for (size_t i = 0; i < records->length; ++i)
     {
         const entry_t *const entry = &records->entries[i];
+
         printf("%c, %d\n", entry->letter, entry->value);
     }
 
     printf("\n");
 }
 
-static int comp_ascending(const void *const value1, const void *const value2)
+int comp_ascending(const void *const value1, const void *const value2)
 {
     const entry_t *const left = (entry_t *)(value1);
     const entry_t *const right = (entry_t *)(value2);
@@ -96,7 +91,7 @@ static int comp_ascending(const void *const value1, const void *const value2)
     }
 }
 
-static int comp_descending(const void *const value1, const void *const value2)
+int comp_descending(const void *const value1, const void *const value2)
 {
     const entry_t *const left = (entry_t *)(value1);
     const entry_t *const right = (entry_t *)(value2);
