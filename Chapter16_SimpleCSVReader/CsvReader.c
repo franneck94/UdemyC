@@ -9,7 +9,7 @@
 #define BUFFER_SIZE (size_t)(128)
 #define NEW_LINE_CHARACTER_ASCII '\n'
 
-void line_count(const char *const file_path, size_t *const num_lines)
+size_t line_count(const char *const file_path)
 {
     FILE *const fp = fopen(file_path, "r");
 
@@ -29,9 +29,9 @@ void line_count(const char *const file_path, size_t *const num_lines)
         }
     }
 
-    *num_lines = count;
-
     fclose(fp);
+
+    return count;
 }
 
 void read_simple_csv(const char *const file_path, records_t *const records)
@@ -43,12 +43,11 @@ void read_simple_csv(const char *const file_path, records_t *const records)
         fprintf(stderr, "Error opening file: %s\n", strerror(errno));
     }
 
-    size_t num_lines = 0;
-    line_count(file_path, &num_lines);
+    const size_t num_lines = line_count(file_path);
 
-    entry_t *entries = create_entries(num_lines);
+    value_pair_t *const values = create_entries(num_lines);
 
-    if (NULL == entries)
+    if (NULL == values)
     {
         fclose(fp);
         return;
@@ -59,12 +58,13 @@ void read_simple_csv(const char *const file_path, records_t *const records)
         char buffer[BUFFER_SIZE] = {'\0'};
         fgets(buffer, BUFFER_SIZE, fp);
 
-        sscanf(buffer, "%c,%d", &entries[i].letter, &entries[i].value);
+        sscanf(buffer, "%c,%d", &values[i].value_a, &values[i].value_b);
     }
 
     fclose(fp);
 
-    set_records(records, entries, num_lines);
+    records->values = values;
+    records->num_values = num_lines;
 }
 
 void write_simple_csv(const char *const file_path, const records_t *const records)
@@ -76,11 +76,11 @@ void write_simple_csv(const char *const file_path, const records_t *const record
         fprintf(stderr, "Error opening file: %s\n", strerror(errno));
     }
 
-    for (size_t i = 0; i < records->length; ++i)
+    for (size_t i = 0; i < records->num_values; ++i)
     {
-        const entry_t *const entry = &records->entries[i];
+        const value_pair_t *const entry = &records->values[i];
 
-        fprintf(fp, "%c, %d\n", entry->letter, entry->value);
+        fprintf(fp, "%c, %d\n", entry->value_a, entry->value_b);
     }
 
     fclose(fp);

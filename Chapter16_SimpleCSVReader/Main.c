@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     print_records(my_records, "Descending Sort");
 
     write_simple_csv(output_filepath, my_records);
-    delete_records(my_records);
+    free_records(my_records);
 
     return 0;
 }

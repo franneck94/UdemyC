@@ -4,21 +4,21 @@
 
 #include "Record.h"
 
-entry_t *create_entries(const size_t num_entries)
+value_pair_t *create_entries(const size_t num_entries)
 {
-    entry_t *entries = (entry_t *)malloc(num_entries * sizeof(entry_t));
+    value_pair_t *values = (value_pair_t *)malloc(num_entries * sizeof(value_pair_t));
 
-    return entries;
+    return values;
 }
 
-void delete_entries(entry_t *entries)
+void free_entries(value_pair_t *values)
 {
-    if (NULL == entries)
+    if (NULL == values)
     {
         return;
     }
 
-    free(entries);
+    free(values);
 }
 
 records_t *create_records()
@@ -28,26 +28,15 @@ records_t *create_records()
     return records;
 }
 
-void delete_records(records_t *records)
+void free_records(records_t *records)
 {
     if (NULL == records)
     {
         return;
     }
 
-    delete_entries(records->entries);
+    free_entries(records->values);
     free(records);
-}
-
-void set_records(records_t *const records, entry_t *const entries, const size_t length)
-{
-    if (NULL == records || NULL == entries)
-    {
-        return;
-    }
-
-    records->entries = entries;
-    records->length = length;
 }
 
 void print_records(const records_t *const records, const char *const header)
@@ -62,26 +51,26 @@ void print_records(const records_t *const records, const char *const header)
         printf("Records %s:\n", header);
     }
 
-    for (size_t i = 0; i < records->length; ++i)
+    for (size_t i = 0; i < records->num_values; ++i)
     {
-        const entry_t *const entry = &records->entries[i];
+        const value_pair_t *const entry = &records->values[i];
 
-        printf("%c, %d\n", entry->letter, entry->value);
+        printf("%c, %d\n", entry->value_a, entry->value_b);
     }
 
     printf("\n");
 }
 
-int comp_ascending(const void *const value1, const void *const value2)
+int comp_ascending(const void *const left_v, const void *const right_v)
 {
-    const entry_t *const left = (entry_t *)(value1);
-    const entry_t *const right = (entry_t *)(value2);
+    const value_pair_t *const left = (value_pair_t *)(left_v);
+    const value_pair_t *const right = (value_pair_t *)(right_v);
 
-    if (left->value < right->value)
+    if (left->value_b < right->value_b)
     {
         return -1;
     }
-    else if (right->value < left->value)
+    else if (right->value_b < left->value_b)
     {
         return 1;
     }
@@ -91,16 +80,16 @@ int comp_ascending(const void *const value1, const void *const value2)
     }
 }
 
-int comp_descending(const void *const value1, const void *const value2)
+int comp_descending(const void *const left_v, const void *const right_v)
 {
-    const entry_t *const left = (entry_t *)(value1);
-    const entry_t *const right = (entry_t *)(value2);
+    const value_pair_t *const left = (value_pair_t *)(left_v);
+    const value_pair_t *const right = (value_pair_t *)(right_v);
 
-    if (left->value > right->value)
+    if (left->value_b > right->value_b)
     {
         return -1;
     }
-    else if (right->value > left->value)
+    else if (right->value_b > left->value_b)
     {
         return 1;
     }
@@ -121,12 +110,12 @@ void sort_records(const records_t *const records, const sorting_scheme_t sorting
     {
     case SORTING_SCHEME_ASCENDING:
     {
-        qsort(records->entries, records->length, sizeof(entry_t), comp_ascending);
+        qsort(records->values, records->num_values, sizeof(value_pair_t), comp_ascending);
         break;
     }
     case SORTING_SCHEME_DESCENDING:
     {
-        qsort(records->entries, records->length, sizeof(entry_t), comp_descending);
+        qsort(records->values, records->num_values, sizeof(value_pair_t), comp_descending);
         break;
     }
     default:

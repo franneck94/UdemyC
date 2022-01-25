@@ -13,14 +13,14 @@
 
 typedef struct
 {
-    char letter;
-    int32_t value;
-} entry_t;
+    char value_a;
+    int32_t value_b;
+} value_pair_t;
 
 typedef struct
 {
-    entry_t *entries;
-    size_t length;
+    value_pair_t *values;
+    size_t num_values;
 } records_t;
 
 typedef enum
@@ -31,15 +31,13 @@ typedef enum
 
 /* DECLARATIONS */
 
-entry_t *create_entries(const size_t num_entries);
+value_pair_t *create_entries(const size_t num_entries);
 
-void delete_entries(entry_t *entries);
+void free_entries(value_pair_t *values);
 
 records_t *create_records();
 
-void delete_records(records_t *records);
-
-void set_records(records_t *const records, entry_t *const entries, const size_t length);
+void free_records(records_t *records);
 
 void print_records(const records_t *const records, const char *const header);
 
