@@ -4,21 +4,21 @@
 
 #include "Record.h"
 
-value_pair_t *create_entries(const size_t num_entries)
+value_pair_t *create_pairs(const size_t num_pairs)
 {
-    value_pair_t *values = (value_pair_t *)malloc(num_entries * sizeof(value_pair_t));
+    value_pair_t *values = (value_pair_t *)malloc(num_pairs * sizeof(value_pair_t));
 
     return values;
 }
 
-void free_entries(value_pair_t *values)
+void free_pairs(value_pair_t *pairs)
 {
-    if (NULL == values)
+    if (NULL == pairs)
     {
         return;
     }
 
-    free(values);
+    free(pairs);
 }
 
 records_t *create_records()
@@ -35,7 +35,7 @@ void free_records(records_t *records)
         return;
     }
 
-    free_entries(records->values);
+    free(records->values);
     free(records);
 }
 
@@ -48,20 +48,18 @@ void print_records(const records_t *const records, const char *const header)
 
     if (NULL != header)
     {
-        printf("Records %s:\n", header);
+        printf("Records: %s\n", header);
     }
 
     for (size_t i = 0; i < records->num_values; ++i)
     {
-        const value_pair_t *const entry = &records->values[i];
-
-        printf("%c, %d\n", entry->value_a, entry->value_b);
+        printf("%c,%d\n", records->values[i].value_a, records->values[i].value_b);
     }
 
     printf("\n");
 }
 
-int comp_ascending(const void *const left_v, const void *const right_v)
+int comp_ascending(const void *left_v, const void *right_v)
 {
     const value_pair_t *const left = (value_pair_t *)(left_v);
     const value_pair_t *const right = (value_pair_t *)(right_v);
@@ -80,7 +78,7 @@ int comp_ascending(const void *const left_v, const void *const right_v)
     }
 }
 
-int comp_descending(const void *const left_v, const void *const right_v)
+int comp_descending(const void *left_v, const void *right_v)
 {
     const value_pair_t *const left = (value_pair_t *)(left_v);
     const value_pair_t *const right = (value_pair_t *)(right_v);

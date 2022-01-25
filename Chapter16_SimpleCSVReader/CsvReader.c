@@ -7,7 +7,7 @@
 #include "Record.h"
 
 #define BUFFER_SIZE (size_t)(128)
-#define NEW_LINE_CHARACTER_ASCII '\n'
+#define NEW_LINE_CHARACTER_ASCII ('\n')
 
 size_t line_count(const char *const file_path)
 {
@@ -45,7 +45,7 @@ void read_simple_csv(const char *const file_path, records_t *const records)
 
     const size_t num_lines = line_count(file_path);
 
-    value_pair_t *const values = create_entries(num_lines);
+    value_pair_t *const values = create_pairs(num_lines);
 
     if (NULL == values)
     {
@@ -78,9 +78,7 @@ void write_simple_csv(const char *const file_path, const records_t *const record
 
     for (size_t i = 0; i < records->num_values; ++i)
     {
-        const value_pair_t *const entry = &records->values[i];
-
-        fprintf(fp, "%c, %d\n", entry->value_a, entry->value_b);
+        fprintf(fp, "%c,%d\n", records->values[i].value_a, records->values[i].value_b);
     }
 
     fclose(fp);

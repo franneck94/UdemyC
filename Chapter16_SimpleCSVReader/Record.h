@@ -7,7 +7,7 @@
 
 /* DEFINES */
 
-#define NUM_VALUE 2
+#define NUM_VALUES 2
 
 /* TYPES */
 
@@ -26,14 +26,14 @@ typedef struct
 typedef enum
 {
     SORTING_SCHEME_ASCENDING,
-    SORTING_SCHEME_DESCENDING
+    SORTING_SCHEME_DESCENDING,
 } sorting_scheme_t;
 
 /* DECLARATIONS */
 
-value_pair_t *create_entries(const size_t num_entries);
+value_pair_t *create_pairs(const size_t num_pairs);
 
-void free_entries(value_pair_t *values);
+void free_pairs(value_pair_t *pairs);
 
 records_t *create_records();
 
