@@ -30,10 +30,10 @@ Dann ist mein Kurs genau richtig für dich!
 ☑️ Funktionen und Header  
 ☑️ Compiler Abläufe (Preprocess, Compiling, Linking)  
 ☑️ Zeiger und Speicherverwaltung  
-☑️ Stack und Heap Speicher  
-☑️ Arrays und Strings  
+☑️ Stack und Heap Speicher  
+☑️ Arrays und Strings  
 ☑️ Strukturen und Enums  
-☑️ Dateien I/O Operationen
+☑️ Dateien I/O Operationen  
 
 Werde noch heute ein Profi, in der Technologie von Morgen!
 Wir sehen uns im Kurs!
