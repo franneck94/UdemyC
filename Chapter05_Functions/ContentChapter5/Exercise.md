@@ -23,8 +23,3 @@ Max{12, 8} = 12
 Min{12, 8} = 8
 Mean[12, 8] = 10.000000
 ```
-
-## Hinweise
-
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
-Meine Musterlösung werde ich im folgenden Video vorstellen.

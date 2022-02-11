@@ -20,8 +20,3 @@ Please enter a valid unsigned integer!
 The number you entered is not div. by 3!
 The remainder of the operation is: 2
 ```
-
-## Hinweise
-
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
-Meine Musterlösung werde ich im folgenden Video vorstellen.

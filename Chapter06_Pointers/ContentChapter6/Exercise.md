@@ -18,8 +18,3 @@ Willkommen bei der nächsten Programmier-Übung in diesem Kurs.
 a=4, b=3
 c=49
 ```
-
-## Hinweise
-
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
-Meine Musterlösung werde ich im folgenden Video vorstellen.

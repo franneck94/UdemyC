@@ -15,8 +15,3 @@ Willkommen bei der nächsten Programmier-Übung in diesem Kurs.
 ![alt](../../media/exercise9.png)
 
 Also beim 2. Beispiel wird *Clara* und *Florian* wird zuerst der delimiter *->* an Clara konkateniert, danach dann *Florian*.
-
-## Hinweise
-
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
-Meine Musterlösung werde ich im folgenden Video vorstellen.

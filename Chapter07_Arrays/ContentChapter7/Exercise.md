@@ -17,8 +17,3 @@ Das heißt, bei einem Array mit den Werten [1,2,3] kommt folgender Output raus:
 Min: 1
 Max: 3
 ```
-
-## Hinweise
-
-Der Udemy Compiler überprüft nur, ob ihr eine Lösung abgegeben habt.  
-Meine Musterlösung werde ich im folgenden Video vorstellen.
