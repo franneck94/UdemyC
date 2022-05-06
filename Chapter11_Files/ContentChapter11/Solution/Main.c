@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char PROJECT_DIR[] = "C:/Users/Jan/Dropbox/_Coding/UdemyC/";
+char PROJECT_DIR[] = "C:/Users/Jan/OneDrive/_Coding/UdemyC/";
 
 int main()
 {
