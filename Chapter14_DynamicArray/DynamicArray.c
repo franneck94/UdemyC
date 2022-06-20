@@ -13,18 +13,15 @@ dynamic_array_t *createDynamicArray()
     dynamic_array_t *array = (dynamic_array_t *)malloc(sizeof(dynamic_array_t));
 
     if (NULL == array)
-    {
         return NULL;
-    }
 
-    array->length = 0u;
+    array->length = 0U;
     array->capacity = INIT_CAPACITY;
     array->data = (float *)malloc(array->capacity * sizeof(float));
 
     if (array->data == NULL)
     {
         free(array);
-
         return NULL;
     }
 
@@ -33,27 +30,27 @@ dynamic_array_t *createDynamicArray()
 
 void *freeDynamicArray(dynamic_array_t *array)
 {
-    if (NULL != array)
-    {
-        free(array->data);
-        array->data = NULL;
+    if (NULL == array)
+        return NULL;
 
-        free(array);
-        array = NULL;
-    }
+    free(array->data);
+    array->data = NULL;
+
+    free(array);
+    array = NULL;
 
     return NULL;
 }
 
 void expandDynamicArray(dynamic_array_t *array)
 {
-    array->capacity *= GROW_FACTOR;
+    array->capacity *= GROWTH_FACTOR;
     array->data = realloc(array->data, array->capacity * sizeof(float));
 }
 
 void shrinkDynamicArray(dynamic_array_t *array)
 {
-    array->capacity /= SHRINK_FACTOR;
+    array->capacity /= SHIRNK_FACTOR;
     array->data = realloc(array->data, array->capacity * sizeof(float));
 }
 
@@ -63,23 +60,19 @@ void pushValue(dynamic_array_t *array, const float value)
     array->length++;
 
     if (array->length == array->capacity)
-    {
         expandDynamicArray(array);
-    }
 }
 
 float popValue(dynamic_array_t *array)
 {
-    const unsigned int index = (array->length - 1u);
+    const unsigned int index = array->length - 1U;
     const float value = array->data[index];
 
-    array->data[index] = 0.0f;
+    array->data[index] = 0.0F;
     array->length--;
 
-    if (array->length < array->capacity / SHRINK_FACTOR)
-    {
+    if (array->length < array->capacity / SHIRNK_FACTOR)
         shrinkDynamicArray(array);
-    }
 
     return value;
 }
@@ -87,23 +80,19 @@ float popValue(dynamic_array_t *array)
 void clearDynamicArray(dynamic_array_t *array)
 {
     if (NULL == array || array->data == NULL)
-    {
         return;
-    }
 
     free(array->data);
     array->data = NULL;
-    array->length = 0u;
-    array->capacity = INIT_CAPACITY;
+    array->length = 0U;
+    array->capacity = 0U;
 }
 
 void printDynamicArray(const dynamic_array_t *array)
 {
-    printf("DynamicArray contains %d elements with a capacity of %d.\n",
-           array->length,
-           array->capacity);
+    printf("Length: %u, Capacity: %u\n", array->length, array->capacity);
 
-    for (unsigned int i = 0; i < array->length; i++)
+    for (unsigned int i = 0; i < array->length; ++i)
     {
         printf("%f\n", array->data[i]);
     }
