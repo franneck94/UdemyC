@@ -49,17 +49,13 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [
-        ""
-      ],
+      "args": [],
       "stopAtEntry": false,
-      "cwd": "c:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter09_CharArrays/ContentChapter9/Solution",
-      "environment": [],
-      "program": "c:/Users/Jan/Dropbox/_Coding/UdemyC/Chapter09_CharArrays/ContentChapter9/Solution/build/Debug/outDebug",
-      "internalConsoleOptions": "openOnSessionStart",
+      "externalConsole": false,
+      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter03_ControlFlow",
+      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter03_ControlFlow/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
-      "externalConsole": true,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

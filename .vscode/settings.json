@@ -25,7 +25,8 @@
     "*.gvw": "jsonc",
     "pthread.h": "c",
     "assert.h": "c",
-    "csvreader.h": "c"
+    "csvreader.h": "c",
+    "stdio.h": "c"
   },
   "workbench.startupEditor": "newUntitledFile",
   "git.enableSmartCommit": true,
@@ -108,5 +109,7 @@
   "C_Cpp_Runner.cStandard": "c99",
   "C_Cpp_Runner.cppStandard": "c++20",
   "C_Cpp_Runner.debuggerPath": "C:/cygwin64/bin/gdb.exe",
-  "C_Cpp_Runner.msvcBatchPath": ""
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": false
 }
