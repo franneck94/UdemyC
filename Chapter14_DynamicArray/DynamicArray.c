@@ -99,7 +99,9 @@ void clearDynamicArray(dynamic_array_t *array)
 
 void printDynamicArray(const dynamic_array_t *array)
 {
-    printf("DynamicArray contains %d elements with a capacity of %d.\n", array->length, array->capacity);
+    printf("DynamicArray contains %d elements with a capacity of %d.\n",
+           array->length,
+           array->capacity);
 
     for (unsigned int i = 0; i < array->length; i++)
     {

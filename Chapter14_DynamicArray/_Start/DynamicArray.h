@@ -5,15 +5,11 @@
 /* DEFINES AND TYPES  */
 /**********************/
 
-#define INIT_CAPACITY (size_t)(10u)
-#define GROW_FACTOR (size_t)(2u)
-#define SHRINK_FACTOR (size_t)(2u)
+// ...
 
 typedef struct dynamic_array
 {
-    float *data;
-    unsigned int length;
-    unsigned int capacity;
+    // ...
 } dynamic_array_t;
 
 /**********************/
