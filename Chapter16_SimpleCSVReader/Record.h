@@ -41,6 +41,7 @@ void free_records(records_t *records);
 
 void print_records(const records_t *const records, const char *const header);
 
-void sort_records(const records_t *const records, const sorting_scheme_t sorting_scheme);
+void sort_records(const records_t *const records,
+                  const sorting_scheme_t sorting_scheme);
 
 #endif /* RECORD_H */

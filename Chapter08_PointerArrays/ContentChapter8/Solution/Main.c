@@ -77,7 +77,9 @@ int **freeMatrix(int **matrix, unsigned int num_rows)
     return NULL;
 }
 
-int **transposeMatrix(int **p_matrix, unsigned int num_rows, unsigned int num_cols)
+int **transposeMatrix(int **p_matrix,
+                      unsigned int num_rows,
+                      unsigned int num_cols)
 {
     int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
 

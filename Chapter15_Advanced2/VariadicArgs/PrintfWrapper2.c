@@ -74,7 +74,13 @@ void my_printf(char *format, ...)
 
 int main(void)
 {
-    my_printf("%c, %d, %u, %f, %lf, %s\n", 'a', -12, 115, 1337.5f, -1337.3, "Jan");
+    my_printf("%c, %d, %u, %f, %lf, %s\n",
+              'a',
+              -12,
+              115,
+              1337.5f,
+              -1337.3,
+              "Jan");
 
     return 0;
 }

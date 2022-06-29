@@ -159,7 +159,8 @@ void printVector(const Vector *vector)
 
 Vector *addVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL ||
+        vec2->data == NULL || vec1->length != vec2->length)
     {
         return NULL;
     }
@@ -176,7 +177,8 @@ Vector *addVectors(const Vector *vec1, const Vector *vec2)
 
 Vector *subVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL ||
+        vec2->data == NULL || vec1->length != vec2->length)
     {
         return NULL;
     }
@@ -193,7 +195,8 @@ Vector *subVectors(const Vector *vec1, const Vector *vec2)
 
 float multiplyVectors(const Vector *vec1, const Vector *vec2)
 {
-    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL || vec2->data == NULL || vec1->length != vec2->length)
+    if (NULL == vec1 || NULL == vec2 || vec1->data == NULL ||
+        vec2->data == NULL || vec1->length != vec2->length)
     {
         return 0.0f;
     }

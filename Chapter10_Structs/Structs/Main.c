@@ -12,9 +12,21 @@ struct Friend
 
 int main()
 {
-    struct Friend jan = {.name = "Schaffranek", .prename = "Jan", .year = 1994U, .month = 2U, .day = 24U};
-    struct Friend peter = {.name = "Lustig", .prename = "Peter", .year = 1959U, .month = 8U, .day = 13};
-    struct Friend hans = {.name = "Meier", .prename = "Hans", .year = 1970U, .month = 12U, .day = 31};
+    struct Friend jan = {.name = "Schaffranek",
+                         .prename = "Jan",
+                         .year = 1994U,
+                         .month = 2U,
+                         .day = 24U};
+    struct Friend peter = {.name = "Lustig",
+                           .prename = "Peter",
+                           .year = 1959U,
+                           .month = 8U,
+                           .day = 13};
+    struct Friend hans = {.name = "Meier",
+                          .prename = "Hans",
+                          .year = 1970U,
+                          .month = 12U,
+                          .day = 31};
 
     printf("%s\n", jan.name);
     printf("%s\n", jan.prename);

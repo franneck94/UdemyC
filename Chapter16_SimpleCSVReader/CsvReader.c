@@ -67,7 +67,8 @@ void read_simple_csv(const char *const file_path, records_t *const records)
     records->num_values = num_lines;
 }
 
-void write_simple_csv(const char *const file_path, const records_t *const records)
+void write_simple_csv(const char *const file_path,
+                      const records_t *const records)
 {
     FILE *const fp = fopen(file_path, "w");
 
@@ -78,7 +79,10 @@ void write_simple_csv(const char *const file_path, const records_t *const record
 
     for (size_t i = 0; i < records->num_values; ++i)
     {
-        fprintf(fp, "%c,%d\n", records->values[i].value_a, records->values[i].value_b);
+        fprintf(fp,
+                "%c,%d\n",
+                records->values[i].value_a,
+                records->values[i].value_b);
     }
 
     fclose(fp);

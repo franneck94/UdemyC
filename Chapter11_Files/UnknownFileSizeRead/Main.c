@@ -10,7 +10,9 @@ int main()
 {
     char input_filepath[100] = {'\0'};
     strncpy(input_filepath, PROJECT_DIR, 100);
-    strncat(input_filepath, "Chapter11_Files/UnknownFileSizeRead/InputData.txt", 60);
+    strncat(input_filepath,
+            "Chapter11_Files/UnknownFileSizeRead/InputData.txt",
+            60);
 
     FILE *fp = fopen(input_filepath, "r");
 

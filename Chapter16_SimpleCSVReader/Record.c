@@ -6,7 +6,8 @@
 
 value_pair_t *create_pairs(const size_t num_pairs)
 {
-    value_pair_t *values = (value_pair_t *)malloc(num_pairs * sizeof(value_pair_t));
+    value_pair_t *values =
+        (value_pair_t *)malloc(num_pairs * sizeof(value_pair_t));
 
     return values;
 }
@@ -53,7 +54,9 @@ void print_records(const records_t *const records, const char *const header)
 
     for (size_t i = 0; i < records->num_values; ++i)
     {
-        printf("%c,%d\n", records->values[i].value_a, records->values[i].value_b);
+        printf("%c,%d\n",
+               records->values[i].value_a,
+               records->values[i].value_b);
     }
 
     printf("\n");
@@ -97,7 +100,8 @@ int comp_descending(const void *left_v, const void *right_v)
     }
 }
 
-void sort_records(const records_t *const records, const sorting_scheme_t sorting_scheme)
+void sort_records(const records_t *const records,
+                  const sorting_scheme_t sorting_scheme)
 {
     if (NULL == records)
     {
@@ -108,12 +112,18 @@ void sort_records(const records_t *const records, const sorting_scheme_t sorting
     {
     case SORTING_SCHEME_ASCENDING:
     {
-        qsort(records->values, records->num_values, sizeof(value_pair_t), comp_ascending);
+        qsort(records->values,
+              records->num_values,
+              sizeof(value_pair_t),
+              comp_ascending);
         break;
     }
     case SORTING_SCHEME_DESCENDING:
     {
-        qsort(records->values, records->num_values, sizeof(value_pair_t), comp_descending);
+        qsort(records->values,
+              records->num_values,
+              sizeof(value_pair_t),
+              comp_descending);
         break;
     }
     default:

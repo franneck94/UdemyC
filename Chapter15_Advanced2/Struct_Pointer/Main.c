@@ -19,8 +19,12 @@ int main()
     s_user_data user_data_peter = {"Peter Polkow"};
     s_account account_peter = {.user_data = &user_data_peter, .ID = 1337};
 
-    printf("User id %d with name %s\n", account_jan.ID, account_jan.user_data->name);
-    printf("User id %d with name %s\n", account_peter.ID, account_peter.user_data->name);
+    printf("User id %d with name %s\n",
+           account_jan.ID,
+           account_jan.user_data->name);
+    printf("User id %d with name %s\n",
+           account_peter.ID,
+           account_peter.user_data->name);
 
     return 0;
 }

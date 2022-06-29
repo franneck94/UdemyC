@@ -62,7 +62,9 @@ int main()
     size_t lastname_length1 = strlen(lastname);
 
     printf("Name Length 0: %lu, 1: %lu\n", name_length0, name_length1);
-    printf("Last Name Length 0: %lu, 1: %lu\n", lastname_length0, lastname_length1);
+    printf("Last Name Length 0: %lu, 1: %lu\n",
+           lastname_length0,
+           lastname_length1);
 
     int equal1 = strings_equal(name, lastname);
     int equal2 = strings_equal(name, name);
