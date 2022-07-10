@@ -2,21 +2,25 @@
 
 void printEvenOrOdd(int number)
 {
-    if ((number % 2) == 0)
+    if (number % 2 == 0)
     {
-        printf("Even!\n");
+        printf("%d is even!\n", number);
     }
     else
     {
-        printf("Odd!\n");
+        printf("%d is odd!\n", number);
     }
 }
 
 int main()
 {
-    printEvenOrOdd(1);
-    printEvenOrOdd(2);
-    printEvenOrOdd(3);
+    int a = 2;
+    int b = 3;
+    int c = 4;
+
+    printEvenOrOdd(a);
+    printEvenOrOdd(b);
+    printEvenOrOdd(c);
 
     return 0;
 }

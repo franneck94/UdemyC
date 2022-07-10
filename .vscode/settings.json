@@ -26,7 +26,8 @@
     "pthread.h": "c",
     "assert.h": "c",
     "csvreader.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "random": "c"
   },
   "workbench.startupEditor": "newUntitledFile",
   "git.enableSmartCommit": true,

@@ -1,35 +1,31 @@
 #include <stdio.h>
 
-void printEvenOrOdd(int number);
-
-int getNumberFromUser();
-
-int main()
-{
-    int user_number = getNumberFromUser();
-    printEvenOrOdd(user_number);
-
-    return 0;
-}
-
 void printEvenOrOdd(int number)
 {
-    if ((number % 2) == 0)
+    if (number % 2 == 0)
     {
-        printf("Even!\n");
+        printf("%d is even!\n", number);
     }
     else
     {
-        printf("Odd!\n");
+        printf("%d is odd!\n", number);
     }
 }
 
 int getNumberFromUser()
 {
-    int number_from_user;
+    int number = 0;
 
     printf("Please enter an integer number: ");
-    scanf("%d", &number_from_user);
+    scanf("%d", &number);
 
-    return number_from_user;
+    return number;
+}
+
+int main()
+{
+    int n = getNumberFromUser();
+    printEvenOrOdd(n);
+
+    return 0;
 }
