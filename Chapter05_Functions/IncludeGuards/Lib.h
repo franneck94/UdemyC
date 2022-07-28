@@ -1,6 +1,8 @@
 #ifndef LIB1_H
 #define LIB1_H
 
-int getNumberFromUser();
+#include "Types.h"
+
+int function();
 
 #endif // LIB1_H
