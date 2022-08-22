@@ -51,9 +51,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter03_ControlFlow",
-      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter03_ControlFlow/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter12_Advanced1/Timestamp",
+      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter12_Advanced1/Timestamp/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/cygwin64/bin/gdb.exe",
       "setupCommands": [
