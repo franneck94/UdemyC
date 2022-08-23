@@ -8,7 +8,7 @@
  * %lf: double / long float
  *
  * %x: hexa-decimal
- * %p: pointer adress
+ * %p: pointer address
  */
 int main()
 {

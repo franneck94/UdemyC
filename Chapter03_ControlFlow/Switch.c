@@ -15,22 +15,22 @@ int main()
     {
     case 0:
     {
-        printf("You chosed a Cola!");
+        printf("You chose a Cola!");
         break;
     }
     case 1:
     {
-        printf("You chosed an Icetea!");
+        printf("You chose an Icetea!");
         break;
     }
     case 2:
     {
-        printf("You chosed a Water!");
+        printf("You chose a Water!");
         break;
     }
     case 3:
     {
-        printf("You chosed a Coffee!");
+        printf("You chose a Coffee!");
         break;
     }
     default:

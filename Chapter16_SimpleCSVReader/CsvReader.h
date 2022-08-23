@@ -5,7 +5,7 @@
 
 #include "Record.h"
 
-/* DECLARTIONS */
+/* DECLARATIONS */
 
 size_t line_count(const char *const file_path);
 
