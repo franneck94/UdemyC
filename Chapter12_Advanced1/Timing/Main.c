@@ -14,10 +14,9 @@ void do_something()
 int main()
 {
     clock_t time_start = clock();
-
     do_something();
-
     clock_t time_end = clock();
+
     clock_t duration = time_end - time_start;
 
     double s = (double)duration / CLOCKS_PER_SEC;

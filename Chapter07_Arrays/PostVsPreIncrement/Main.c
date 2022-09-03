@@ -1,33 +1,34 @@
 #include <stdio.h>
 
-void my_function(int value)
+
+void f(int v)
 {
-    printf("%d\n", value);
+    printf("%d\n", v);
 }
 
 int main()
 {
     int i = 0;
-    // Post-Increment
-    printf("%d\n", i++);
-    // Pre-Increment
-    printf("%d\n", ++i);
+    printf("%d\n", i++); // post
+    printf("%d\n", ++i); // pre
 
-    int j = 0;
-    // Post-Increment
-    my_function(j++);
-    // Pre-Increment
-    my_function(++j);
+    i = 0;
+    f(i++);
+    f(++i);
 
-    // Post-Increment
-    for (int i = 0; i < 3; i++)
+    i = 0;
+    i++;
+    ++i;
+    printf("%d\n", i);
+
+    for (int k = 0; k < 3; k++)
     {
-        printf("%d\n", i);
+        printf("%d\n", k);
     }
-    // Pre-Increment
-    for (int i = 0; i < 3; ++i)
+
+    for (int k = 0; k < 3; ++k)
     {
-        printf("%d\n", i);
+        printf("%d\n", k);
     }
 
     return 0;
