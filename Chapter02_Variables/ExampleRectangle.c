@@ -7,17 +7,15 @@ int main()
     // 2.) Compute the perimeter and area of the rectangle
     // 3.) Print the computed values to the console
 
-    float a = 0.0F;
-    float b = 0.0F;
+    float a;
+    float b;
 
-    printf("Please enter the value for a: ");
+    printf("Enter a value for a: ");
     scanf("%f", &a);
-    printf("\n");
-    printf("Please enter the value for b: ");
+    printf("Enter a value for b: ");
     scanf("%f", &b);
-    printf("\n");
 
-    float perimeter = 2 * a + 2 * b;
+    float perimeter = 2.0F * a + 2.0F * b;
     float area = a * b;
 
     printf("Perimeter: %f\n", perimeter);
