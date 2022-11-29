@@ -7,6 +7,11 @@ int main()
     uint32_t length = 4;
     int32_t *arr = (int32_t *)malloc(length * sizeof(int32_t));
 
+    if (NULL == arr)
+    {
+        return 1;
+    }
+
     for (uint32_t i = 0; i < length; i++)
     {
         arr[i] = (int32_t)i;
@@ -17,5 +22,5 @@ int main()
         printf("%d\n", arr[i]);
     }
 
-    // free(arr);
+    free(arr);
 }
