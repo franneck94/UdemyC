@@ -1,7 +1,7 @@
 ---
-Checks: 'clang-analyzer-*''
-WarningsAsErrors: '*'
-HeaderFilterRegex: '.*'
+Checks: 'clang-analyzer-*,bugprone-*,-clang-analyzer-security.*'
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
 FormatStyle:     none
 ...
