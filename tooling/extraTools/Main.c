@@ -12,13 +12,9 @@ int main()
         return 1;
     }
 
-    for (uint32_t i = 0; i < length; i++)
+    for (uint32_t i = 0; i < length + 1; i++)
     {
         arr[i] = (int32_t)i;
-    }
-
-    for (uint32_t i = 0; i < length; i++)
-    {
         printf("%d\n", arr[i]);
     }
 
