@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/_Exercise/Solution",
-      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/_Exercise/Solution/build/Debug/outDebug",
+      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter04_Loops",
+      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter04_Loops/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
