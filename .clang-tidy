@@ -1,5 +1,7 @@
 ---
 Checks: 'clang-analyzer-*,bugprone-*,readability-*,cppcoreguidelines-*,-readability-avoid-const-params-in-decls,-cppcoreguidelines-avoid-non-const-global-variables,-bugprone-easily-swappable-parameters,-altera-*,-readability-uppercase-literal-suffix,-bugprone-branch-clone,-cppcoreguidelines-pro-*,-readability-function-cognitive-complexity,-cppcoreguidelines-avoid-magic-numbers,-clang-analyzer-security.insecureAPI.*'
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
 CheckOptions:
   - key:             readability-magic-numbers.IgnoredFloatingPointValues
     value:           '0.0;1.0;100.0;'
