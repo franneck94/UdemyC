@@ -1,6 +1,38 @@
 # TODO
 
+- Lektion 19: compile bei 5:00
+- Lektion 20: compile bei 2:10
+- Lektion 23: compile bei 4:20
+- Lektion 28: neu
+- Lektion 29: compile bei 0:50
+- Lektion 36: compile bei 2:30
+- Lektion 48: neu
+- Lektion 49: neu
+- Lektion 53: compile bei 12:30
+- Lektion 56: neu
+- Lektion 58: neu
+- Lektion 59: neu
+- Lektion 63: neu
+- Lektion 73: neu
+- Lektion 83: neu
+- Lektion 85: neu
+- Lektion 89: neu
 - Lektion 93 Feedback:
   - Etwas zu schnell
   Ich finde in diesem Abschnitt ging es ein bisschen zu schnell. Wir haben jetzt 2 neue Konzepte. Erstens die Reservierung von Speicher und zweitens Zeiger auf Zeiger. Ich finde man sollte erst eine Aufgabe machen, um selbst zu testen wie das mit dem Speicher reservieren funktioniert und danach dann mit den Pointern auf Pointer.
+- Lektion 96: neu
+- Lektion 98: neu
+- Lektion 99: compile bei 4:24
+- Lektion 100: neu
+- Lektion 105: neu
+- Lektion 106: neu
+- Lektion 110: compile bei 8:40
+- Lektion 112: neu
+- Lektion 118: neu
+- Lektion 129: neu
+- Lektion 134: neu
 - Lektion 136: 13:10 compile
+- Lektion 137: neu
+- Lektion 145: neu
+- Lektion 146: neu
+- Lektion 158: neu
