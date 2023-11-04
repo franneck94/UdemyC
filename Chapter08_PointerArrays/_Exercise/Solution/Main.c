@@ -113,8 +113,8 @@ int main()
     int **matrix_transpose = transposeMatrix(matrix, num_rows, num_cols);
     printMatrix(matrix_transpose, num_cols, num_rows);
 
-    matrix = freeMatrix(matrix, num_rows);
-    matrix = freeMatrix(matrix_transpose, num_cols);
+    freeMatrix(matrix, num_rows);
+    freeMatrix(matrix_transpose, num_cols);
 
     return 0;
 }

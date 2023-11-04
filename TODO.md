@@ -7,7 +7,6 @@
 - Lektion 89: neu
 - Lektion 91: neu
 - Lektion 94: neu
-- Lektion 96: neu
 - Lektion 98: neu
 - Lektion 99: neu
 - Lektion 100: neu

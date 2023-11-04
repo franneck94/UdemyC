@@ -1,14 +1,12 @@
 #include <stdio.h>
 
-#define NUM_STUDENTS 10
+#define NUMBER_OF_STUDENTS 4
 
 int main()
 {
-    const int grade_jan = 1;
-    printf("%d\n", grade_jan);
-    // grade_jan = 2;
+    const int number_of_students = 4;
 
-    int students_grades[NUM_STUDENTS] = {1, 2, 3, 4, 5, 6, 8, 9, 10};
+    int numbers[NUMBER_OF_STUDENTS] = {1, 2, 3, 4};
 
     return 0;
 }
