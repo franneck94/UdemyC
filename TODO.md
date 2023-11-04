@@ -28,7 +28,6 @@
 - Lektion 125: neu
 - Lektion 126: neu
 - Lektion 127: neu
-- Lektion 129: neu
 - Lektion 134: neu
 - Lektion 137: neu
 - Lektion 138: neu
