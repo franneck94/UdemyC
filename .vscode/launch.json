@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "console": "externalTerminal",
-      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/VariableScope",
-      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/VariableScope/build/Debug/outDebug"
+      "cwd": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/RecursiveFunction",
+      "program": "c:/Users/Jan/OneDrive/_Coding/UdemyC/Chapter05_Functions/RecursiveFunction/build/Debug/outDebug"
     }
   ]
 }

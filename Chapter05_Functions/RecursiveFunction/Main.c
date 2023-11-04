@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-uint64_t factorial(uint8_t n)
+uint32_t factorial(uint32_t n)
 {
     if (n == 1)
     {
@@ -13,10 +13,10 @@ uint64_t factorial(uint8_t n)
 
 int main()
 {
-    uint8_t n = 5; // 5 * 4 * 3 * 2 * 1
-    uint64_t n_faculuty = factorial(n);
+    uint32_t n = 5;
+    uint32_t n_factorial = factorial(n);
 
-    printf("%u! = %lu\n", n, n_faculuty);
+    printf("%u! = %u\n", n , n_factorial);
 
     return 0;
 }

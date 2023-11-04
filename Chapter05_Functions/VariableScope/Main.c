@@ -12,6 +12,10 @@ void func()
     if (1)
     {
         int d = 4;
+
+        printf("(FUNC) a = %d\n", a);
+        printf("(FUNC) b = %d\n", b);
+        printf("(FUNC) d = %d\n", d);
     }
 }
 
