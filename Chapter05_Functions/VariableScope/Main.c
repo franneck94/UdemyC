@@ -8,6 +8,11 @@ void func()
 
     printf("(FUNC) a = %d\n", a);
     printf("(FUNC) b = %d\n", b);
+
+    if (1)
+    {
+        int d = 4;
+    }
 }
 
 int main()

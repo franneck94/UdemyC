@@ -142,7 +142,7 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.configurationWarnings": "disabled",
   "C_Cpp_Config.aggressiveSettings": false,
   "C_Cpp_Config.lineLength": 120,
@@ -153,7 +153,7 @@
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
-  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.useMsvc": true,
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
