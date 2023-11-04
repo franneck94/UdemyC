@@ -10,6 +10,18 @@ In dieser Übung werden wir eine Transponierte-Matrix "berechnen". Wenn ihr gar 
 
 - Programmiere eine Funktion, die zu einer Input Matrix (2d-Array), die transponierte Matrix zurückgeben (auch 2d-Array)
 
+Matrix M:  
+  [[0, 1, 2],  
+   [0, 2, 4]]  
+
+Matrix M_Transposed:  
+  [[0, 0],  
+   [1, 2],  
+   [2, 4]]  
+
+
+Der aktuelle printMatrix Aufruf würde das ausgeben:  
+
 ![alt](../../media/exercise8.png)
 
 ## Hinweise
