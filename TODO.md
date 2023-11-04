@@ -1,13 +1,10 @@
 # TODO
 
-- Lektion 29: neu
 - Lektion 48: neu
 - Lektion 49: neu
-- Lektion 56: neu
 - Lektion 58: neu
 - Lektion 59: neu
 - Lektion 60: neu
-- Lektion 63: neu
 - Lektion 73: neu
 - Lektion 83: neu
 - Lektion 85: neu
@@ -21,11 +18,9 @@
 - Lektion 100: neu
 - Lektion 105: neu
 - Lektion 106: neu
-- Lektion 112: neu
 - Lektion 113: neu
 - Lektion 115: neu
 - Lektion 116: neu
-- Lektion 118: neu
 - Lektion 119: neu
 - Lektion 122: neu
 - Lektion 123: neu
