@@ -2,8 +2,6 @@
 
 - Lektion 48: neu
 - Lektion 49: neu
-- Lektion 83: neu
-- Lektion 85: neu
 - Lektion 89: neu
 - Lektion 91: neu
 - Lektion 94: neu
@@ -15,7 +13,6 @@
 - Lektion 113: neu
 - Lektion 115: neu
 - Lektion 116: neu
-- Lektion 119: neu
 - Lektion 122: neu
 - Lektion 123: neu
 - Lektion 124: neu
