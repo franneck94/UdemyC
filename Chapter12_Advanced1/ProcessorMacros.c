@@ -1,11 +1,13 @@
 #include <assert.h>
 #include <stdio.h>
 
+// NDEBUG <=> Release Mode
+// !Release == Debug
 #ifndef NDEBUG
 #define DEBUG
 #endif
 
-// #define USE_ASSERTS
+#define USE_ASSERTS
 
 int function(int val)
 {
