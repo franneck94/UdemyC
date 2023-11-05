@@ -54,18 +54,24 @@ void print_friend(Friend_t *friend)
 
 int main()
 {
-    Friend_t jan = {.name = "Schaffranek",
-                    .prename = "Jan",
-                    .birthday = {.year = 1994U, .month = 2U, .day = 24U},
-                    .origin = FRIENDSHIP_ORIGIN_FAMILY};
-    Friend_t peter = {.name = "Lustig",
-                      .prename = "Peter",
-                      .birthday = {.year = 1959U, .month = 8U, .day = 13},
-                      .origin = FRIENDSHIP_ORIGIN_OTHER};
-    Friend_t hans = {.name = "Meier",
-                     .prename = "Hans",
-                     .birthday = {.year = 1970U, .month = 12U, .day = 31},
-                     .origin = FRIENDSHIP_ORIGIN_SCHOOL};
+    Friend_t jan = {
+        .name = "Schaffranek",
+        .prename = "Jan",
+        .birthday = {.year = 1994U, .month = 2U, .day = 24U},
+        .origin = FRIENDSHIP_ORIGIN_FAMILY,
+    };
+    Friend_t peter = {
+        .name = "Lustig",
+        .prename = "Peter",
+        .birthday = {.year = 1959U, .month = 8U, .day = 13},
+        .origin = FRIENDSHIP_ORIGIN_OTHER,
+    };
+    Friend_t hans = {
+        .name = "Meier",
+        .prename = "Hans",
+        .birthday = {.year = 1970U, .month = 12U, .day = 31},
+        .origin = FRIENDSHIP_ORIGIN_SCHOOL,
+    };
     Friend_t friend_book[] = {jan, peter, hans};
 
     print_friend(&friend_book[0]);
