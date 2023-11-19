@@ -1,0 +1,41 @@
+# TODO
+
+Wird ca. im Januar 2024 abgearbeitet.
+
+- Lektion 48: Video neu aufnehmen
+- Lektion 49: Video neu aufnehmen
+- Lektion 89: Video neu aufnehmen
+- Lektion 91: Video neu aufnehmen
+- Lektion 94: Video neu aufnehmen
+- Lektion 98: Video neu aufnehmen
+- Lektion 99: Video neu aufnehmen
+- Lektion 100: Video neu aufnehmen
+- Lektion 105: Video neu aufnehmen
+- Lektion 106: Video neu aufnehmen
+- Lektion 113: Video neu aufnehmen
+- Lektion 115: Video neu aufnehmen
+- Lektion 116: Video neu aufnehmen
+- Lektion 122: Video neu aufnehmen
+- Lektion 123: Video neu aufnehmen
+- Lektion 124: Video neu aufnehmen
+- Lektion 125: Video neu aufnehmen
+- Lektion 126: Video neu aufnehmen
+- Lektion 127: Video neu aufnehmen
+- Lektion 134: Video neu aufnehmen
+- Lektion 137: Video neu aufnehmen
+- Lektion 138: Video neu aufnehmen
+- Lektion 143: Video neu aufnehmen
+- Lektion 145: Video neu aufnehmen
+- Lektion 146: Video neu aufnehmen
+- Lektion 147: Video neu aufnehmen
+- Lektion 154: Video neu aufnehmen
+- Lektion 155: Video neu aufnehmen
+- Lektion 156: Video neu aufnehmen
+- Lektion 157: Video neu aufnehmen
+- Lektion 158: Video neu aufnehmen
+- Lektion 159: Video neu aufnehmen
+- Lektion 160: Video neu aufnehmen
+- Lektion 161: Video neu aufnehmen
+- Lektion 162: Video neu aufnehmen
+- Lektion 163: Video neu aufnehmen
+- Lektion 164: Video neu aufnehmen
